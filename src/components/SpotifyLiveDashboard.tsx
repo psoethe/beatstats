@@ -2,22 +2,16 @@ import React, { useState, useMemo } from 'react';
 import { useSpotify } from '../hooks/useSpotify';
 import {
   Headphones,
-  Sparkles,
   Clock,
   Disc3,
   User,
-  Music,
   LogOut,
   ExternalLink,
   RefreshCw,
   Award,
   ListMusic,
   Radio,
-  Sliders,
-  HelpCircle,
-  TrendingUp,
-  Flame,
-  CheckCircle2,
+  Sparkles,
 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
@@ -40,12 +34,8 @@ export const SpotifyLiveDashboard: React.FC = () => {
     fetchLiveSpotifyData,
     connectSpotify,
     disconnectSpotify,
-    spotifyClientId,
-    setStoredSpotifyClientId,
   } = useSpotify();
 
-  const [inputClientId, setInputClientId] = useState(spotifyClientId || '');
-  const [showApiHelp, setShowApiHelp] = useState(false);
   const [activeSubTab, setActiveSubTab] = useState<'tracks' | 'artists' | 'recent' | 'playlists'>('tracks');
   const [searchFilter, setSearchFilter] = useState('');
 
@@ -87,97 +77,44 @@ export const SpotifyLiveDashboard: React.FC = () => {
   // If not connected to Spotify API
   if (!isSpotifyConnected) {
     return (
-      <div className="max-w-3xl mx-auto py-10 px-4 space-y-8 animate-fadeIn">
+      <div className="max-w-2xl mx-auto py-12 px-4 space-y-8 animate-fadeIn">
         {/* Connect Hero */}
-        <div className="bg-[#181818] border border-[#282828] p-8 sm:p-10 rounded-3xl text-center shadow-2xl relative overflow-hidden flex flex-col items-center gap-6">
+        <div className="bg-[#181818] border border-[#282828] p-8 sm:p-12 rounded-3xl text-center shadow-2xl relative overflow-hidden flex flex-col items-center gap-6">
           <div className="w-20 h-20 rounded-3xl bg-[#1DB954]/15 border border-[#1DB954]/30 flex items-center justify-center text-[#1DB954] shadow-inner">
             <Radio size={40} />
           </div>
 
           <div className="space-y-2 max-w-lg">
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Conectar Spotify Live API
+              Conectar sua Conta Spotify
             </h2>
             <p className="text-xs sm:text-sm text-[#A7A7A7] leading-relaxed">
-              Vincule sua conta pessoal do Spotify para visualizar seus dados em tempo real: artistas mais tocados, músicas favoritas de longo prazo (1+ ano), músicas recentes e o que está tocando agora!
+              Clique no botão abaixo para autorizar o BeatStats e carregar seus artistas mais ouvidos, músicas favoritas de longo prazo (1+ ano), reproduções recentes e o que está tocando agora no seu Spotify.
             </p>
           </div>
 
           {spotifyError && (
-            <div className="p-3.5 bg-red-950/40 border border-red-800/60 rounded-xl text-red-200 text-xs text-left max-w-md">
+            <div className="p-4 bg-red-950/40 border border-red-800/60 rounded-2xl text-red-200 text-xs text-left max-w-md w-full leading-relaxed">
+              <strong className="block font-bold text-red-300 mb-1">Atenção ao conectar:</strong>
               {spotifyError}
             </div>
           )}
 
-          {/* Client ID input */}
-          <div className="w-full max-w-md space-y-3 text-left bg-[#121212] p-5 rounded-2xl border border-[#282828]">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold text-white flex items-center gap-1.5">
-                <span>Spotify Client ID:</span>
-              </label>
-              <button
-                type="button"
-                onClick={() => setShowApiHelp(!showApiHelp)}
-                className="text-[11px] text-[#1DB954] hover:underline inline-flex items-center gap-1 cursor-pointer"
-              >
-                <HelpCircle size={12} />
-                <span>Como obter minha chave?</span>
-              </button>
-            </div>
-
-            <input
-              type="text"
-              value={inputClientId}
-              onChange={e => {
-                setInputClientId(e.target.value);
-                setStoredSpotifyClientId(e.target.value);
-              }}
-              placeholder="Cole seu Spotify Client ID aqui..."
-              className="w-full bg-[#181818] text-xs text-white placeholder-[#666] px-3.5 py-2.5 rounded-xl border border-[#333] focus:border-[#1DB954] outline-none font-mono"
-            />
-
+          {/* 1-Click Connect Button */}
+          <div className="w-full max-w-sm pt-2">
             <button
               type="button"
-              onClick={() => connectSpotify(inputClientId.trim())}
+              onClick={() => connectSpotify()}
               disabled={isConnecting}
-              className="w-full py-3 px-6 bg-[#1DB954] hover:bg-[#1ed760] text-black font-extrabold text-sm rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-2 mt-2"
+              className="w-full py-4 px-8 bg-[#1DB954] hover:bg-[#1ed760] text-black font-extrabold text-base rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-3 disabled:opacity-50"
             >
-              <Headphones size={18} />
-              <span>{isConnecting ? 'Conectando...' : 'Conectar com Spotify'}</span>
+              <Headphones size={22} />
+              <span>{isConnecting ? 'Conectando ao Spotify...' : 'Conectar com Spotify'}</span>
             </button>
+            <p className="text-[11px] text-[#666] mt-3">
+              Autenticação segura via Spotify OAuth 2.0 PKCE • Sem compartilhamento de senhas
+            </p>
           </div>
-
-          {/* Instructions Helper Modal / Card */}
-          {showApiHelp && (
-            <div className="w-full max-w-md bg-[#121212] p-5 rounded-2xl border border-emerald-500/30 text-left text-xs space-y-3 animate-fadeIn">
-              <div className="flex items-center gap-2 text-emerald-400 font-bold uppercase tracking-wider text-[11px]">
-                <CheckCircle2 size={15} />
-                <span>Como criar seu Client ID no Spotify Developer:</span>
-              </div>
-              <ol className="list-decimal list-inside space-y-2 text-[#A7A7A7] leading-relaxed">
-                <li>
-                  Acesse o{' '}
-                  <a
-                    href="https://developer.spotify.com/dashboard"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#1DB954] underline inline-flex items-center gap-0.5 font-semibold"
-                  >
-                    Spotify Developer Dashboard <ExternalLink size={10} />
-                  </a>{' '}
-                  e faça login com sua conta Spotify.
-                </li>
-                <li>Clique em <strong>"Create App"</strong> (Nome: <code>BeatStats</code>).</li>
-                <li>
-                  Nas configurações do App (<strong>Settings</strong>), em <strong>Redirect URIs</strong>, adicione:
-                  <code className="block bg-[#1c1c1c] text-white p-2 rounded-lg font-mono text-[11px] my-1 select-all">
-                    {window.location.origin + window.location.pathname}
-                  </code>
-                </li>
-                <li>Salve as alterações e copie o <strong>Client ID</strong> gerado para a caixinha acima!</li>
-              </ol>
-            </div>
-          )}
         </div>
       </div>
     );

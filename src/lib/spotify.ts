@@ -1,12 +1,20 @@
 /**
- * Spotify Web API integration (OAuth 2.0 PKCE)
+ * Spotify Web API integration (OAuth 2.0 PKCE Flow)
+ *
+ * Security Note:
+ * PKCE (Proof Key for Code Exchange) is the official RFC 7636 standard recommended by Spotify for
+ * single-page applications. It provides cryptographic security using SHA-256 dynamic code challenges
+ * without EVER needing or exposing a Client Secret in the frontend.
  */
+
+export const DEFAULT_SPOTIFY_CLIENT_ID =
+  import.meta.env.VITE_SPOTIFY_CLIENT_ID ||
+  '8581b67914dd4994a1414364b2eed34b';
 
 export const getStoredSpotifyClientId = (): string => {
   return (
     localStorage.getItem('spotify_client_id') ||
-    import.meta.env.VITE_SPOTIFY_CLIENT_ID ||
-    ''
+    DEFAULT_SPOTIFY_CLIENT_ID
   );
 };
 
@@ -70,6 +78,7 @@ export const redirectToSpotifyAuth = async (customClientId?: string) => {
     code_challenge_method: 'S256',
     code_challenge: codeChallenge,
     redirect_uri: redirectUri,
+    show_dialog: 'true',
   };
 
   authUrl.search = new URLSearchParams(params).toString();
