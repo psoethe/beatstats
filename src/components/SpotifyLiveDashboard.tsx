@@ -19,7 +19,11 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recha
 
 const PIE_COLORS = ['#1DB954', '#38bdf8', '#a855f7', '#f59e0b', '#ec4899', '#10b981', '#6366f1', '#e11d48'];
 
-export const SpotifyLiveDashboard: React.FC = () => {
+interface SpotifyLiveDashboardProps {
+  userEmail: string;
+}
+
+export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ userEmail }) => {
   const {
     isSpotifyConnected,
     isConnecting,
@@ -36,7 +40,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
     fetchLiveSpotifyData,
     connectSpotify,
     disconnectSpotify,
-  } = useSpotify();
+  } = useSpotify(userEmail);
 
   const [activeSubTab, setActiveSubTab] = useState<'tracks' | 'artists' | 'recent' | 'playlists'>('tracks');
   const [searchFilter, setSearchFilter] = useState('');

@@ -11,7 +11,6 @@ import {
   Database,
   Radio,
   FolderArchive,
-  Lock,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -58,7 +57,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
               <p className="text-[11px] text-[#727272]">
                 {activeMode === 'files'
-                  ? `Análise de Arquivos Locais (${accounts.length} contas)`
+                  ? accounts.length > 0
+                    ? `Análise de Arquivos Locais (${accounts.length} ${accounts.length === 1 ? 'conta' : 'contas'})`
+                    : 'Importação de Arquivos JSON / ZIP'
                   : 'Estatísticas em Tempo Real via API Oficial'}
               </p>
             </div>
@@ -77,7 +78,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <FolderArchive size={14} />
               <span>Arquivos Exportados</span>
-              {!isFamilyUser && <Lock size={12} className="text-amber-400" />}
             </button>
 
             <button
@@ -114,24 +114,26 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Second Row: Sub-account tabs when in 'files' mode */}
-        {activeMode === 'files' && isFamilyUser && accounts.length > 0 && (
+        {/* Second Row: Sub-account tabs when in 'files' mode with loaded accounts */}
+        {activeMode === 'files' && accounts.length > 0 && (
           <div className="flex items-center flex-wrap gap-1.5 pt-2 border-t border-[#222222]">
-            <button
-              type="button"
-              onClick={() => onSelectAccount('overview')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                selectedAccountId === 'overview'
-                  ? 'bg-white text-black shadow-md'
-                  : 'text-[#A7A7A7] hover:text-white hover:bg-[#202020]'
-              }`}
-            >
-              <LayoutDashboard size={13} />
-              <span>Visão Geral do Grupo</span>
-            </button>
+            {accounts.length > 1 && (
+              <button
+                type="button"
+                onClick={() => onSelectAccount('overview')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  selectedAccountId === 'overview'
+                    ? 'bg-white text-black shadow-md'
+                    : 'text-[#A7A7A7] hover:text-white hover:bg-[#202020]'
+                }`}
+              >
+                <LayoutDashboard size={13} />
+                <span>Visão Geral do Grupo</span>
+              </button>
+            )}
 
             {accounts.map(acc => {
-              const isSelected = selectedAccountId === acc.id;
+              const isSelected = selectedAccountId === acc.id || (accounts.length === 1 && selectedAccountId === 'overview');
               return (
                 <button
                   key={acc.id}
@@ -159,24 +161,26 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
 
             <div className="ml-auto flex items-center gap-2">
-              <button
-                type="button"
-                onClick={onReloadBundledData}
-                title="Recarregar dados originais de /public/spotifydata"
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold text-[#A7A7A7] hover:text-white hover:bg-[#202020] border border-[#282828] transition-all cursor-pointer"
-              >
-                <Database size={12} />
-                <span>Sincronizar</span>
-              </button>
+              {isFamilyUser && (
+                <button
+                  type="button"
+                  onClick={onReloadBundledData}
+                  title="Recarregar dados originais de /public/spotifydata"
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold text-[#A7A7A7] hover:text-white hover:bg-[#202020] border border-[#282828] transition-all cursor-pointer"
+                >
+                  <Database size={12} />
+                  <span>Sincronizar Família</span>
+                </button>
+              )}
 
               <button
                 type="button"
                 onClick={onResetData}
-                title="Carregar outra pasta localmente"
+                title="Carregar outro arquivo ZIP ou pasta"
                 className="flex items-center gap-1.5 px-2.5 py-1.5 bg-[#242424] hover:bg-[#2c2c2c] text-white text-[11px] font-bold rounded-xl border border-[#333] transition-all cursor-pointer"
               >
                 <FolderOpen size={12} />
-                <span>Outra Pasta</span>
+                <span>Trocar Arquivos</span>
               </button>
             </div>
           </div>

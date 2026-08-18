@@ -9,7 +9,6 @@ import { FolderDropzone } from './components/FolderDropzone';
 import { ComparativeOverview } from './components/ComparativeOverview';
 import { AccountDetail } from './components/AccountDetail';
 import { SpotifyLiveDashboard } from './components/SpotifyLiveDashboard';
-import { Lock, Radio, ShieldAlert } from 'lucide-react';
 
 export default function App() {
   const {
@@ -35,12 +34,13 @@ export default function App() {
       if (isFamilyAdmin(user.email)) {
         setActiveMode('files');
       } else {
+        // Default guest users to Spotify API, but allow files tab with personal dropzone
         setActiveMode('spotify_api');
       }
     }
   }, [user]);
 
-  // Auto-load bundled dataset from /public/spotifydata when family user is authenticated
+  // Auto-load bundled dataset from /public/spotifydata ONLY for whitelisted family users
   useEffect(() => {
     if (isAuthenticated && isFamilyUser) {
       let isMounted = true;
@@ -66,13 +66,19 @@ export default function App() {
         isMounted = false;
       };
     } else {
+      // Non-family users start with empty accounts so they see the FolderDropzone guide
+      setAccounts([]);
       setIsLoadingData(false);
     }
   }, [isAuthenticated, isFamilyUser]);
 
   const handleDataLoaded = (newAccounts: SpotifyAccount[]) => {
     setAccounts(newAccounts);
-    setSelectedAccountId('overview');
+    if (newAccounts.length === 1) {
+      setSelectedAccountId(newAccounts[0].id);
+    } else {
+      setSelectedAccountId('overview');
+    }
   };
 
   const handleResetData = () => {
@@ -81,6 +87,7 @@ export default function App() {
   };
 
   const handleReloadBundledData = async () => {
+    if (!isFamilyUser) return;
     setIsLoadingData(true);
     try {
       const loaded = await loadBundledSpotifyData();
@@ -116,7 +123,7 @@ export default function App() {
     );
   }
 
-  const currentAccount = accounts.find(a => a.id === selectedAccountId);
+  const currentAccount = accounts.find(a => a.id === selectedAccountId) || (accounts.length === 1 ? accounts[0] : undefined);
 
   return (
     <div className="min-h-screen bg-[#121212] text-white flex flex-col selection:bg-[#1DB954] selection:text-black">
@@ -133,34 +140,14 @@ export default function App() {
       />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-8 py-8">
-        {/* Mode 1: Spotify Live API Dashboard (Available to anyone) */}
-        {activeMode === 'spotify_api' && <SpotifyLiveDashboard />}
+        {/* Mode 1: Spotify Live API Dashboard (isolated by user email) */}
+        {activeMode === 'spotify_api' && <SpotifyLiveDashboard userEmail={user.email} />}
 
-        {/* Mode 2: Exported Family Files Dashboard (Restricted to Family Admins or Custom Folder) */}
+        {/* Mode 2: Exported Files Dashboard (preloaded for family, dropzone for all users) */}
         {activeMode === 'files' && (
           <>
-            {!isFamilyUser ? (
-              <div className="max-w-2xl mx-auto py-16 text-center space-y-6">
-                <div className="w-16 h-16 rounded-3xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center mx-auto">
-                  <Lock size={32} />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-black text-white">Acesso Restrito aos Dados Familiares</h3>
-                  <p className="text-xs sm:text-sm text-[#A7A7A7] leading-relaxed max-w-lg mx-auto">
-                    Os arquivos históricos privados estão restritos para as contas administradoras (<code>psoethe@gmail.com</code> e <code>alicebsoethe@gmail.com</code>).
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setActiveMode('spotify_api')}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#1DB954] hover:bg-[#1ed760] text-black font-extrabold text-xs rounded-full shadow-lg transition-all cursor-pointer"
-                >
-                  <Radio size={15} />
-                  <span>Acessar Meu Spotify Ao Vivo</span>
-                </button>
-              </div>
-            ) : accounts.length > 0 ? (
-              selectedAccountId === 'overview' || !currentAccount ? (
+            {accounts.length > 0 ? (
+              (selectedAccountId === 'overview' && accounts.length > 1) || !currentAccount ? (
                 <ComparativeOverview
                   accounts={accounts}
                   onSelectAccount={id => setSelectedAccountId(id)}

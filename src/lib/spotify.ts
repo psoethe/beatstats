@@ -1,10 +1,7 @@
 /**
  * Spotify Web API integration (OAuth 2.0 PKCE Flow)
  *
- * Security Note:
- * PKCE (Proof Key for Code Exchange) is the official RFC 7636 standard recommended by Spotify for
- * single-page applications. It provides cryptographic security using SHA-256 dynamic code challenges
- * without EVER needing or exposing a Client Secret in the frontend.
+ * Scoped by Google user email to prevent token leakage across accounts.
  */
 
 export const DEFAULT_SPOTIFY_CLIENT_ID =
@@ -26,6 +23,15 @@ const getRedirectUri = () => {
   return window.location.origin + window.location.pathname;
 };
 
+const getStorageKeys = (userEmail?: string) => {
+  const emailKey = (userEmail || localStorage.getItem('beatstats_current_user_email') || 'default').toLowerCase().trim();
+  return {
+    accessToken: `spotify_access_token_${emailKey}`,
+    refreshToken: `spotify_refresh_token_${emailKey}`,
+    tokenExpiry: `spotify_token_expiry_${emailKey}`,
+  };
+};
+
 const generateRandomString = (length: number) => {
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const values = crypto.getRandomValues(new Uint8Array(length));
@@ -45,7 +51,7 @@ const base64encode = (input: ArrayBuffer) => {
     .replace(/\//g, '_');
 };
 
-export const redirectToSpotifyAuth = async (customClientId?: string) => {
+export const redirectToSpotifyAuth = async (userEmail?: string, customClientId?: string) => {
   const clientId = customClientId || getStoredSpotifyClientId();
   if (!clientId) {
     throw new Error('Spotify Client ID não configurado.');
@@ -53,6 +59,10 @@ export const redirectToSpotifyAuth = async (customClientId?: string) => {
 
   const codeVerifier = generateRandomString(64);
   window.sessionStorage.setItem('spotify_code_verifier', codeVerifier);
+
+  if (userEmail) {
+    window.sessionStorage.setItem('spotify_pending_google_user', userEmail.toLowerCase().trim());
+  }
 
   const hashed = await sha256(codeVerifier);
   const codeChallenge = base64encode(hashed);
@@ -85,10 +95,15 @@ export const redirectToSpotifyAuth = async (customClientId?: string) => {
   window.location.href = authUrl.toString();
 };
 
-export const getAccessToken = async (code: string) => {
+export const getAccessToken = async (code: string, userEmail?: string) => {
   const clientId = getStoredSpotifyClientId();
   const verifier = window.sessionStorage.getItem('spotify_code_verifier');
   const storedRedirectUri = window.sessionStorage.getItem('spotify_auth_redirect_uri') || getRedirectUri();
+  const targetEmail =
+    userEmail ||
+    window.sessionStorage.getItem('spotify_pending_google_user') ||
+    localStorage.getItem('beatstats_current_user_email') ||
+    'default';
 
   if (!verifier) {
     throw new Error('Code verifier está ausente.');
@@ -116,21 +131,27 @@ export const getAccessToken = async (code: string) => {
   }
 
   const data = await response.json();
+  const keys = getStorageKeys(targetEmail);
 
-  window.localStorage.setItem('spotify_access_token', data.access_token);
+  window.localStorage.setItem(keys.accessToken, data.access_token);
   if (data.refresh_token) {
-    window.localStorage.setItem('spotify_refresh_token', data.refresh_token);
+    window.localStorage.setItem(keys.refreshToken, data.refresh_token);
   }
 
   const expiryTime = Date.now() + data.expires_in * 1000;
-  window.localStorage.setItem('spotify_token_expiry', expiryTime.toString());
+  window.localStorage.setItem(keys.tokenExpiry, expiryTime.toString());
+
+  // Clean pending state
+  window.sessionStorage.removeItem('spotify_pending_google_user');
 
   return data.access_token;
 };
 
-export const refreshAccessToken = async () => {
+export const refreshAccessToken = async (userEmail?: string) => {
   const clientId = getStoredSpotifyClientId();
-  const refreshToken = window.localStorage.getItem('spotify_refresh_token');
+  const keys = getStorageKeys(userEmail);
+  const refreshToken = window.localStorage.getItem(keys.refreshToken);
+
   if (!refreshToken) {
     throw new Error('Nenhum refresh token disponível.');
   }
@@ -155,29 +176,30 @@ export const refreshAccessToken = async () => {
 
   const data = await response.json();
 
-  window.localStorage.setItem('spotify_access_token', data.access_token);
+  window.localStorage.setItem(keys.accessToken, data.access_token);
   if (data.refresh_token) {
-    window.localStorage.setItem('spotify_refresh_token', data.refresh_token);
+    window.localStorage.setItem(keys.refreshToken, data.refresh_token);
   }
 
   const expiryTime = Date.now() + data.expires_in * 1000;
-  window.localStorage.setItem('spotify_token_expiry', expiryTime.toString());
+  window.localStorage.setItem(keys.tokenExpiry, expiryTime.toString());
 
   return data.access_token;
 };
 
-export const getValidToken = async () => {
-  const token = window.localStorage.getItem('spotify_access_token');
-  const expiry = window.localStorage.getItem('spotify_token_expiry');
+export const getValidToken = async (userEmail?: string) => {
+  const keys = getStorageKeys(userEmail);
+  const token = window.localStorage.getItem(keys.accessToken);
+  const expiry = window.localStorage.getItem(keys.tokenExpiry);
 
   if (!token || !expiry) return null;
 
   if (Date.now() > parseInt(expiry, 10) - 60000) {
     try {
-      return await refreshAccessToken();
+      return await refreshAccessToken(userEmail);
     } catch (e) {
-      console.error('Falha ao renovar token:', e);
-      logoutSpotify();
+      console.error('Falha ao renovar token do Spotify:', e);
+      logoutSpotify(userEmail);
       return null;
     }
   }
@@ -185,14 +207,15 @@ export const getValidToken = async () => {
   return token;
 };
 
-export const logoutSpotify = () => {
-  window.localStorage.removeItem('spotify_access_token');
-  window.localStorage.removeItem('spotify_refresh_token');
-  window.localStorage.removeItem('spotify_token_expiry');
+export const logoutSpotify = (userEmail?: string) => {
+  const keys = getStorageKeys(userEmail);
+  window.localStorage.removeItem(keys.accessToken);
+  window.localStorage.removeItem(keys.refreshToken);
+  window.localStorage.removeItem(keys.tokenExpiry);
 };
 
-const fetchWebApi = async (endpoint: string, method: string = 'GET') => {
-  const token = await getValidToken();
+export const fetchWebApi = async (endpoint: string, userEmail?: string, method: string = 'GET') => {
+  const token = await getValidToken(userEmail);
   if (!token) throw new Error('Não autenticado no Spotify');
 
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
@@ -211,12 +234,12 @@ const fetchWebApi = async (endpoint: string, method: string = 'GET') => {
   return await res.json();
 };
 
-export const getUserProfile = () => fetchWebApi('v1/me');
-export const getTopArtists = (timeRange = 'long_term', limit = 50) =>
-  fetchWebApi(`v1/me/top/artists?time_range=${timeRange}&limit=${limit}`);
-export const getTopTracks = (timeRange = 'long_term', limit = 50) =>
-  fetchWebApi(`v1/me/top/tracks?time_range=${timeRange}&limit=${limit}`);
-export const getRecentlyPlayed = (limit = 50) =>
-  fetchWebApi(`v1/me/player/recently-played?limit=${limit}`);
-export const getCurrentlyPlaying = () => fetchWebApi('v1/me/player/currently-playing');
-export const getUserPlaylists = (limit = 50) => fetchWebApi(`v1/me/playlists?limit=${limit}`);
+export const getUserProfile = (userEmail?: string) => fetchWebApi('v1/me', userEmail);
+export const getTopArtists = (timeRange = 'long_term', limit = 50, userEmail?: string) =>
+  fetchWebApi(`v1/me/top/artists?time_range=${timeRange}&limit=${limit}`, userEmail);
+export const getTopTracks = (timeRange = 'long_term', limit = 50, userEmail?: string) =>
+  fetchWebApi(`v1/me/top/tracks?time_range=${timeRange}&limit=${limit}`, userEmail);
+export const getRecentlyPlayed = (limit = 50, userEmail?: string) =>
+  fetchWebApi(`v1/me/player/recently-played?limit=${limit}`, userEmail);
+export const getCurrentlyPlaying = (userEmail?: string) => fetchWebApi('v1/me/player/currently-playing', userEmail);
+export const getUserPlaylists = (limit = 50, userEmail?: string) => fetchWebApi(`v1/me/playlists?limit=${limit}`, userEmail);

@@ -21,7 +21,7 @@ import {
   SpotifyRecentlyPlayedItem,
 } from '../types';
 
-export const useSpotify = () => {
+export const useSpotify = (userEmail?: string) => {
   const [isSpotifyConnected, setIsSpotifyConnected] = useState<boolean>(false);
   const [isConnecting, setIsConnecting] = useState<boolean>(true);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
@@ -36,30 +36,47 @@ export const useSpotify = () => {
   const [timeRange, setTimeRange] = useState<'short_term' | 'medium_term' | 'long_term'>('long_term');
   const [isDataLoading, setIsDataLoading] = useState<boolean>(false);
 
-  // Check auth and handle callback
+  // Sync active user email to localStorage for redirect recovery
+  useEffect(() => {
+    if (userEmail) {
+      localStorage.setItem('beatstats_current_user_email', userEmail.toLowerCase().trim());
+    }
+  }, [userEmail]);
+
+  // Check auth and handle callback for this specific user
   useEffect(() => {
     const initAuth = async () => {
+      setIsConnecting(true);
       const params = new URLSearchParams(window.location.search);
       const code = params.get('code');
 
       if (code) {
         window.history.replaceState({}, document.title, window.location.pathname);
         try {
-          await getAccessToken(code);
+          await getAccessToken(code, userEmail);
           setIsSpotifyConnected(true);
         } catch (error: any) {
           console.error('Erro na troca de token do Spotify:', error);
           setSpotifyError(error.message || 'Falha ao autenticar com Spotify');
         }
       } else {
-        const token = await getValidToken();
+        const token = await getValidToken(userEmail);
         setIsSpotifyConnected(!!token);
+        if (!token) {
+          // Reset data if no active token for this user
+          setSpotifyUser(null);
+          setTopArtists([]);
+          setTopTracks([]);
+          setRecentlyPlayed([]);
+          setCurrentlyPlaying(null);
+          setPlaylists([]);
+        }
       }
       setIsConnecting(false);
     };
 
     initAuth();
-  }, []);
+  }, [userEmail]);
 
   const fetchLiveSpotifyData = useCallback(async () => {
     if (!isSpotifyConnected) return;
@@ -75,12 +92,12 @@ export const useSpotify = () => {
         playingData,
         playlistsData,
       ] = await Promise.all([
-        getUserProfile().catch(() => null),
-        getTopArtists(timeRange, 50).catch(() => ({ items: [] })),
-        getTopTracks(timeRange, 50).catch(() => ({ items: [] })),
-        getRecentlyPlayed(50).catch(() => ({ items: [] })),
-        getCurrentlyPlaying().catch(() => null),
-        getUserPlaylists(50).catch(() => ({ items: [] })),
+        getUserProfile(userEmail).catch(() => null),
+        getTopArtists(timeRange, 50, userEmail).catch(() => ({ items: [] })),
+        getTopTracks(timeRange, 50, userEmail).catch(() => ({ items: [] })),
+        getRecentlyPlayed(50, userEmail).catch(() => ({ items: [] })),
+        getCurrentlyPlaying(userEmail).catch(() => null),
+        getUserPlaylists(50, userEmail).catch(() => ({ items: [] })),
       ]);
 
       if (profileData) setSpotifyUser(profileData);
@@ -95,7 +112,7 @@ export const useSpotify = () => {
     } finally {
       setIsDataLoading(false);
     }
-  }, [isSpotifyConnected, timeRange]);
+  }, [isSpotifyConnected, timeRange, userEmail]);
 
   useEffect(() => {
     if (isSpotifyConnected) {
@@ -109,20 +126,21 @@ export const useSpotify = () => {
       setStoredSpotifyClientId(customClientId);
     }
     try {
-      await redirectToSpotifyAuth(customClientId);
+      await redirectToSpotifyAuth(userEmail, customClientId);
     } catch (e: any) {
       setSpotifyError(e.message || 'Falha ao iniciar autenticação com Spotify');
     }
   };
 
   const disconnectSpotify = () => {
-    logoutSpotify();
+    logoutSpotify(userEmail);
     setIsSpotifyConnected(false);
     setSpotifyUser(null);
     setTopArtists([]);
     setTopTracks([]);
     setRecentlyPlayed([]);
     setCurrentlyPlaying(null);
+    setPlaylists([]);
   };
 
   return {
