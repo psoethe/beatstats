@@ -1,0 +1,382 @@
+{
+  "tracks" : [ {
+    "artist" : "CORTIS",
+    "album" : "COLOR OUTSIDE THE LINES",
+    "track" : "FaSHioN",
+    "uri" : "spotify:track:4ecdsGz3Hg6TKPwQ0ZOdJz"
+  }, {
+    "artist" : "TWICE",
+    "album" : "Twicetagram",
+    "track" : "Look At Me",
+    "uri" : "spotify:track:6Jkcg39vqttJezD7nfqrSj"
+  }, {
+    "artist" : "The Goo Goo Dolls",
+    "album" : "Dizzy up the Girl",
+    "track" : "Iris",
+    "uri" : "spotify:track:6Qyc6fS4DsZjB2mRW9DsQs"
+  }, {
+    "artist" : "MEOVV",
+    "album" : "BURNING UP",
+    "track" : "BURNING UP",
+    "uri" : "spotify:track:3uqgFeHo4Jr1D3gVIHQlD7"
+  }, {
+    "artist" : "Hearts2Hearts",
+    "album" : "RUDE!",
+    "track" : "RUDE!",
+    "uri" : "spotify:track:2bAQsNqdo62T8akkIvWzGl"
+  }, {
+    "artist" : "Cyndi Lauper",
+    "album" : "True Colors: The Best Of Cyndi Lauper",
+    "track" : "Girls Just Want to Have Fun",
+    "uri" : "spotify:track:459EpH5UZgE6fMNPMLOgMF"
+  }, {
+    "artist" : "BLACKPINK",
+    "album" : "BORN PINK",
+    "track" : "Pink Venom",
+    "uri" : "spotify:track:5zwwW9Oq7ubSxoCGyW1nbY"
+  }, {
+    "artist" : "Ariana Grande",
+    "album" : "eternal sunshine",
+    "track" : "we can't be friends (wait for your love)",
+    "uri" : "spotify:track:46kspZSY3aKmwQe7O77fCC"
+  }, {
+    "artist" : "KATSEYE",
+    "album" : "Gnarly",
+    "track" : "Gnarly",
+    "uri" : "spotify:track:1j15Ar0qGDzIR0v3CQv3JL"
+  } ],
+  "albums" : [ {
+    "artist" : "Stray Kids",
+    "album" : "KARMA",
+    "uri" : "spotify:album:3wqskwruUGJHC4yHbo7nxc"
+  }, {
+    "artist" : "BLACKPINK",
+    "album" : "DEADLINE",
+    "uri" : "spotify:album:2SrWldMz9dfCB7kAGQNbcC"
+  }, {
+    "artist" : "ILLIT",
+    "album" : "NOT CUTE ANYMORE",
+    "uri" : "spotify:album:6wKHLrZczZAhDVsMEG4JXt"
+  }, {
+    "artist" : "ITZY",
+    "album" : "TUNNEL VISION (Remixes)",
+    "uri" : "spotify:album:2slS2QBQnl9E82UvO2Bo8E"
+  }, {
+    "artist" : "KATSEYE",
+    "album" : "Internet Girl",
+    "uri" : "spotify:album:4yQ0HUnygkBjf33hvA71MF"
+  }, {
+    "artist" : "BABYMONSTER",
+    "album" : "Ghost",
+    "uri" : "spotify:album:0aA475GObe8VCZvHRRloxK"
+  }, {
+    "artist" : "BTS",
+    "album" : "ARIRANG",
+    "uri" : "spotify:album:3ukkRHDHbN8tNRPKsGZR1h"
+  } ],
+  "shows" : [ ],
+  "episodes" : [ ],
+  "bannedTracks" : [ ],
+  "artists" : [ {
+    "name" : "2PM",
+    "uri" : "spotify:artist:5iRPbkcPmqAFFwDUj6ywVS"
+  }, {
+    "name" : "AC/DC",
+    "uri" : "spotify:artist:711MCceyCBcFnzjGY4Q7Un"
+  }, {
+    "name" : "ATEEZ",
+    "uri" : "spotify:artist:68KmkJeZGfwe1OUaivBa2L"
+  }, {
+    "name" : "Angel Noise",
+    "uri" : "spotify:artist:3TuhgPWdqMUNtxUuJSrfH5"
+  }, {
+    "name" : "Ariana Grande",
+    "uri" : "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR"
+  }, {
+    "name" : "BABYMONSTER",
+    "uri" : "spotify:artist:1SIocsqdEefUTE6XKGUiVS"
+  }, {
+    "name" : "BIBI",
+    "uri" : "spotify:artist:6UbmqUEgjLA6jAcXwbM1Z9"
+  }, {
+    "name" : "BLACKPINK",
+    "uri" : "spotify:artist:41MozSoPIsD1dJM0CLPjZF"
+  }, {
+    "name" : "BOYNEXTDOOR",
+    "uri" : "spotify:artist:4hnHLgMSOiqERWBL4jINP1"
+  }, {
+    "name" : "BTS",
+    "uri" : "spotify:artist:3Nrfpe0tUJi4K4DXYWgMUX"
+  }, {
+    "name" : "Baby DONT Cry",
+    "uri" : "spotify:artist:0dXoF2Q2WnVrhRT26SJNvs"
+  }, {
+    "name" : "Bang Chan",
+    "uri" : "spotify:artist:5jRUIqBSxmsBPNiEwKUjgZ"
+  }, {
+    "name" : "Billie Eilish",
+    "uri" : "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+  }, {
+    "name" : "Bruno Mars",
+    "uri" : "spotify:artist:0du5cEVh5yTK9QJze8zA0C"
+  }, {
+    "name" : "CHAERYEONG (ITZY)",
+    "uri" : "spotify:artist:73nPXEFs9tGCNmSOcqFHPs"
+  }, {
+    "name" : "CHAEYOUNG",
+    "uri" : "spotify:artist:0qtqWLjAkheu9MaVCQ3FXa"
+  }, {
+    "name" : "CHUU",
+    "uri" : "spotify:artist:1q86WVZhETqii5kKjEwYuB"
+  }, {
+    "name" : "CORTIS",
+    "uri" : "spotify:artist:1ebt9HnXdyYA6KgLXr1n4P"
+  }, {
+    "name" : "Cha Eun-Woo",
+    "uri" : "spotify:artist:76ea6HHCvHlTqhF9I0jtHU"
+  }, {
+    "name" : "Claudinho & Buchecha",
+    "uri" : "spotify:artist:4avp60HMZY8XgYe7VGi4SU"
+  }, {
+    "name" : "Coldplay",
+    "uri" : "spotify:artist:4gzpq5DPGxSnKTe4SA8HAU"
+  }, {
+    "name" : "DANIELLE",
+    "uri" : "spotify:artist:3BNhPTiKBExlE45mYeC9YY"
+  }, {
+    "name" : "Daniela Avanzini",
+    "uri" : "spotify:artist:4OtrER6OKuiMDrkHi4Iv9Y"
+  }, {
+    "name" : "ENHYPEN",
+    "uri" : "spotify:artist:5t5FqBwTcgKTaWmfEbwQY9"
+  }, {
+    "name" : "Evan Pak",
+    "uri" : "spotify:artist:4iyZCveqeAFlOd1E47ZHyC"
+  }, {
+    "name" : "Felix",
+    "uri" : "spotify:artist:4UIOuc84ExWojcUzFGtb8W"
+  }, {
+    "name" : "GISELLE",
+    "uri" : "spotify:artist:2P1id80CMwR5R5cwcyIIAi"
+  }, {
+    "name" : "HAN",
+    "uri" : "spotify:artist:46YvTuKiPBUu5KP9818J2F"
+  }, {
+    "name" : "HANNI",
+    "uri" : "spotify:artist:3pbMG0xBwe9vsd2PxmsaiF"
+  }, {
+    "name" : "HEART OF WOMAN",
+    "uri" : "spotify:artist:15JWJu72hLPUmB0L2RMusu"
+  }, {
+    "name" : "HUH YUNJIN",
+    "uri" : "spotify:artist:13yWtUnz63q5VIs5SwoMhy"
+  }, {
+    "name" : "Hannah Montana",
+    "uri" : "spotify:artist:7nU4hB040gTmHm45YYMvqc"
+  }, {
+    "name" : "Hyunjin",
+    "uri" : "spotify:artist:0ymFDpsRImjK673AGgFBcg"
+  }, {
+    "name" : "I.MET.U",
+    "uri" : "spotify:artist:0Fq4LQg3EJF2C0oLgZUIP4"
+  }, {
+    "name" : "I.N",
+    "uri" : "spotify:artist:1odvXbzhdzNajv6un9x5Mc"
+  }, {
+    "name" : "ICHILLIN'",
+    "uri" : "spotify:artist:5357DGet3KsoJNwVkV7qvy"
+  }, {
+    "name" : "ILLIT",
+    "uri" : "spotify:artist:36cgvBn0aadzOijnjjwqMN"
+  }, {
+    "name" : "ITZY",
+    "uri" : "spotify:artist:2KC9Qb60EaY0kW4eH68vr3"
+  }, {
+    "name" : "IU",
+    "uri" : "spotify:artist:3HqSLMAZ3g3d5poNaI7GOU"
+  }, {
+    "name" : "IVE",
+    "uri" : "spotify:artist:6RHTUrRF63xao58xh9FXYJ"
+  }, {
+    "name" : "IZ*ONE",
+    "uri" : "spotify:artist:5r1tUTxVSgvBHnoDuDODPH"
+  }, {
+    "name" : "Imagine Dragons",
+    "uri" : "spotify:artist:53XhwfbYqKCa1cC15pYq2q"
+  }, {
+    "name" : "JENNIE",
+    "uri" : "spotify:artist:250b0Wlc5Vk0CoUsaCY84M"
+  }, {
+    "name" : "JEONGYEON",
+    "uri" : "spotify:artist:4NJR8jQW2hcH8MiwGVRfT1"
+  }, {
+    "name" : "JIHYO",
+    "uri" : "spotify:artist:7F1iAHRYxR3MY7yAEuFqgL"
+  }, {
+    "name" : "JISOO",
+    "uri" : "spotify:artist:6UZ0ba50XreR4TM8u322gs"
+  }, {
+    "name" : "JO YURI",
+    "uri" : "spotify:artist:3LFFf4EpKn2krneZ9vozyz"
+  }, {
+    "name" : "Jung Kook",
+    "uri" : "spotify:artist:6HaGTQPmzraVmaVxvz6EUc"
+  }, {
+    "name" : "KATSEYE",
+    "uri" : "spotify:artist:3c0gDdb9lhnHGFtP4prQpn"
+  }, {
+    "name" : "KISS OF LIFE",
+    "uri" : "spotify:artist:4TEK9tIkcoxib4GxT3O4ky"
+  }, {
+    "name" : "KiiiKiii",
+    "uri" : "spotify:artist:63sat2XSMKdwKfqspmYQKP"
+  }, {
+    "name" : "LE SSERAFIM",
+    "uri" : "spotify:artist:4SpbR6yFEvexJuaBpgAU5p"
+  }, {
+    "name" : "LISA",
+    "uri" : "spotify:artist:5L1lO4eRHmJ7a0Q6csE5cT"
+  }, {
+    "name" : "LIZ (IVE)",
+    "uri" : "spotify:artist:2Cl2zS9nttS8xQeCp7zYT1"
+  }, {
+    "name" : "LNGSHOT",
+    "uri" : "spotify:artist:2F4oTJOWkcD1JaTeKEa9h6"
+  }, {
+    "name" : "MEOVV",
+    "uri" : "spotify:artist:08hHTBHlv0WRXWlyrsb6Kv"
+  }, {
+    "name" : "MINJU",
+    "uri" : "spotify:artist:7lhiEEAGZosFSF2tlSBBKO"
+  }, {
+    "name" : "MISAMO",
+    "uri" : "spotify:artist:0IwZVmMMGE7nNXS7vN9SIo"
+  }, {
+    "name" : "Megan SkiendieI",
+    "uri" : "spotify:artist:4qxZAgWBK5UgUsE9Zf5qV3"
+  }, {
+    "name" : "Michael Jackson",
+    "uri" : "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
+  }, {
+    "name" : "NAYEON",
+    "uri" : "spotify:artist:1VwDG9aBflQupaFNjUru9A"
+  }, {
+    "name" : "NMIXX",
+    "uri" : "spotify:artist:28ot3wh4oNmoFOdVajibBl"
+  }, {
+    "name" : "Natiruts",
+    "uri" : "spotify:artist:4PhdYoQGH8s1xee81dqQOO"
+  }, {
+    "name" : "NewJeans",
+    "uri" : "spotify:artist:6HvZYsbFfjnjFrWF950C9d"
+  }, {
+    "name" : "Olivia Rodrigo",
+    "uri" : "spotify:artist:1McMsnEElThX1knmY4oliG"
+  }, {
+    "name" : "Os Paralamas Do Sucesso",
+    "uri" : "spotify:artist:7EM9m7HOXxVgP9oEpDDv70"
+  }, {
+    "name" : "Pink Floyd",
+    "uri" : "spotify:artist:0k17h0D3J5VfsdmQ1iZtE9"
+  }, {
+    "name" : "REI (IVE)",
+    "uri" : "spotify:artist:5s3Ys2jpFZD2t4bivtHG2q"
+  }, {
+    "name" : "ROSÉ",
+    "uri" : "spotify:artist:3eVa5w3URK5duf6eyVDbu9"
+  }, {
+    "name" : "SANA",
+    "uri" : "spotify:artist:4a4zvpQq5Phxr12Pu8Akmm"
+  }, {
+    "name" : "SULLI",
+    "uri" : "spotify:artist:1OjcBoc71FwlzD5cJGx7xk"
+  }, {
+    "name" : "Sabrina Carpenter",
+    "uri" : "spotify:artist:74KM79TiuVKeVCqs8QtB0B"
+  }, {
+    "name" : "Seori",
+    "uri" : "spotify:artist:2bWTIIQP9zaVc55RaMGu7e"
+  }, {
+    "name" : "Seungmin",
+    "uri" : "spotify:artist:2nTtulf6WM0raQcIbzYJuf"
+  }, {
+    "name" : "Shawn Mendes",
+    "uri" : "spotify:artist:7n2wHs1TKAczGzO7Dd2rGr"
+  }, {
+    "name" : "Stray Kids",
+    "uri" : "spotify:artist:2dIgFjalVxs4ThymZ67YCE"
+  }, {
+    "name" : "TWICE",
+    "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+  }, {
+    "name" : "TZUYU",
+    "uri" : "spotify:artist:1arCVYXeStgCY2UazBNBLK"
+  }, {
+    "name" : "Taylor Swift",
+    "uri" : "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+  }, {
+    "name" : "Tim Maia",
+    "uri" : "spotify:artist:0jOs0wnXCu1bGGP7kh5uIu"
+  }, {
+    "name" : "UNCHILD",
+    "uri" : "spotify:artist:6TKweJiG4KC62YFs5KKUqu"
+  }, {
+    "name" : "UNIS",
+    "uri" : "spotify:artist:48xyu8QHo1IhsQZGlgNGYZ"
+  }, {
+    "name" : "V",
+    "uri" : "spotify:artist:3JsHnjpbhX4SnySpvpa9DK"
+  }, {
+    "name" : "WONHEE",
+    "uri" : "spotify:artist:0XyauZtJR5bmU3AAB5wC9U"
+  }, {
+    "name" : "Wonder Girls",
+    "uri" : "spotify:artist:3Cv2vi3WTl8VZOTdrBkKdM"
+  }, {
+    "name" : "XG",
+    "uri" : "spotify:artist:0LOK81e9H5lr61HlGGHqwA"
+  }, {
+    "name" : "XLOV",
+    "uri" : "spotify:artist:2b8aDRZFgUGWiUGchpWsyC"
+  }, {
+    "name" : "YEJI",
+    "uri" : "spotify:artist:3skli1w2n0nOZ4qkDbvV2m"
+  }, {
+    "name" : "YENA",
+    "uri" : "spotify:artist:49muoiIu4uea4PO8vueUNN"
+  }, {
+    "name" : "Yves",
+    "uri" : "spotify:artist:6AkddQqEu75QRbsCo12zce"
+  }, {
+    "name" : "aespa",
+    "uri" : "spotify:artist:6YVMFz59CuY7ngCxTxjpxE"
+  }, {
+    "name" : "hannah bahng",
+    "uri" : "spotify:artist:2oTW5kYNj4eIgp68Z5W4D9"
+  }, {
+    "name" : "i-dle",
+    "uri" : "spotify:artist:2AfmfGFbe0A0WsTYm0SDTx"
+  }, {
+    "name" : "izna",
+    "uri" : "spotify:artist:6EB5QC7lGAu7bSuWQ416d4"
+  }, {
+    "name" : "j-hope",
+    "uri" : "spotify:artist:0b1sIQumIAsNbqAoIClSpy"
+  }, {
+    "name" : "tripleS",
+    "uri" : "spotify:artist:5Z71xE9prhpHrqL5thVMyK"
+  } ],
+  "bannedArtists" : [ ],
+  "pageMatch" : [ ],
+  "kallaxes" : [ ],
+  "other" : [ ],
+  "parentAllowedTracks" : [ ],
+  "parentAllowedArtists" : [ ],
+  "podcastChapters" : [ ],
+  "parentAllowIntentTracks" : [ ],
+  "parentAllowIntentAlbums" : [ ],
+  "followedAuthors" : [ ],
+  "savedConcerts" : [ ],
+  "savedVenues" : [ ],
+  "savedConcertCampaigns" : [ ]
+}

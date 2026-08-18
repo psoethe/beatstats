@@ -1,0 +1,367 @@
+{
+  "stats" : [ {
+    "date" : "2026-08-10",
+    "streamCount" : 0,
+    "secondsPlayed" : 148,
+    "topTracks" : [ {
+      "name" : "BOOMPALA",
+      "streamCount" : 2,
+      "secondsPlayed" : 67
+    } ],
+    "topArtists" : [ {
+      "name" : "LE SSERAFIM",
+      "streamCount" : 2,
+      "secondsPlayed" : 67
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-08-03",
+    "streamCount" : 0,
+    "secondsPlayed" : 13499,
+    "topTracks" : [ {
+      "name" : "the cure",
+      "streamCount" : 10,
+      "secondsPlayed" : 3030
+    }, {
+      "name" : "deja vu",
+      "streamCount" : 5,
+      "secondsPlayed" : 973
+    }, {
+      "name" : "drop dead",
+      "streamCount" : 5,
+      "secondsPlayed" : 843
+    }, {
+      "name" : "traitor",
+      "streamCount" : 4,
+      "secondsPlayed" : 687
+    }, {
+      "name" : "Earrings",
+      "streamCount" : 4,
+      "secondsPlayed" : 518
+    }, {
+      "name" : "Ditto",
+      "streamCount" : 3,
+      "secondsPlayed" : 512
+    }, {
+      "name" : "drivers license",
+      "streamCount" : 2,
+      "secondsPlayed" : 404
+    }, {
+      "name" : "Self Aware",
+      "streamCount" : 2,
+      "secondsPlayed" : 361
+    }, {
+      "name" : "ICONIC BY MISTAKE",
+      "streamCount" : 2,
+      "secondsPlayed" : 355
+    }, {
+      "name" : "CHOOM",
+      "streamCount" : 2,
+      "secondsPlayed" : 335
+    } ],
+    "topArtists" : [ {
+      "name" : "Olivia Rodrigo",
+      "streamCount" : 31,
+      "secondsPlayed" : 6501
+    }, {
+      "name" : "NewJeans",
+      "streamCount" : 8,
+      "secondsPlayed" : 1227
+    }, {
+      "name" : "KATSEYE",
+      "streamCount" : 7,
+      "secondsPlayed" : 1154
+    }, {
+      "name" : "Malcolm Todd",
+      "streamCount" : 4,
+      "secondsPlayed" : 518
+    }, {
+      "name" : "ROSÉ",
+      "streamCount" : 3,
+      "secondsPlayed" : 271
+    }, {
+      "name" : "Temper City",
+      "streamCount" : 2,
+      "secondsPlayed" : 361
+    }, {
+      "name" : "LE SSERAFIM",
+      "streamCount" : 2,
+      "secondsPlayed" : 355
+    }, {
+      "name" : "Coldplay",
+      "streamCount" : 2,
+      "secondsPlayed" : 354
+    }, {
+      "name" : "BABYMONSTER",
+      "streamCount" : 2,
+      "secondsPlayed" : 335
+    }, {
+      "name" : "aespa",
+      "streamCount" : 2,
+      "secondsPlayed" : 317
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-27",
+    "streamCount" : 0,
+    "secondsPlayed" : 16528,
+    "topTracks" : [ {
+      "name" : "the cure",
+      "streamCount" : 9,
+      "secondsPlayed" : 2781
+    }, {
+      "name" : "BOOMPALA",
+      "streamCount" : 5,
+      "secondsPlayed" : 1102
+    }, {
+      "name" : "drop dead",
+      "streamCount" : 4,
+      "secondsPlayed" : 737
+    }, {
+      "name" : "Self Aware",
+      "streamCount" : 4,
+      "secondsPlayed" : 692
+    }, {
+      "name" : "LEMONADE",
+      "streamCount" : 3,
+      "secondsPlayed" : 641
+    }, {
+      "name" : "Supernova",
+      "streamCount" : 3,
+      "secondsPlayed" : 496
+    }, {
+      "name" : "FOREVER",
+      "streamCount" : 3,
+      "secondsPlayed" : 471
+    }, {
+      "name" : "WE GO UP",
+      "streamCount" : 3,
+      "secondsPlayed" : 577
+    }, {
+      "name" : "ICONIC BY MISTAKE",
+      "streamCount" : 3,
+      "secondsPlayed" : 418
+    }, {
+      "name" : "Animal",
+      "streamCount" : 2,
+      "secondsPlayed" : 316
+    } ],
+    "topArtists" : [ {
+      "name" : "Olivia Rodrigo",
+      "streamCount" : 18,
+      "secondsPlayed" : 4273
+    }, {
+      "name" : "BABYMONSTER",
+      "streamCount" : 18,
+      "secondsPlayed" : 2907
+    }, {
+      "name" : "aespa",
+      "streamCount" : 14,
+      "secondsPlayed" : 2481
+    }, {
+      "name" : "LE SSERAFIM",
+      "streamCount" : 8,
+      "secondsPlayed" : 1520
+    }, {
+      "name" : "KATSEYE",
+      "streamCount" : 7,
+      "secondsPlayed" : 1023
+    }, {
+      "name" : "Temper City",
+      "streamCount" : 4,
+      "secondsPlayed" : 692
+    }, {
+      "name" : "ILLIT",
+      "streamCount" : 5,
+      "secondsPlayed" : 642
+    }, {
+      "name" : "Oasis",
+      "streamCount" : 2,
+      "secondsPlayed" : 517
+    }, {
+      "name" : "Malcolm Todd",
+      "streamCount" : 2,
+      "secondsPlayed" : 303
+    }, {
+      "name" : "Fitz and The Tantrums",
+      "streamCount" : 2,
+      "secondsPlayed" : 259
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-20",
+    "streamCount" : 0,
+    "secondsPlayed" : 8467,
+    "topTracks" : [ {
+      "name" : "the cure",
+      "streamCount" : 5,
+      "secondsPlayed" : 1382
+    }, {
+      "name" : "drop dead",
+      "streamCount" : 3,
+      "secondsPlayed" : 674
+    }, {
+      "name" : "Self Aware",
+      "streamCount" : 3,
+      "secondsPlayed" : 410
+    }, {
+      "name" : "White Keys",
+      "streamCount" : 3,
+      "secondsPlayed" : 362
+    }, {
+      "name" : "Wonderwall - Remastered",
+      "streamCount" : 2,
+      "secondsPlayed" : 456
+    }, {
+      "name" : "ICONIC BY MISTAKE",
+      "streamCount" : 2,
+      "secondsPlayed" : 355
+    }, {
+      "name" : "HOT",
+      "streamCount" : 2,
+      "secondsPlayed" : 298
+    }, {
+      "name" : "Spicy",
+      "streamCount" : 1,
+      "secondsPlayed" : 269
+    }, {
+      "name" : "Armageddon",
+      "streamCount" : 1,
+      "secondsPlayed" : 261
+    }, {
+      "name" : "Cookie",
+      "streamCount" : 1,
+      "secondsPlayed" : 235
+    } ],
+    "topArtists" : [ {
+      "name" : "Olivia Rodrigo",
+      "streamCount" : 10,
+      "secondsPlayed" : 2395
+    }, {
+      "name" : "KATSEYE",
+      "streamCount" : 7,
+      "secondsPlayed" : 1112
+    }, {
+      "name" : "LE SSERAFIM",
+      "streamCount" : 4,
+      "secondsPlayed" : 654
+    }, {
+      "name" : "aespa",
+      "streamCount" : 3,
+      "secondsPlayed" : 601
+    }, {
+      "name" : "Temper City",
+      "streamCount" : 3,
+      "secondsPlayed" : 410
+    }, {
+      "name" : "Dominic Fike",
+      "streamCount" : 3,
+      "secondsPlayed" : 362
+    }, {
+      "name" : "ILLIT",
+      "streamCount" : 3,
+      "secondsPlayed" : 567
+    }, {
+      "name" : "Oasis",
+      "streamCount" : 2,
+      "secondsPlayed" : 456
+    }, {
+      "name" : "NewJeans",
+      "streamCount" : 2,
+      "secondsPlayed" : 400
+    }, {
+      "name" : "Justin Bieber",
+      "streamCount" : 2,
+      "secondsPlayed" : 256
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-13",
+    "streamCount" : 0,
+    "secondsPlayed" : 8766,
+    "topTracks" : [ {
+      "name" : "the cure",
+      "streamCount" : 5,
+      "secondsPlayed" : 1365
+    }, {
+      "name" : "drop dead",
+      "streamCount" : 4,
+      "secondsPlayed" : 674
+    }, {
+      "name" : "honeybee",
+      "streamCount" : 3,
+      "secondsPlayed" : 539
+    }, {
+      "name" : "CHOOM",
+      "streamCount" : 3,
+      "secondsPlayed" : 536
+    }, {
+      "name" : "SUGAR HONEY ICE TEA",
+      "streamCount" : 3,
+      "secondsPlayed" : 498
+    }, {
+      "name" : "traitor",
+      "streamCount" : 2,
+      "secondsPlayed" : 413
+    }, {
+      "name" : "PSYCHO",
+      "streamCount" : 2,
+      "secondsPlayed" : 390
+    }, {
+      "name" : "DRIP",
+      "streamCount" : 2,
+      "secondsPlayed" : 361
+    }, {
+      "name" : "SHEESH",
+      "streamCount" : 2,
+      "secondsPlayed" : 340
+    }, {
+      "name" : "WE GO UP",
+      "streamCount" : 2,
+      "secondsPlayed" : 303
+    } ],
+    "topArtists" : [ {
+      "name" : "BABYMONSTER",
+      "streamCount" : 19,
+      "secondsPlayed" : 3291
+    }, {
+      "name" : "Olivia Rodrigo",
+      "streamCount" : 15,
+      "secondsPlayed" : 3208
+    }, {
+      "name" : "aespa",
+      "streamCount" : 6,
+      "secondsPlayed" : 434
+    }, {
+      "name" : "Coldplay",
+      "streamCount" : 4,
+      "secondsPlayed" : 629
+    }, {
+      "name" : "KATSEYE",
+      "streamCount" : 4,
+      "secondsPlayed" : 582
+    }, {
+      "name" : "G-DRAGON",
+      "streamCount" : 2,
+      "secondsPlayed" : 200
+    }, {
+      "name" : "Temper City",
+      "streamCount" : 1,
+      "secondsPlayed" : 180
+    }, {
+      "name" : "LE SSERAFIM",
+      "streamCount" : 1,
+      "secondsPlayed" : 177
+    }, {
+      "name" : "Malcolm Todd",
+      "streamCount" : 1,
+      "secondsPlayed" : 98
+    }, {
+      "name" : "She & Him",
+      "streamCount" : 1,
+      "secondsPlayed" : 54
+    } ],
+    "topGenres" : [ ]
+  } ],
+  "highlights" : [ ]
+}

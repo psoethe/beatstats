@@ -1,0 +1,1949 @@
+{
+  "stats" : [ {
+    "date" : "2026-08-10",
+    "streamCount" : 0,
+    "secondsPlayed" : 31227,
+    "topTracks" : [ {
+      "name" : "Starstruck (with Biff Byford)",
+      "streamCount" : 2,
+      "secondsPlayed" : 245
+    }, {
+      "name" : "The Wall",
+      "streamCount" : 2,
+      "secondsPlayed" : 83
+    }, {
+      "name" : "Atom Heart Mother - Live in Montreux, 21 November 1970",
+      "streamCount" : 1,
+      "secondsPlayed" : 1076
+    }, {
+      "name" : "Help Me",
+      "streamCount" : 1,
+      "secondsPlayed" : 589
+    }, {
+      "name" : "Hummingbird",
+      "streamCount" : 1,
+      "secondsPlayed" : 547
+    }, {
+      "name" : "Ball and Chain",
+      "streamCount" : 1,
+      "secondsPlayed" : 535
+    }, {
+      "name" : "Master Of Puppets - Live",
+      "streamCount" : 1,
+      "secondsPlayed" : 505
+    }, {
+      "name" : "Slow Blues in C - Live in Frankfurt",
+      "streamCount" : 1,
+      "secondsPlayed" : 494
+    }, {
+      "name" : "Stormy Monday - Live",
+      "streamCount" : 1,
+      "secondsPlayed" : 489
+    }, {
+      "name" : "Where The Streets Have No Name - Remastered",
+      "streamCount" : 1,
+      "secondsPlayed" : 486
+    } ],
+    "topArtists" : [ {
+      "name" : "U2",
+      "streamCount" : 10,
+      "secondsPlayed" : 2815
+    }, {
+      "name" : "Sepultura",
+      "streamCount" : 7,
+      "secondsPlayed" : 1886
+    }, {
+      "name" : "Jimi Hendrix",
+      "streamCount" : 5,
+      "secondsPlayed" : 1720
+    }, {
+      "name" : "Judas Priest",
+      "streamCount" : 5,
+      "secondsPlayed" : 1101
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 4,
+      "secondsPlayed" : 1744
+    }, {
+      "name" : "Pantera",
+      "streamCount" : 4,
+      "secondsPlayed" : 1013
+    }, {
+      "name" : "Roy Buchanan",
+      "streamCount" : 3,
+      "secondsPlayed" : 1358
+    }, {
+      "name" : "Motörhead",
+      "streamCount" : 3,
+      "secondsPlayed" : 559
+    }, {
+      "name" : "Yes",
+      "streamCount" : 3,
+      "secondsPlayed" : 537
+    }, {
+      "name" : "Ten Years After",
+      "streamCount" : 2,
+      "secondsPlayed" : 1083
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-08-03",
+    "streamCount" : 0,
+    "secondsPlayed" : 65265,
+    "topTracks" : [ {
+      "name" : "Stop Whispering",
+      "streamCount" : 3,
+      "secondsPlayed" : 652
+    }, {
+      "name" : "Breathe (In the Air)",
+      "streamCount" : 3,
+      "secondsPlayed" : 508
+    }, {
+      "name" : "Anyone Can Play Guitar",
+      "streamCount" : 3,
+      "secondsPlayed" : 436
+    }, {
+      "name" : "Papa Ain't Salty",
+      "streamCount" : 3,
+      "secondsPlayed" : 335
+    }, {
+      "name" : "Time",
+      "streamCount" : 2,
+      "secondsPlayed" : 845
+    }, {
+      "name" : "Agony of Defeat",
+      "streamCount" : 2,
+      "secondsPlayed" : 703
+    }, {
+      "name" : "Call It Stormy Monday",
+      "streamCount" : 2,
+      "secondsPlayed" : 630
+    }, {
+      "name" : "Blue Monday",
+      "streamCount" : 2,
+      "secondsPlayed" : 516
+    }, {
+      "name" : "Creep",
+      "streamCount" : 2,
+      "secondsPlayed" : 477
+    }, {
+      "name" : "Country Road",
+      "streamCount" : 2,
+      "secondsPlayed" : 437
+    } ],
+    "topArtists" : [ {
+      "name" : "Eric Clapton",
+      "streamCount" : 36,
+      "secondsPlayed" : 9232
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 26,
+      "secondsPlayed" : 7270
+    }, {
+      "name" : "Radiohead",
+      "streamCount" : 24,
+      "secondsPlayed" : 4280
+    }, {
+      "name" : "Muddy Waters",
+      "streamCount" : 17,
+      "secondsPlayed" : 3274
+    }, {
+      "name" : "Howlin' Wolf",
+      "streamCount" : 17,
+      "secondsPlayed" : 3248
+    }, {
+      "name" : "John Lee Hooker",
+      "streamCount" : 14,
+      "secondsPlayed" : 2634
+    }, {
+      "name" : "Sepultura",
+      "streamCount" : 12,
+      "secondsPlayed" : 3140
+    }, {
+      "name" : "T-Bone Walker",
+      "streamCount" : 9,
+      "secondsPlayed" : 1638
+    }, {
+      "name" : "Oasis",
+      "streamCount" : 7,
+      "secondsPlayed" : 1919
+    }, {
+      "name" : "Big Walter Horton",
+      "streamCount" : 7,
+      "secondsPlayed" : 1542
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-27",
+    "streamCount" : 0,
+    "secondsPlayed" : 61573,
+    "topTracks" : [ {
+      "name" : "Boogie Chillen'",
+      "streamCount" : 4,
+      "secondsPlayed" : 649
+    }, {
+      "name" : "Echoes - Live",
+      "streamCount" : 3,
+      "secondsPlayed" : 1417
+    }, {
+      "name" : "Heaven and Hell - 2008 Remaster",
+      "streamCount" : 3,
+      "secondsPlayed" : 855
+    }, {
+      "name" : "Fabienk",
+      "streamCount" : 3,
+      "secondsPlayed" : 691
+    }, {
+      "name" : "Orgasmatron",
+      "streamCount" : 3,
+      "secondsPlayed" : 487
+    }, {
+      "name" : "Mean Old World",
+      "streamCount" : 3,
+      "secondsPlayed" : 406
+    }, {
+      "name" : "Louisiana Blues",
+      "streamCount" : 3,
+      "secondsPlayed" : 392
+    }, {
+      "name" : "Come On In My Kitchen",
+      "streamCount" : 3,
+      "secondsPlayed" : 344
+    }, {
+      "name" : "The Sky Is Crying",
+      "streamCount" : 3,
+      "secondsPlayed" : 333
+    }, {
+      "name" : "Orion",
+      "streamCount" : 2,
+      "secondsPlayed" : 915
+    } ],
+    "topArtists" : [ {
+      "name" : "Sepultura",
+      "streamCount" : 14,
+      "secondsPlayed" : 3164
+    }, {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 12,
+      "secondsPlayed" : 3083
+    }, {
+      "name" : "Muddy Waters",
+      "streamCount" : 12,
+      "secondsPlayed" : 2259
+    }, {
+      "name" : "John Lee Hooker",
+      "streamCount" : 12,
+      "secondsPlayed" : 1964
+    }, {
+      "name" : "Howlin' Wolf",
+      "streamCount" : 11,
+      "secondsPlayed" : 1612
+    }, {
+      "name" : "Eric Clapton",
+      "streamCount" : 10,
+      "secondsPlayed" : 2494
+    }, {
+      "name" : "Judas Priest",
+      "streamCount" : 9,
+      "secondsPlayed" : 2355
+    }, {
+      "name" : "Robert Johnson",
+      "streamCount" : 9,
+      "secondsPlayed" : 1350
+    }, {
+      "name" : "T-Bone Walker",
+      "streamCount" : 8,
+      "secondsPlayed" : 1391
+    }, {
+      "name" : "Metallica",
+      "streamCount" : 7,
+      "secondsPlayed" : 2211
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-20",
+    "streamCount" : 0,
+    "secondsPlayed" : 41794,
+    "topTracks" : [ {
+      "name" : "Sarniezz",
+      "streamCount" : 5,
+      "secondsPlayed" : 825
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 3,
+      "secondsPlayed" : 767
+    }, {
+      "name" : "Mata Zyklek",
+      "streamCount" : 3,
+      "secondsPlayed" : 741
+    }, {
+      "name" : "Green Fuzz",
+      "streamCount" : 2,
+      "secondsPlayed" : 861
+    }, {
+      "name" : "Firth of Fifth - 2007 Stereo Mix",
+      "streamCount" : 2,
+      "secondsPlayed" : 570
+    }, {
+      "name" : "Dusklight Movement",
+      "streamCount" : 2,
+      "secondsPlayed" : 471
+    }, {
+      "name" : "Yor Zarad",
+      "streamCount" : 2,
+      "secondsPlayed" : 389
+    }, {
+      "name" : "Tamebsz",
+      "streamCount" : 2,
+      "secondsPlayed" : 378
+    }, {
+      "name" : "Taxidermia",
+      "streamCount" : 2,
+      "secondsPlayed" : 378
+    }, {
+      "name" : "Angor",
+      "streamCount" : 2,
+      "secondsPlayed" : 377
+    } ],
+    "topArtists" : [ {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 20,
+      "secondsPlayed" : 3988
+    }, {
+      "name" : "Jon Batiste",
+      "streamCount" : 12,
+      "secondsPlayed" : 2213
+    }, {
+      "name" : "Sepultura",
+      "streamCount" : 8,
+      "secondsPlayed" : 2115
+    }, {
+      "name" : "Naked Giants",
+      "streamCount" : 8,
+      "secondsPlayed" : 1642
+    }, {
+      "name" : "Testament",
+      "streamCount" : 6,
+      "secondsPlayed" : 1560
+    }, {
+      "name" : "Accept",
+      "streamCount" : 6,
+      "secondsPlayed" : 1293
+    }, {
+      "name" : "Nektar",
+      "streamCount" : 6,
+      "secondsPlayed" : 899
+    }, {
+      "name" : "Anthrax",
+      "streamCount" : 5,
+      "secondsPlayed" : 1189
+    }, {
+      "name" : "Papangu",
+      "streamCount" : 5,
+      "secondsPlayed" : 1075
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 4,
+      "secondsPlayed" : 1633
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07-13",
+    "streamCount" : 0,
+    "secondsPlayed" : 69555,
+    "topTracks" : [ {
+      "name" : "Green Fuzz",
+      "streamCount" : 8,
+      "secondsPlayed" : 2321
+    }, {
+      "name" : "Waldstein Wobble",
+      "streamCount" : 5,
+      "secondsPlayed" : 1339
+    }, {
+      "name" : "Turns Blue",
+      "streamCount" : 4,
+      "secondsPlayed" : 1001
+    }, {
+      "name" : "Rough And Twisted",
+      "streamCount" : 4,
+      "secondsPlayed" : 916
+    }, {
+      "name" : "Slow Dance II",
+      "streamCount" : 4,
+      "secondsPlayed" : 887
+    }, {
+      "name" : "Für Elise - Reverie",
+      "streamCount" : 3,
+      "secondsPlayed" : 923
+    }, {
+      "name" : "The Only Horse in Town",
+      "streamCount" : 3,
+      "secondsPlayed" : 845
+    }, {
+      "name" : "Never Wanna Lose You",
+      "streamCount" : 3,
+      "secondsPlayed" : 811
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 3,
+      "secondsPlayed" : 772
+    }, {
+      "name" : "In The Stars",
+      "streamCount" : 3,
+      "secondsPlayed" : 726
+    } ],
+    "topArtists" : [ {
+      "name" : "The Rolling Stones",
+      "streamCount" : 51,
+      "secondsPlayed" : 14071
+    }, {
+      "name" : "Naked Giants",
+      "streamCount" : 39,
+      "secondsPlayed" : 8476
+    }, {
+      "name" : "Jon Batiste",
+      "streamCount" : 31,
+      "secondsPlayed" : 6395
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 30,
+      "secondsPlayed" : 7100
+    }, {
+      "name" : "Marvin Gaye",
+      "streamCount" : 21,
+      "secondsPlayed" : 4635
+    }, {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 14,
+      "secondsPlayed" : 3346
+    }, {
+      "name" : "Roger Waters",
+      "streamCount" : 13,
+      "secondsPlayed" : 2820
+    }, {
+      "name" : "Muddy Waters",
+      "streamCount" : 6,
+      "secondsPlayed" : 2678
+    }, {
+      "name" : "Death",
+      "streamCount" : 6,
+      "secondsPlayed" : 1236
+    }, {
+      "name" : "Accept",
+      "streamCount" : 5,
+      "secondsPlayed" : 1193
+    } ],
+    "topGenres" : [ ]
+  }, {
+    "date" : "2026-07",
+    "streamCount" : 1253,
+    "secondsPlayed" : 314638,
+    "topTracks" : [ {
+      "name" : "Green Fuzz",
+      "streamCount" : 10,
+      "secondsPlayed" : 3181
+    }, {
+      "name" : "Mata Zyklek",
+      "streamCount" : 9,
+      "secondsPlayed" : 2470
+    }, {
+      "name" : "Sarniezz",
+      "streamCount" : 9,
+      "secondsPlayed" : 1798
+    }, {
+      "name" : "L'Aberek",
+      "streamCount" : 7,
+      "secondsPlayed" : 1093
+    }, {
+      "name" : "Dogs",
+      "streamCount" : 6,
+      "secondsPlayed" : 3621
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 6,
+      "secondsPlayed" : 1537
+    }, {
+      "name" : "Angor",
+      "streamCount" : 6,
+      "secondsPlayed" : 1520
+    }, {
+      "name" : "Waldstein Wobble",
+      "streamCount" : 6,
+      "secondsPlayed" : 1427
+    }, {
+      "name" : "Utzp",
+      "streamCount" : 6,
+      "secondsPlayed" : 1260
+    }, {
+      "name" : "Sherpa",
+      "streamCount" : 5,
+      "secondsPlayed" : 1367
+    } ],
+    "topArtists" : [ {
+      "name" : "Pink Floyd",
+      "streamCount" : 102,
+      "secondsPlayed" : 41305
+    }, {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 63,
+      "secondsPlayed" : 14610
+    }, {
+      "name" : "The Rolling Stones",
+      "streamCount" : 61,
+      "secondsPlayed" : 16836
+    }, {
+      "name" : "Naked Giants",
+      "streamCount" : 47,
+      "secondsPlayed" : 10100
+    }, {
+      "name" : "Jon Batiste",
+      "streamCount" : 43,
+      "secondsPlayed" : 8591
+    }, {
+      "name" : "Titãs",
+      "streamCount" : 39,
+      "secondsPlayed" : 7566
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 32,
+      "secondsPlayed" : 7899
+    }, {
+      "name" : "Sepultura",
+      "streamCount" : 25,
+      "secondsPlayed" : 5960
+    }, {
+      "name" : "Marvin Gaye",
+      "streamCount" : 21,
+      "secondsPlayed" : 4625
+    }, {
+      "name" : "Barão Vermelho",
+      "streamCount" : 21,
+      "secondsPlayed" : 3815
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ ]
+  }, {
+    "date" : "2026-06",
+    "streamCount" : 1048,
+    "secondsPlayed" : 276215,
+    "topTracks" : [ {
+      "name" : "Fabienk",
+      "streamCount" : 16,
+      "secondsPlayed" : 4692
+    }, {
+      "name" : "Utzp",
+      "streamCount" : 13,
+      "secondsPlayed" : 3971
+    }, {
+      "name" : "Sherpa",
+      "streamCount" : 13,
+      "secondsPlayed" : 2720
+    }, {
+      "name" : "Tamebsz",
+      "streamCount" : 12,
+      "secondsPlayed" : 4668
+    }, {
+      "name" : "Yor Zarad",
+      "streamCount" : 12,
+      "secondsPlayed" : 3888
+    }, {
+      "name" : "Mata Zyklek",
+      "streamCount" : 11,
+      "secondsPlayed" : 3730
+    }, {
+      "name" : "Angor",
+      "streamCount" : 11,
+      "secondsPlayed" : 3648
+    }, {
+      "name" : "Sahardnieh",
+      "streamCount" : 11,
+      "secondsPlayed" : 2501
+    }, {
+      "name" : "Sarniezz",
+      "streamCount" : 10,
+      "secondsPlayed" : 2746
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 10,
+      "secondsPlayed" : 2492
+    } ],
+    "topArtists" : [ {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 138,
+      "secondsPlayed" : 39454
+    }, {
+      "name" : "Rush",
+      "streamCount" : 63,
+      "secondsPlayed" : 20835
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 55,
+      "secondsPlayed" : 20948
+    }, {
+      "name" : "Slayer",
+      "streamCount" : 45,
+      "secondsPlayed" : 9614
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 39,
+      "secondsPlayed" : 10399
+    }, {
+      "name" : "Black Sabbath",
+      "streamCount" : 26,
+      "secondsPlayed" : 7046
+    }, {
+      "name" : "Megadeth",
+      "streamCount" : 26,
+      "secondsPlayed" : 5278
+    }, {
+      "name" : "Ramones",
+      "streamCount" : 25,
+      "secondsPlayed" : 3472
+    }, {
+      "name" : "Radiohead",
+      "streamCount" : 22,
+      "secondsPlayed" : 4753
+    }, {
+      "name" : "Tears For Fears",
+      "streamCount" : 19,
+      "secondsPlayed" : 5140
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ ]
+  }, {
+    "date" : "2026-05",
+    "streamCount" : 1180,
+    "secondsPlayed" : 294670,
+    "topTracks" : [ {
+      "name" : "Sherpa",
+      "streamCount" : 13,
+      "secondsPlayed" : 3337
+    }, {
+      "name" : "Yor Zarad",
+      "streamCount" : 12,
+      "secondsPlayed" : 4280
+    }, {
+      "name" : "Utzp",
+      "streamCount" : 12,
+      "secondsPlayed" : 3497
+    }, {
+      "name" : "Mata Zyklek",
+      "streamCount" : 12,
+      "secondsPlayed" : 3437
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 12,
+      "secondsPlayed" : 3307
+    }, {
+      "name" : "Sahardnieh",
+      "streamCount" : 11,
+      "secondsPlayed" : 2052
+    }, {
+      "name" : "Fabienk",
+      "streamCount" : 9,
+      "secondsPlayed" : 3338
+    }, {
+      "name" : "Sarniezz",
+      "streamCount" : 9,
+      "secondsPlayed" : 2182
+    }, {
+      "name" : "Tamebsz",
+      "streamCount" : 8,
+      "secondsPlayed" : 3364
+    }, {
+      "name" : "L'Aberek",
+      "streamCount" : 8,
+      "secondsPlayed" : 1735
+    } ],
+    "topArtists" : [ {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 121,
+      "secondsPlayed" : 34192
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 86,
+      "secondsPlayed" : 25259
+    }, {
+      "name" : "R.E.M.",
+      "streamCount" : 54,
+      "secondsPlayed" : 12670
+    }, {
+      "name" : "Zé Ramalho",
+      "streamCount" : 51,
+      "secondsPlayed" : 12151
+    }, {
+      "name" : "Titãs",
+      "streamCount" : 44,
+      "secondsPlayed" : 6896
+    }, {
+      "name" : "Mark Knopfler",
+      "streamCount" : 47,
+      "secondsPlayed" : 10502
+    }, {
+      "name" : "Rush",
+      "streamCount" : 26,
+      "secondsPlayed" : 7454
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 24,
+      "secondsPlayed" : 7027
+    }, {
+      "name" : "Dire Straits",
+      "streamCount" : 23,
+      "secondsPlayed" : 5586
+    }, {
+      "name" : "Ratos De Porão",
+      "streamCount" : 23,
+      "secondsPlayed" : 2605
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ ]
+  }, {
+    "date" : "2026-04",
+    "streamCount" : 1553,
+    "secondsPlayed" : 395519,
+    "topTracks" : [ {
+      "name" : "Fabienk",
+      "streamCount" : 27,
+      "secondsPlayed" : 10280
+    }, {
+      "name" : "Mata Zyklek",
+      "streamCount" : 25,
+      "secondsPlayed" : 8189
+    }, {
+      "name" : "Utzp",
+      "streamCount" : 24,
+      "secondsPlayed" : 8618
+    }, {
+      "name" : "Sherpa",
+      "streamCount" : 24,
+      "secondsPlayed" : 8520
+    }, {
+      "name" : "Yor Zarad",
+      "streamCount" : 22,
+      "secondsPlayed" : 8070
+    }, {
+      "name" : "Sarniezz",
+      "streamCount" : 20,
+      "secondsPlayed" : 4541
+    }, {
+      "name" : "Tohogd",
+      "streamCount" : 19,
+      "secondsPlayed" : 4395
+    }, {
+      "name" : "Sahardnieh",
+      "streamCount" : 19,
+      "secondsPlayed" : 3996
+    }, {
+      "name" : "Tamebsz",
+      "streamCount" : 18,
+      "secondsPlayed" : 8567
+    }, {
+      "name" : "Ababa Hotel",
+      "streamCount" : 16,
+      "secondsPlayed" : 5455
+    } ],
+    "topArtists" : [ {
+      "name" : "Angine de Poitrine",
+      "streamCount" : 243,
+      "secondsPlayed" : 79197
+    }, {
+      "name" : "Chico Buarque",
+      "streamCount" : 71,
+      "secondsPlayed" : 13434
+    }, {
+      "name" : "Mark Knopfler",
+      "streamCount" : 75,
+      "secondsPlayed" : 15552
+    }, {
+      "name" : "Nightwish",
+      "streamCount" : 41,
+      "secondsPlayed" : 18274
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 37,
+      "secondsPlayed" : 10848
+    }, {
+      "name" : "Dire Straits",
+      "streamCount" : 34,
+      "secondsPlayed" : 7932
+    }, {
+      "name" : "Ghost",
+      "streamCount" : 24,
+      "secondsPlayed" : 5424
+    }, {
+      "name" : "Legião Urbana",
+      "streamCount" : 23,
+      "secondsPlayed" : 6838
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 23,
+      "secondsPlayed" : 6192
+    }, {
+      "name" : "High Fade",
+      "streamCount" : 23,
+      "secondsPlayed" : 3970
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ ]
+  }, {
+    "date" : "2026-03",
+    "streamCount" : 1055,
+    "secondsPlayed" : 270672,
+    "topTracks" : [ {
+      "name" : "Beryl",
+      "streamCount" : 7,
+      "secondsPlayed" : 992
+    }, {
+      "name" : "The Trawlerman's Song",
+      "streamCount" : 6,
+      "secondsPlayed" : 1201
+    }, {
+      "name" : "Murder - 2006 Remaster",
+      "streamCount" : 5,
+      "secondsPlayed" : 1195
+    }, {
+      "name" : "There's No Way out of Here - 2006 Remaster",
+      "streamCount" : 5,
+      "secondsPlayed" : 1185
+    }, {
+      "name" : "Nude Disintegrating Parachutist Woman - 2013 Remaster",
+      "streamCount" : 5,
+      "secondsPlayed" : 1115
+    }, {
+      "name" : "Go, Love",
+      "streamCount" : 5,
+      "secondsPlayed" : 878
+    }, {
+      "name" : "The Last Laugh",
+      "streamCount" : 5,
+      "secondsPlayed" : 695
+    }, {
+      "name" : "Someday",
+      "streamCount" : 5,
+      "secondsPlayed" : 685
+    }, {
+      "name" : "On Every Street",
+      "streamCount" : 4,
+      "secondsPlayed" : 904
+    }, {
+      "name" : "Yes, I Have Ghosts",
+      "streamCount" : 4,
+      "secondsPlayed" : 887
+    } ],
+    "topArtists" : [ {
+      "name" : "Mark Knopfler",
+      "streamCount" : 85,
+      "secondsPlayed" : 18029
+    }, {
+      "name" : "Dire Straits",
+      "streamCount" : 67,
+      "secondsPlayed" : 19989
+    }, {
+      "name" : "AC/DC",
+      "streamCount" : 64,
+      "secondsPlayed" : 15026
+    }, {
+      "name" : "Bob Marley & The Wailers",
+      "streamCount" : 56,
+      "secondsPlayed" : 13251
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 41,
+      "secondsPlayed" : 14868
+    }, {
+      "name" : "Eric Clapton",
+      "streamCount" : 39,
+      "secondsPlayed" : 8134
+    }, {
+      "name" : "David Gilmour",
+      "streamCount" : 35,
+      "secondsPlayed" : 9753
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 28,
+      "secondsPlayed" : 9510
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 25,
+      "secondsPlayed" : 7216
+    }, {
+      "name" : "Roger Waters",
+      "streamCount" : 23,
+      "secondsPlayed" : 7421
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ ]
+  }, {
+    "date" : "2026-02",
+    "streamCount" : 1133,
+    "secondsPlayed" : 271010,
+    "topTracks" : [ {
+      "name" : "If You Want Blood (You've Got It)",
+      "streamCount" : 6,
+      "secondsPlayed" : 1454
+    }, {
+      "name" : "Sin City",
+      "streamCount" : 5,
+      "secondsPlayed" : 1425
+    }, {
+      "name" : "Back In Black",
+      "streamCount" : 5,
+      "secondsPlayed" : 1280
+    }, {
+      "name" : "Have a Drink on Me",
+      "streamCount" : 5,
+      "secondsPlayed" : 1195
+    }, {
+      "name" : "Hells Bells",
+      "streamCount" : 5,
+      "secondsPlayed" : 1089
+    }, {
+      "name" : "Demon Fire",
+      "streamCount" : 5,
+      "secondsPlayed" : 1050
+    }, {
+      "name" : "Shot Down in Flames",
+      "streamCount" : 5,
+      "secondsPlayed" : 1011
+    }, {
+      "name" : "Você E Eu, Eu E Você (Juntinhos)",
+      "streamCount" : 4,
+      "secondsPlayed" : 1168
+    }, {
+      "name" : "O Mundo É Um Moinho",
+      "streamCount" : 4,
+      "secondsPlayed" : 933
+    }, {
+      "name" : "Shoot to Thrill",
+      "streamCount" : 4,
+      "secondsPlayed" : 1272
+    } ],
+    "topArtists" : [ {
+      "name" : "AC/DC",
+      "streamCount" : 93,
+      "secondsPlayed" : 22092
+    }, {
+      "name" : "FAKE MUSIC",
+      "streamCount" : 65,
+      "secondsPlayed" : 15301
+    }, {
+      "name" : "Rush",
+      "streamCount" : 38,
+      "secondsPlayed" : 10981
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 36,
+      "secondsPlayed" : 11898
+    }, {
+      "name" : "Megadeth",
+      "streamCount" : 28,
+      "secondsPlayed" : 6167
+    }, {
+      "name" : "Tim Maia",
+      "streamCount" : 23,
+      "secondsPlayed" : 4389
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 21,
+      "secondsPlayed" : 6617
+    }, {
+      "name" : "Tears For Fears",
+      "streamCount" : 20,
+      "secondsPlayed" : 5309
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 20,
+      "secondsPlayed" : 5207
+    }, {
+      "name" : "The Beatles",
+      "streamCount" : 18,
+      "secondsPlayed" : 3625
+    } ],
+    "topGenres" : [ ],
+    "timeOfDayStats" : [ {
+      "period" : "early_morning",
+      "secondsPlayed" : 30189
+    }, {
+      "period" : "late_evening",
+      "secondsPlayed" : 9292
+    }, {
+      "period" : "afternoon",
+      "secondsPlayed" : 58504
+    }, {
+      "period" : "morning",
+      "secondsPlayed" : 15153
+    }, {
+      "period" : "evening",
+      "secondsPlayed" : 51585
+    } ]
+  }, {
+    "date" : "2026-01",
+    "streamCount" : 953,
+    "secondsPlayed" : 234882,
+    "topTracks" : [ {
+      "name" : "Brain Damage",
+      "streamCount" : 7,
+      "secondsPlayed" : 1430
+    }, {
+      "name" : "Firth of Fifth - 2007 Stereo Mix",
+      "streamCount" : 6,
+      "secondsPlayed" : 1832
+    }, {
+      "name" : "Love to Love - 2008 Remaster",
+      "streamCount" : 6,
+      "secondsPlayed" : 2166
+    }, {
+      "name" : "No Decoder",
+      "streamCount" : 6,
+      "secondsPlayed" : 1274
+    }, {
+      "name" : "Locomotive Breath",
+      "streamCount" : 5,
+      "secondsPlayed" : 1330
+    }, {
+      "name" : "Lazy - Remastered 2012",
+      "streamCount" : 5,
+      "secondsPlayed" : 1347
+    }, {
+      "name" : "Follow You Follow Me - 2007 Remaster",
+      "streamCount" : 5,
+      "secondsPlayed" : 1195
+    }, {
+      "name" : "It's Late - Remastered 2011",
+      "streamCount" : 5,
+      "secondsPlayed" : 1160
+    }, {
+      "name" : "The Carpet Crawlers - 2007 Stereo Mix",
+      "streamCount" : 4,
+      "secondsPlayed" : 1256
+    }, {
+      "name" : "Another Day",
+      "streamCount" : 4,
+      "secondsPlayed" : 1052
+    } ],
+    "topArtists" : [ {
+      "name" : "Pink Floyd",
+      "streamCount" : 53,
+      "secondsPlayed" : 16307
+    }, {
+      "name" : "Genesis",
+      "streamCount" : 32,
+      "secondsPlayed" : 8821
+    }, {
+      "name" : "AC/DC",
+      "streamCount" : 31,
+      "secondsPlayed" : 7340
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 26,
+      "secondsPlayed" : 6572
+    }, {
+      "name" : "The Cult",
+      "streamCount" : 25,
+      "secondsPlayed" : 6536
+    }, {
+      "name" : "Supertramp",
+      "streamCount" : 23,
+      "secondsPlayed" : 6598
+    }, {
+      "name" : "Rush",
+      "streamCount" : 23,
+      "secondsPlayed" : 6488
+    }, {
+      "name" : "Jethro Tull",
+      "streamCount" : 23,
+      "secondsPlayed" : 5485
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 22,
+      "secondsPlayed" : 5334
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 21,
+      "secondsPlayed" : 6715
+    } ],
+    "topGenres" : [ {
+      "name" : "rock",
+      "streamCount" : 369,
+      "secondsPlayed" : 102312
+    }, {
+      "name" : "classic rock",
+      "streamCount" : 310,
+      "secondsPlayed" : 86578
+    }, {
+      "name" : "progressive rock",
+      "streamCount" : 204,
+      "secondsPlayed" : 61867
+    }, {
+      "name" : "symphonic rock",
+      "streamCount" : 150,
+      "secondsPlayed" : 46839
+    }, {
+      "name" : "rock and roll",
+      "streamCount" : 157,
+      "secondsPlayed" : 41346
+    }, {
+      "name" : "art rock",
+      "streamCount" : 117,
+      "secondsPlayed" : 36574
+    }, {
+      "name" : "hard rock",
+      "streamCount" : 130,
+      "secondsPlayed" : 35888
+    }, {
+      "name" : "70s rock",
+      "streamCount" : 124,
+      "secondsPlayed" : 34839
+    }, {
+      "name" : "metal",
+      "streamCount" : 116,
+      "secondsPlayed" : 32750
+    }, {
+      "name" : "vintage rock",
+      "streamCount" : 104,
+      "secondsPlayed" : 27472
+    } ],
+    "timeOfDayStats" : [ {
+      "period" : "late_evening",
+      "secondsPlayed" : 25771
+    }, {
+      "period" : "afternoon",
+      "secondsPlayed" : 78335
+    }, {
+      "period" : "morning",
+      "secondsPlayed" : 25299
+    }, {
+      "period" : "evening",
+      "secondsPlayed" : 86928
+    }, {
+      "period" : "early_morning",
+      "secondsPlayed" : 16163
+    }, {
+      "period" : "night",
+      "secondsPlayed" : 2360
+    } ]
+  }, {
+    "date" : "2025-12",
+    "streamCount" : 1178,
+    "secondsPlayed" : 289738,
+    "topTracks" : [ {
+      "name" : "Highway Star - Remastered 2012",
+      "streamCount" : 5,
+      "secondsPlayed" : 1097
+    }, {
+      "name" : "Jumpin' Jack Flash",
+      "streamCount" : 5,
+      "secondsPlayed" : 645
+    }, {
+      "name" : "Firth of Fifth - Excerpt; Live in Manchester",
+      "streamCount" : 4,
+      "secondsPlayed" : 836
+    }, {
+      "name" : "Stained Class",
+      "streamCount" : 4,
+      "secondsPlayed" : 759
+    }, {
+      "name" : "Going to California - Remaster",
+      "streamCount" : 4,
+      "secondsPlayed" : 491
+    }, {
+      "name" : "Stargazer",
+      "streamCount" : 4,
+      "secondsPlayed" : 1518
+    }, {
+      "name" : "Can't You Hear Me Knocking - 2009 Mix",
+      "streamCount" : 4,
+      "secondsPlayed" : 1308
+    }, {
+      "name" : "I've Seen All Good People: a. Your Move, b. All Good People - 2008 Remaster",
+      "streamCount" : 4,
+      "secondsPlayed" : 1249
+    }, {
+      "name" : "Mama, I'm Coming Home",
+      "streamCount" : 4,
+      "secondsPlayed" : 754
+    }, {
+      "name" : "The March Of The Black Queen - Remastered 2011",
+      "streamCount" : 4,
+      "secondsPlayed" : 1178
+    } ],
+    "topArtists" : [ {
+      "name" : "Pink Floyd",
+      "streamCount" : 110,
+      "secondsPlayed" : 31963
+    }, {
+      "name" : "Ramones",
+      "streamCount" : 58,
+      "secondsPlayed" : 9116
+    }, {
+      "name" : "The Rolling Stones",
+      "streamCount" : 50,
+      "secondsPlayed" : 11198
+    }, {
+      "name" : "Marillion",
+      "streamCount" : 45,
+      "secondsPlayed" : 15495
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 43,
+      "secondsPlayed" : 11390
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 42,
+      "secondsPlayed" : 11223
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 39,
+      "secondsPlayed" : 10517
+    }, {
+      "name" : "AC/DC",
+      "streamCount" : 35,
+      "secondsPlayed" : 7705
+    }, {
+      "name" : "Queen",
+      "streamCount" : 33,
+      "secondsPlayed" : 6832
+    }, {
+      "name" : "Black Sabbath",
+      "streamCount" : 32,
+      "secondsPlayed" : 8805
+    } ],
+    "topGenres" : [ {
+      "name" : "rock",
+      "streamCount" : 536,
+      "secondsPlayed" : 151349
+    }, {
+      "name" : "classic rock",
+      "streamCount" : 402,
+      "secondsPlayed" : 117264
+    }, {
+      "name" : "progressive rock",
+      "streamCount" : 201,
+      "secondsPlayed" : 69394
+    }, {
+      "name" : "symphonic rock",
+      "streamCount" : 158,
+      "secondsPlayed" : 56042
+    }, {
+      "name" : "rock and roll",
+      "streamCount" : 209,
+      "secondsPlayed" : 55182
+    }, {
+      "name" : "70s rock",
+      "streamCount" : 193,
+      "secondsPlayed" : 54075
+    }, {
+      "name" : "hard rock",
+      "streamCount" : 164,
+      "secondsPlayed" : 44966
+    }, {
+      "name" : "art rock",
+      "streamCount" : 132,
+      "secondsPlayed" : 43333
+    }, {
+      "name" : "metal",
+      "streamCount" : 134,
+      "secondsPlayed" : 40569
+    }, {
+      "name" : "classic metal",
+      "streamCount" : 102,
+      "secondsPlayed" : 31708
+    } ],
+    "timeOfDayStats" : [ {
+      "period" : "late_evening",
+      "secondsPlayed" : 33054
+    }, {
+      "period" : "afternoon",
+      "secondsPlayed" : 67931
+    }, {
+      "period" : "morning",
+      "secondsPlayed" : 41150
+    }, {
+      "period" : "evening",
+      "secondsPlayed" : 104794
+    }, {
+      "period" : "early_morning",
+      "secondsPlayed" : 40298
+    }, {
+      "period" : "night",
+      "secondsPlayed" : 2475
+    } ]
+  }, {
+    "date" : "2025-11",
+    "streamCount" : 1219,
+    "secondsPlayed" : 287075,
+    "topTracks" : [ {
+      "name" : "Any Colour You Like - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 7,
+      "secondsPlayed" : 3098
+    }, {
+      "name" : "Us and Them - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 7,
+      "secondsPlayed" : 2274
+    }, {
+      "name" : "The Great Gig in the Sky - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 6,
+      "secondsPlayed" : 2454
+    }, {
+      "name" : "Time - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 6,
+      "secondsPlayed" : 2097
+    }, {
+      "name" : "Breathe (In the Air) - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 6,
+      "secondsPlayed" : 886
+    }, {
+      "name" : "Money - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 5,
+      "secondsPlayed" : 2350
+    }, {
+      "name" : "On the Run - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 5,
+      "secondsPlayed" : 1536
+    }, {
+      "name" : "Speak to Me - Live at Wembley 1974 - 2023 Master",
+      "streamCount" : 5,
+      "secondsPlayed" : 820
+    }, {
+      "name" : "Love Is Strong - Remastered 2009",
+      "streamCount" : 5,
+      "secondsPlayed" : 1136
+    }, {
+      "name" : "She's So Cold - Remastered 2009",
+      "streamCount" : 5,
+      "secondsPlayed" : 1013
+    } ],
+    "topArtists" : [ {
+      "name" : "Pink Floyd",
+      "streamCount" : 75,
+      "secondsPlayed" : 22265
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 54,
+      "secondsPlayed" : 13978
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 43,
+      "secondsPlayed" : 11461
+    }, {
+      "name" : "The Rolling Stones",
+      "streamCount" : 41,
+      "secondsPlayed" : 9952
+    }, {
+      "name" : "Chico Buarque",
+      "streamCount" : 43,
+      "secondsPlayed" : 7645
+    }, {
+      "name" : "Queen",
+      "streamCount" : 40,
+      "secondsPlayed" : 8772
+    }, {
+      "name" : "Sepultura",
+      "streamCount" : 39,
+      "secondsPlayed" : 8590
+    }, {
+      "name" : "AC/DC",
+      "streamCount" : 38,
+      "secondsPlayed" : 8992
+    }, {
+      "name" : "Mercyful Fate",
+      "streamCount" : 31,
+      "secondsPlayed" : 9309
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 29,
+      "secondsPlayed" : 7890
+    } ],
+    "topGenres" : [ {
+      "name" : "rock",
+      "streamCount" : 489,
+      "secondsPlayed" : 137157
+    }, {
+      "name" : "classic rock",
+      "streamCount" : 383,
+      "secondsPlayed" : 107840
+    }, {
+      "name" : "rock and roll",
+      "streamCount" : 252,
+      "secondsPlayed" : 64694
+    }, {
+      "name" : "70s rock",
+      "streamCount" : 150,
+      "secondsPlayed" : 41788
+    }, {
+      "name" : "vintage rock",
+      "streamCount" : 152,
+      "secondsPlayed" : 39419
+    }, {
+      "name" : "hard rock",
+      "streamCount" : 142,
+      "secondsPlayed" : 39242
+    }, {
+      "name" : "progressive rock",
+      "streamCount" : 110,
+      "secondsPlayed" : 39182
+    }, {
+      "name" : "metal",
+      "streamCount" : 131,
+      "secondsPlayed" : 37494
+    }, {
+      "name" : "old school rock",
+      "streamCount" : 131,
+      "secondsPlayed" : 35307
+    }, {
+      "name" : "english rock",
+      "streamCount" : 137,
+      "secondsPlayed" : 34963
+    } ],
+    "timeOfDayStats" : [ {
+      "period" : "late_evening",
+      "secondsPlayed" : 23474
+    }, {
+      "period" : "afternoon",
+      "secondsPlayed" : 67928
+    }, {
+      "period" : "morning",
+      "secondsPlayed" : 49793
+    }, {
+      "period" : "evening",
+      "secondsPlayed" : 83590
+    }, {
+      "period" : "early_morning",
+      "secondsPlayed" : 54529
+    }, {
+      "period" : "night",
+      "secondsPlayed" : 7733
+    } ]
+  }, {
+    "date" : "2025-10",
+    "streamCount" : 1351,
+    "secondsPlayed" : 325733,
+    "topTracks" : [ {
+      "name" : "The Wind Cries Mary",
+      "streamCount" : 6,
+      "secondsPlayed" : 1000
+    }, {
+      "name" : "Dreams - 2004 Remaster",
+      "streamCount" : 6,
+      "secondsPlayed" : 1542
+    }, {
+      "name" : "Vaughan Williams: Symphony No. 2 \"A London Symphony\": I. Lento - Allegro risoluto",
+      "streamCount" : 5,
+      "secondsPlayed" : 892
+    }, {
+      "name" : "Blowin' in the Wind",
+      "streamCount" : 5,
+      "secondsPlayed" : 825
+    }, {
+      "name" : "Working Man",
+      "streamCount" : 5,
+      "secondsPlayed" : 1869
+    }, {
+      "name" : "So Lonely",
+      "streamCount" : 5,
+      "secondsPlayed" : 1126
+    }, {
+      "name" : "Stone Crazy",
+      "streamCount" : 5,
+      "secondsPlayed" : 1662
+    }, {
+      "name" : "For Those About to Rock (We Salute You)",
+      "streamCount" : 5,
+      "secondsPlayed" : 1377
+    }, {
+      "name" : "No Woman, No Cry - Live At The Lyceum, London/1975",
+      "streamCount" : 4,
+      "secondsPlayed" : 1495
+    }, {
+      "name" : "Us and Them",
+      "streamCount" : 4,
+      "secondsPlayed" : 1407
+    } ],
+    "topArtists" : [ {
+      "name" : "AC/DC",
+      "streamCount" : 88,
+      "secondsPlayed" : 20872
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 56,
+      "secondsPlayed" : 18835
+    }, {
+      "name" : "Rush",
+      "streamCount" : 54,
+      "secondsPlayed" : 13718
+    }, {
+      "name" : "The Cult",
+      "streamCount" : 52,
+      "secondsPlayed" : 11500
+    }, {
+      "name" : "Jimi Hendrix",
+      "streamCount" : 50,
+      "secondsPlayed" : 13305
+    }, {
+      "name" : "The Rolling Stones",
+      "streamCount" : 32,
+      "secondsPlayed" : 7785
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 31,
+      "secondsPlayed" : 7363
+    }, {
+      "name" : "Led Zeppelin",
+      "streamCount" : 29,
+      "secondsPlayed" : 7453
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 25,
+      "secondsPlayed" : 6921
+    }, {
+      "name" : "Imagine Dragons",
+      "streamCount" : 25,
+      "secondsPlayed" : 4835
+    } ],
+    "topGenres" : [ {
+      "name" : "rock",
+      "streamCount" : 524,
+      "secondsPlayed" : 144110
+    }, {
+      "name" : "classic rock",
+      "streamCount" : 476,
+      "secondsPlayed" : 134945
+    }, {
+      "name" : "rock and roll",
+      "streamCount" : 295,
+      "secondsPlayed" : 76445
+    }, {
+      "name" : "old school rock",
+      "streamCount" : 257,
+      "secondsPlayed" : 70608
+    }, {
+      "name" : "vintage rock",
+      "streamCount" : 201,
+      "secondsPlayed" : 57400
+    }, {
+      "name" : "hard rock",
+      "streamCount" : 194,
+      "secondsPlayed" : 51827
+    }, {
+      "name" : "progressive rock",
+      "streamCount" : 147,
+      "secondsPlayed" : 48832
+    }, {
+      "name" : "english rock",
+      "streamCount" : 177,
+      "secondsPlayed" : 45870
+    }, {
+      "name" : "metal",
+      "streamCount" : 124,
+      "secondsPlayed" : 41829
+    }, {
+      "name" : "70s rock",
+      "streamCount" : 146,
+      "secondsPlayed" : 41431
+    } ],
+    "timeOfDayStats" : [ {
+      "period" : "late_evening",
+      "secondsPlayed" : 22849
+    }, {
+      "period" : "afternoon",
+      "secondsPlayed" : 65331
+    }, {
+      "period" : "morning",
+      "secondsPlayed" : 46084
+    }, {
+      "period" : "evening",
+      "secondsPlayed" : 133938
+    }, {
+      "period" : "early_morning",
+      "secondsPlayed" : 52874
+    }, {
+      "period" : "night",
+      "secondsPlayed" : 4619
+    } ]
+  }, {
+    "date" : "2025-09",
+    "streamCount" : 1147,
+    "secondsPlayed" : 273190,
+    "topTracks" : [ {
+      "name" : "Lavender - 2017 Remaster",
+      "streamCount" : 6,
+      "secondsPlayed" : 877
+    }, {
+      "name" : "Riders on the Storm",
+      "streamCount" : 6,
+      "secondsPlayed" : 1709
+    }, {
+      "name" : "Won't Get Fooled Again - Original Album Version",
+      "streamCount" : 6,
+      "secondsPlayed" : 2485
+    }, {
+      "name" : "Tempo Perdido",
+      "streamCount" : 5,
+      "secondsPlayed" : 1510
+    }, {
+      "name" : "Pais E Filhos",
+      "streamCount" : 5,
+      "secondsPlayed" : 1219
+    }, {
+      "name" : "Como Nossos Pais",
+      "streamCount" : 5,
+      "secondsPlayed" : 1120
+    }, {
+      "name" : "Show Me The Way",
+      "streamCount" : 5,
+      "secondsPlayed" : 967
+    }, {
+      "name" : "Who Are You",
+      "streamCount" : 5,
+      "secondsPlayed" : 1145
+    }, {
+      "name" : "Fire Woman",
+      "streamCount" : 5,
+      "secondsPlayed" : 1006
+    }, {
+      "name" : "Money",
+      "streamCount" : 4,
+      "secondsPlayed" : 1529
+    } ],
+    "topArtists" : [ {
+      "name" : "Led Zeppelin",
+      "streamCount" : 59,
+      "secondsPlayed" : 15296
+    }, {
+      "name" : "The Beatles",
+      "streamCount" : 57,
+      "secondsPlayed" : 11050
+    }, {
+      "name" : "Pink Floyd",
+      "streamCount" : 41,
+      "secondsPlayed" : 13849
+    }, {
+      "name" : "The Smiths",
+      "streamCount" : 36,
+      "secondsPlayed" : 7213
+    }, {
+      "name" : "The Rolling Stones",
+      "streamCount" : 35,
+      "secondsPlayed" : 8446
+    }, {
+      "name" : "The Who",
+      "streamCount" : 31,
+      "secondsPlayed" : 8107
+    }, {
+      "name" : "Queen",
+      "streamCount" : 30,
+      "secondsPlayed" : 7891
+    }, {
+      "name" : "Deep Purple",
+      "streamCount" : 27,
+      "secondsPlayed" : 8968
+    }, {
+      "name" : "Chico Buarque",
+      "streamCount" : 28,
+      "secondsPlayed" : 5550
+    }, {
+      "name" : "Bob Dylan",
+      "streamCount" : 26,
+      "secondsPlayed" : 6627
+    } ],
+    "topGenres" : [ {
+      "name" : "classic rock",
+      "streamCount" : 457,
+      "secondsPlayed" : 128100
+    }, {
+      "name" : "rock",
+      "streamCount" : 371,
+      "secondsPlayed" : 105438
+    }, {
+      "name" : "vintage rock",
+      "streamCount" : 205,
+      "secondsPlayed" : 54739
+    }, {
+      "name" : "70s rock",
+      "streamCount" : 186,
+      "secondsPlayed" : 54329
+    }, {
+      "name" : "rock and roll",
+      "streamCount" : 181,
+      "secondsPlayed" : 50602
+    }, {
+      "name" : "progressive rock",
+      "streamCount" : 116,
+      "secondsPlayed" : 39243
+    }, {
+      "name" : "golden oldies",
+      "streamCount" : 144,
+      "secondsPlayed" : 33598
+    }, {
+      "name" : "60s rock",
+      "streamCount" : 127,
+      "secondsPlayed" : 32297
+    }, {
+      "name" : "psychedelic rock",
+      "streamCount" : 107,
+      "secondsPlayed" : 31328
+    }, {
+      "name" : "english rock",
+      "streamCount" : 104,
+      "secondsPlayed" : 28861
+    } ],
+    "timeOfDayStats" : [ ]
+  } ],
+  "highlights" : [ {
+    "date" : "2026-08-09",
+    "highlightType" : "MILESTONE",
+    "milestoneHighlight" : {
+      "entity" : "Blues Raiz",
+      "milestoneListeningSeconds" : 22166
+    }
+  }, {
+    "date" : "2026-08-02",
+    "highlightType" : "STREAKS",
+    "streaksHighlight" : {
+      "entity" : "Muddy Waters",
+      "dayStreaks" : 4
+    }
+  }, {
+    "date" : "2026-07-26",
+    "highlightType" : "UNLIKE_COMBINATION",
+    "unlikeCombinationHighlight" : {
+      "firstEntity" : "Jon Batiste",
+      "secondEntity" : "Tankard"
+    }
+  }, {
+    "date" : "2026-07-19",
+    "highlightType" : "PROPORTION_LISTENING_ENTITY",
+    "proportionListeningHighlight" : {
+      "entity" : "The Rolling Stones",
+      "listeningPercentage" : 20.211924719278823
+    }
+  }, {
+    "date" : "2026-07-12",
+    "highlightType" : "ON_REPEAT",
+    "onRepeatHighlight" : {
+      "entity" : "Dogs",
+      "streamCount" : 5
+    }
+  }, {
+    "date" : "2026-07-05",
+    "highlightType" : "MILESTONE",
+    "milestoneHighlight" : {
+      "entity" : "Pink Floyd",
+      "milestoneListeningSeconds" : 28504
+    }
+  }, {
+    "date" : "2026-07",
+    "highlightType" : "FIRST_TO_DISCOVER",
+    "firstToDiscoverHighlight" : {
+      "entity" : "Scriblin' Gib'rish",
+      "country" : "BR",
+      "position" : 6240
+    }
+  }, {
+    "date" : "2026-06-28",
+    "highlightType" : "ON_THIS_PERIOD",
+    "onThisPeriodHighlight" : {
+      "entity" : "Bullet The Blue Sky - Live From Paris",
+      "nostalgiaPeriod" : "YEAR",
+      "nostalgiaUnitsAgo" : 1
+    }
+  }, {
+    "date" : "2026-06-21",
+    "highlightType" : "TOP_LISTENER",
+    "topListenerHighlight" : {
+      "entity" : "Angine de Poitrine",
+      "topPercentile" : 0.005196970371579671
+    }
+  }, {
+    "date" : "2026-06-14",
+    "highlightType" : "FIRST_TO_DISCOVER",
+    "firstToDiscoverHighlight" : {
+      "entity" : "One of These Days",
+      "country" : "BR",
+      "position" : 1389
+    }
+  }, {
+    "date" : "2026-06-07",
+    "highlightType" : "MILESTONE",
+    "milestoneHighlight" : {
+      "entity" : "Maratona do Rio 78k",
+      "milestoneListeningSeconds" : 31639
+    }
+  }, {
+    "date" : "2026-06",
+    "highlightType" : "STREAKS",
+    "streaksHighlight" : {
+      "entity" : "Angine de Poitrine",
+      "dayStreaks" : 8
+    }
+  }, {
+    "date" : "2026-05-31",
+    "highlightType" : "UNLIKE_COMBINATION",
+    "unlikeCombinationHighlight" : {
+      "firstEntity" : "Born To Be Bad - Live In Sarasota, Florida / 2024",
+      "secondEntity" : "Jagadambe Ma (Jai Jai Ma)"
+    }
+  }, {
+    "date" : "2026-05-24",
+    "highlightType" : "PROPORTION_LISTENING_ENTITY",
+    "proportionListeningHighlight" : {
+      "entity" : "Pink Floyd",
+      "listeningPercentage" : 27.740129313217942
+    }
+  }, {
+    "date" : "2026-05-17",
+    "highlightType" : "ON_REPEAT",
+    "onRepeatHighlight" : {
+      "entity" : "Mata Zyklek",
+      "streamCount" : 6
+    }
+  }, {
+    "date" : "2026-05-10",
+    "highlightType" : "STREAKS",
+    "streaksHighlight" : {
+      "entity" : "Mark Knopfler",
+      "dayStreaks" : 5
+    }
+  }, {
+    "date" : "2026-05-03",
+    "highlightType" : "TOP_LISTENER",
+    "topListenerHighlight" : {
+      "entity" : "R.E.M.",
+      "topPercentile" : 0.0013062080022340336
+    }
+  }, {
+    "date" : "2026-05",
+    "highlightType" : "UNLIKE_COMBINATION",
+    "unlikeCombinationHighlight" : {
+      "firstEntity" : "Edo & Jo",
+      "secondEntity" : "The Anchoret"
+    }
+  }, {
+    "date" : "2026-04-26",
+    "highlightType" : "MILESTONE",
+    "multiEntityMilestoneHighlight" : {
+      "entities" : [ "Angine de Poitrine", "Chico Buarque", "Ghost", "Sherpa", "Fabienk", "Mata Zyklek", "Tamebsz", "Utzp", "Yor Zarad" ],
+      "milestoneListeningSeconds" : 86423
+    }
+  }, {
+    "date" : "2026-04-19",
+    "highlightType" : "YOU_STAND_OUT",
+    "youStandOutHighlight" : {
+      "entity" : "Legião Urbana",
+      "country" : "BR",
+      "secondsPlayed" : 5744,
+      "marketAvgSecondsPlayed" : 845.17883
+    }
+  }, {
+    "date" : "2026-04-12",
+    "highlightType" : "PROPORTION_LISTENING_ENTITY",
+    "proportionListeningHighlight" : {
+      "entity" : "Angine de Poitrine",
+      "listeningPercentage" : 23.633633932211144
+    }
+  }, {
+    "date" : "2026-04-05",
+    "highlightType" : "UNLIKE_COMBINATION",
+    "unlikeCombinationHighlight" : {
+      "firstEntity" : "Lulu Santos",
+      "secondEntity" : "Sylosis"
+    }
+  }, {
+    "date" : "2026-04",
+    "highlightType" : "ON_THIS_PERIOD",
+    "onThisPeriodHighlight" : {
+      "entity" : "Standing in the Doorway",
+      "nostalgiaPeriod" : "YEAR",
+      "nostalgiaUnitsAgo" : 2
+    }
+  }, {
+    "date" : "2026-03-29",
+    "highlightType" : "FIRST_TO_DISCOVER",
+    "firstToDiscoverHighlight" : {
+      "entity" : "Name In Blood",
+      "country" : "BR",
+      "position" : 5574
+    }
+  }, {
+    "date" : "2026-03-22",
+    "highlightType" : "ON_REPEAT",
+    "onRepeatHighlight" : {
+      "entity" : "Nude Disintegrating Parachutist Woman - 2013 Remaster",
+      "streamCount" : 5
+    }
+  }, {
+    "date" : "2026-03-15",
+    "highlightType" : "TOP_LISTENER",
+    "topListenerHighlight" : {
+      "entity" : "Eric Clapton",
+      "topPercentile" : 0.004293200774756121
+    }
+  }, {
+    "date" : "2026-03-08",
+    "highlightType" : "ON_THIS_PERIOD",
+    "onThisPeriodHighlight" : {
+      "entity" : "Not Dark Yet",
+      "nostalgiaPeriod" : "YEAR",
+      "nostalgiaUnitsAgo" : 2
+    }
+  }, {
+    "date" : "2026-03-01",
+    "highlightType" : "STREAKS",
+    "streaksHighlight" : {
+      "entity" : "Marillion",
+      "dayStreaks" : 4
+    }
+  }, {
+    "date" : "2026-03",
+    "highlightType" : "STREAKS",
+    "streaksHighlight" : {
+      "entity" : "Dire Straits",
+      "dayStreaks" : 6
+    }
+  }, {
+    "date" : "2026-02-22",
+    "highlightType" : "MILESTONE",
+    "milestoneHighlight" : {
+      "entity" : "FAKE MUSIC",
+      "milestoneListeningSeconds" : 15301
+    }
+  }, {
+    "date" : "2026-02-15",
+    "highlightType" : "TOP_LISTENER",
+    "topListenerHighlight" : {
+      "entity" : "Tears For Fears",
+      "topPercentile" : 0.0030753231795092777
+    }
+  }, {
+    "date" : "2026-02-08",
+    "highlightType" : "ON_THIS_PERIOD",
+    "onThisPeriodHighlight" : {
+      "entity" : "Shelter from the Storm - Take 1",
+      "nostalgiaPeriod" : "YEAR",
+      "nostalgiaUnitsAgo" : 2
+    }
+  }, {
+    "date" : "2026-02-01",
+    "highlightType" : "TOP_LISTENER",
+    "topListenerHighlight" : {
+      "entity" : "Robert Johnson",
+      "topPercentile" : 0.01599737229474094
+    }
+  }, {
+    "date" : "2026-02",
+    "highlightType" : "UNLIKE_COMBINATION",
+    "unlikeCombinationHighlight" : {
+      "firstEntity" : "Lester Davenport",
+      "secondEntity" : "NewJeans"
+    }
+  }, {
+    "date" : "2026-01-25",
+    "highlightType" : "ON_THIS_PERIOD",
+    "onThisPeriodHighlight" : {
+      "entity" : "Wart Hog - 2002 Remaster",
+      "nostalgiaPeriod" : "YEAR",
+      "nostalgiaUnitsAgo" : 2
+    }
+  } ]
+}

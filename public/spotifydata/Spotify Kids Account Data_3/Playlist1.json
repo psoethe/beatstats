@@ -1,0 +1,3462 @@
+{
+  "playlists" : [ {
+    "name" : "Pop meus fav",
+    "lastModifiedDate" : "2026-07-26",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "the cure",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "the cure",
+        "trackUri" : "spotify:track:4EoJ151oQ5jY48z4RhSE96"
+      },
+      "addedDate" : "2026-07-26"
+    }, {
+      "track" : {
+        "trackName" : "Yellow",
+        "artistName" : "Coldplay",
+        "albumName" : "Parachutes",
+        "trackUri" : "spotify:track:3AJwUDP919kvQ9QcozQPxg"
+      },
+      "addedDate" : "2026-07-26"
+    }, {
+      "track" : {
+        "trackName" : "Sparks",
+        "artistName" : "Coldplay",
+        "albumName" : "Parachutes",
+        "trackUri" : "spotify:track:7D0RhFcb3CrfPuTJ0obrod"
+      },
+      "addedDate" : "2026-07-26"
+    } ],
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "My Princess Chuu",
+    "lastModifiedDate" : "2026-05-24",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "Kiss a kitty",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:3PRUZiGcWjM47FznzBR8xN"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Only cry in the rain",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:0J92BX2A6XcG2ZbWAxtk1x"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Back in town",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:4j7bZhhO2K33gC2ltvx8vF"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "No more",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:5TbG2PsicwTbCD2CK48swZ"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "XO, My Cyberlove",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:4fr8jAAeEw8CehOFoBdjqL"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Canary",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:59BCMqaghgeHN4IpMv7Gdn"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Strawberry Rush",
+        "artistName" : "CHUU",
+        "albumName" : "Strawberry Rush",
+        "trackUri" : "spotify:track:1gq1gf44tZ9cyTdlcyoJd1"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Teeny Tiny Heart",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:4GGoMLyvbaFte3xx54N6Qt"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Cocktail Dress",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:0AYqQD1tff1gGz8u6D9RD2"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "Limoncello",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:1MzrmkSpQO3z0xBIWkh9s0"
+      },
+      "addedDate" : "2026-03-04"
+    } ],
+    "description" : "AMO AMO AMO MUITO A CHUU",
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "Vecna Duda ",
+    "lastModifiedDate" : "2026-01-22",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "Still With You",
+        "artistName" : "Jung Kook",
+        "albumName" : "Still With You",
+        "trackUri" : "spotify:track:0eFMbKCRw8KByXyWBw8WO7"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "New Jeans",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'Super Shy'",
+        "trackUri" : "spotify:track:6rdkCkjk6D12xRpdMXy0I2"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "Perfect Night",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "Perfect Night",
+        "trackUri" : "spotify:track:74X2u8JMVooG2QbjRxXwR8"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "ETA",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:56v8WEnGzLByGsDAXDiv4d"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "OMG",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'OMG'",
+        "trackUri" : "spotify:track:65FftemJ1DbbZ45DUfHJXE"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "k bye",
+        "artistName" : "KISS OF LIFE",
+        "albumName" : "224",
+        "trackUri" : "spotify:track:3ByurcMfnnP5Af9ezJ4DEa"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "Knife (SUNGHOON Ver.)",
+        "artistName" : "ENHYPEN",
+        "albumName" : "THE SIN : VANISH (SUNGHOON Ver.)",
+        "trackUri" : "spotify:track:7rQFuRv9AZUX84e2KjYG5e"
+      },
+      "addedDate" : "2026-01-22"
+    } ],
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "Kpop\uD83D\uDC97",
+    "lastModifiedDate" : "2026-01-12",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "What is Love?",
+        "artistName" : "TWICE",
+        "albumName" : "What is Love?",
+        "trackUri" : "spotify:track:54mnwt3kO0uYsy0ceg14JP"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Touch",
+        "artistName" : "KATSEYE",
+        "albumName" : "Touch",
+        "trackUri" : "spotify:track:6aJn7Cst74cj4lNIiPRgav"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "SPAGHETTI",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "SPAGHETTI",
+        "trackUri" : "spotify:track:2N9miXnewVmUrgl6JSK1FI"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "like JENNIE",
+        "artistName" : "JENNIE",
+        "albumName" : "Ruby",
+        "trackUri" : "spotify:track:0fK7ie6XwGxQTIkpFoWkd1"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "TUNNEL VISION",
+        "artistName" : "ITZY",
+        "albumName" : "TUNNEL VISION",
+        "trackUri" : "spotify:track:5xCiLM4z1C40vHKM9r2xJ1"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Armageddon",
+        "artistName" : "aespa",
+        "albumName" : "Armageddon - The 1st Album",
+        "trackUri" : "spotify:track:4b2fMv44GAYpsDSK4ihbsI"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "WANNABE",
+        "artistName" : "ITZY",
+        "albumName" : "IT'z ME",
+        "trackUri" : "spotify:track:4pspYVQGFHLPEFgQPD1J7e"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Shut Down",
+        "artistName" : "BLACKPINK",
+        "albumName" : "BORN PINK",
+        "trackUri" : "spotify:track:7gRFDGEzF9UkBV233yv2dc"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "IYKYK (If You Know You Know)",
+        "artistName" : "ILLIT",
+        "albumName" : "I'LL LIKE YOU",
+        "trackUri" : "spotify:track:31UtyhPu6vu9LJBzoygDiQ"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "딸기게임 (Strawberry Cheesegame)",
+        "artistName" : "KiiiKiii",
+        "albumName" : "DANCING ALONE",
+        "trackUri" : "spotify:track:3bwIZ1JeL6Atyk9seFX0RY"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "JUMP",
+        "artistName" : "BLACKPINK",
+        "albumName" : "JUMP",
+        "trackUri" : "spotify:track:5H1sKFMzDeMtXwND3V6hRY"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Gnarly",
+        "artistName" : "KATSEYE",
+        "albumName" : "Gnarly",
+        "trackUri" : "spotify:track:1j15Ar0qGDzIR0v3CQv3JL"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Gabriela",
+        "artistName" : "KATSEYE",
+        "albumName" : "Gabriela",
+        "trackUri" : "spotify:track:1xOqGUkyxGQRdCvGpvWKmL"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Mean Girls",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:5AspWMn9KWy9VxeIhZnRcu"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "I DO ME",
+        "artistName" : "KiiiKiii",
+        "albumName" : "I DO ME",
+        "trackUri" : "spotify:track:5PclMa9Pxs1OFWSAS6Nid9"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Tell Me",
+        "artistName" : "Wonder Girls",
+        "albumName" : "The Wonder Years",
+        "trackUri" : "spotify:track:2UuKZDzjZ7cVMOvpmuAMYj"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Tonight I Might",
+        "artistName" : "KATSEYE",
+        "albumName" : "SIS (Soft Is Strong)",
+        "trackUri" : "spotify:track:2Ih0CPdyK7SwbTUUkpun16"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Debut",
+        "artistName" : "KATSEYE",
+        "albumName" : "Debut",
+        "trackUri" : "spotify:track:58AZXyKRlsMBMcrRjpJpVG"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Rockstar",
+        "artistName" : "LISA",
+        "albumName" : "Rockstar",
+        "trackUri" : "spotify:track:6vvPecFTmWxDfEJ6cYT1wa"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "SHEESH",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "BABYMONS7ER",
+        "trackUri" : "spotify:track:1njlnn8ZKHI77Pe9szIONR"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "I AM",
+        "artistName" : "IVE",
+        "albumName" : "I've IVE",
+        "trackUri" : "spotify:track:70t7Q6AYG6ZgTYmJWcnkUM"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Go Pato",
+        "artistName" : "Pato Banton",
+        "albumName" : "The Best Of Pato Banton",
+        "trackUri" : "spotify:track:4f1EdNgsnvVz6K5Qbu5JS0"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Internet Girl",
+        "artistName" : "KATSEYE",
+        "albumName" : "Internet Girl",
+        "trackUri" : "spotify:track:3THVfoVD5kdCxPviVaCPi7"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "God’s Menu",
+        "artistName" : "Stray Kids",
+        "albumName" : "GO LIVE",
+        "trackUri" : "spotify:track:4XPXrcpyNr30Km6aPiflJy"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "MANIAC",
+        "artistName" : "Stray Kids",
+        "albumName" : "ODDINARY",
+        "trackUri" : "spotify:track:63irPUP3xB74fHdw1Aw9zR"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Flame (from the Netflix Series \"Jentry Chau vs the Underworld\")",
+        "artistName" : "KATSEYE",
+        "albumName" : "Flame (from the Netflix Series \"Jentry Chau vs the Underworld\")",
+        "trackUri" : "spotify:track:5tw1Ob0E4iRY8pjvgFk7oU"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "DRIP",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:198zDKzyktXRG1PGpidY9h"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "PSYCHO",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "WE GO UP",
+        "trackUri" : "spotify:track:7jp2VW62Yt2bDOaRas3hR6"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Gabriela",
+        "artistName" : "KATSEYE",
+        "albumName" : "Internet Girl",
+        "trackUri" : "spotify:track:6Rr4ZMccEEEnZuwHiOrR8N"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Cookie (FRNK Remix)",
+        "artistName" : "NewJeans",
+        "albumName" : "NJWMX",
+        "trackUri" : "spotify:track:5bwpbZBOY0mrmRhZ94c0kW"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Hype Boy (250 Remix)",
+        "artistName" : "NewJeans",
+        "albumName" : "NJWMX",
+        "trackUri" : "spotify:track:6CUKsv928uT4561qJovhhG"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Attention (250 Remix)",
+        "artistName" : "NewJeans",
+        "albumName" : "NJWMX",
+        "trackUri" : "spotify:track:2nW48vXnZZ5EYka46v7GOk"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "OMG (FRNK Remix)",
+        "artistName" : "NewJeans",
+        "albumName" : "NJWMX",
+        "trackUri" : "spotify:track:4yjDMKCAeLovlo9ih0AgXW"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Ditto (250 Remix)",
+        "artistName" : "NewJeans",
+        "albumName" : "NJWMX",
+        "trackUri" : "spotify:track:6JVXVLqCPaodBSEwRFUN8w"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Hurt",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:5expoVGQPvXuwBBFuNGqBd"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Ditto",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'OMG'",
+        "trackUri" : "spotify:track:5702raF31K9rvD6KZ6sCTo"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Zero",
+        "artistName" : "NewJeans",
+        "albumName" : "Zero",
+        "trackUri" : "spotify:track:5LMoKDVzW2kDneNu2UbspP"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Cool With You",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:02wk5BttM0QL38ERjLPQJB"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "ASAP",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:5fpyAakgFOm4YTXkgfPzvV"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Get Up",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:1wUnuiXMMvhudmzvcCtlZP"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Beautiful Restriction",
+        "artistName" : "NewJeans",
+        "albumName" : "A Time Called You (Original Soundtrack from the Netflix Series)",
+        "trackUri" : "spotify:track:7CHDUDw89DCR8vvI0yTXGa"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "GODS",
+        "artistName" : "League of Legends",
+        "albumName" : "GODS",
+        "trackUri" : "spotify:track:62J3LcwTASdo624WsF3L6k"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Our Night is more beautiful than your Day",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans X MY DEMON",
+        "trackUri" : "spotify:track:11YovYUVkZdLyOFncbecWL"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Bubble Gum",
+        "artistName" : "NewJeans",
+        "albumName" : "How Sweet",
+        "trackUri" : "spotify:track:19D8LNpWwIPpi6hs9BG7dq"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Right Now",
+        "artistName" : "NewJeans",
+        "albumName" : "Supernatural",
+        "trackUri" : "spotify:track:58Q3FZFs1YXPpliWQB5kXB"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "NewJeans 2nd Debut Anniversary",
+        "artistName" : "NewJeans",
+        "albumName" : "This Is NewJeans audio liner (2nd anniversary)",
+        "trackUri" : "spotify:track:1TpOJVzoFxCsWFgy7ajwiN"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Cookie",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:2DwUdMJ5uxv20EhAildreg"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Supernatural",
+        "artistName" : "NewJeans",
+        "albumName" : "Supernatural",
+        "trackUri" : "spotify:track:5ocSQW5sIUIOFojwXEz9Ki"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "How Sweet",
+        "artistName" : "NewJeans",
+        "albumName" : "How Sweet",
+        "trackUri" : "spotify:track:38tXZcL1gZRfbqfOG0VMTH"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Attention",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:2pIUpMhHL6L9Z5lnKxJJr9"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Hype Boy",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:0a4MMyCrzT0En247IhqZbD"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "ETA",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:56v8WEnGzLByGsDAXDiv4d"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "OMG",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'OMG'",
+        "trackUri" : "spotify:track:65FftemJ1DbbZ45DUfHJXE"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Super Shy",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'Super Shy'",
+        "trackUri" : "spotify:track:5sdQOyqq2IDhvmx2lHOpwd"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "New Jeans",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'Super Shy'",
+        "trackUri" : "spotify:track:6rdkCkjk6D12xRpdMXy0I2"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "SPAGHETTI (Member ver.)",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "SPAGHETTI",
+        "trackUri" : "spotify:track:07ZkZzMHE6EEbHD50WUrgk"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "NOT CUTE ANYMORE",
+        "artistName" : "ILLIT",
+        "albumName" : "NOT CUTE ANYMORE",
+        "trackUri" : "spotify:track:1k0JAiH11gHL9dc5dfQjQr"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Gabriela - Sped Up Version",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS: The Remixes",
+        "trackUri" : "spotify:track:1hWWXZQFr0jAdnZaSLZYqG"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Mean Girls",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:6oDFDGaAayXd8HXmynsgPv"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "M.I.A - VALORANT Game Changers Version",
+        "artistName" : "KATSEYE",
+        "albumName" : "M.I.A",
+        "trackUri" : "spotify:track:0VodPyDs7Uw9UpeRp22vq6"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Gameboy",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:2f1WulnyiYYnseSQWI8Oi9"
+      },
+      "addedDate" : "2026-01-12"
+    } ],
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "Pop",
+    "lastModifiedDate" : "2026-08-03",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "Cruel Summer",
+        "artistName" : "Taylor Swift",
+        "albumName" : "Lover",
+        "trackUri" : "spotify:track:1BxfuPKGuaTgP7aM0Bbdwr"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Die With A Smile",
+        "artistName" : "Lady Gaga",
+        "albumName" : "Die With A Smile",
+        "trackUri" : "spotify:track:2plbrEY59IikOBgBGLjaoe"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Treat You Better",
+        "artistName" : "Shawn Mendes",
+        "albumName" : "Illuminate",
+        "trackUri" : "spotify:track:3QGsuHI8jO1Rx4JWLUh9jd"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "24K Magic",
+        "artistName" : "Bruno Mars",
+        "albumName" : "24K Magic",
+        "trackUri" : "spotify:track:6b8Be6ljOzmkOmFslEb23P"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "The Lazy Song",
+        "artistName" : "Bruno Mars",
+        "albumName" : "Doo-Wops & Hooligans",
+        "trackUri" : "spotify:track:386RUes7n1uM1yfzgeUuwp"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Moves Like Jagger - Studio Recording From \"The Voice\" Performance",
+        "artistName" : "Maroon 5",
+        "albumName" : "Hands All Over",
+        "trackUri" : "spotify:track:7pYfyrMNPn3wtoCyqcTVoI"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Yellow",
+        "artistName" : "Coldplay",
+        "albumName" : "Parachutes",
+        "trackUri" : "spotify:track:3AJwUDP919kvQ9QcozQPxg"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Sparks",
+        "artistName" : "Coldplay",
+        "albumName" : "Parachutes",
+        "trackUri" : "spotify:track:7D0RhFcb3CrfPuTJ0obrod"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Viva La Vida",
+        "artistName" : "Coldplay",
+        "albumName" : "Viva La Vida or Death and All His Friends",
+        "trackUri" : "spotify:track:1mea3bSkSGXuIRvnydlB5b"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "The Scientist",
+        "artistName" : "Coldplay",
+        "albumName" : "A Rush of Blood to the Head",
+        "trackUri" : "spotify:track:75JFxkI2RXiU7L9VXzMkle"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Marry You",
+        "artistName" : "Bruno Mars",
+        "albumName" : "Doo-Wops & Hooligans",
+        "trackUri" : "spotify:track:6SKwQghsR8AISlxhcwyA9R"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Payphone",
+        "artistName" : "Maroon 5",
+        "albumName" : "Overexposed Track By Track",
+        "trackUri" : "spotify:track:1XGmzt0PVuFgQYYnV2It7A"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "I Gotta Feeling",
+        "artistName" : "Black Eyed Peas",
+        "albumName" : "THE E.N.D. (THE ENERGY NEVER DIES)",
+        "trackUri" : "spotify:track:4kLLWz7srcuLKA7Et40PQR"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Animals",
+        "artistName" : "Maroon 5",
+        "albumName" : "V",
+        "trackUri" : "spotify:track:2bL2gyO6kBdLkNSkxXNh6x"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Fix You",
+        "artistName" : "Coldplay",
+        "albumName" : "X&Y",
+        "trackUri" : "spotify:track:7LVHVU3tWfcxj5aiPFEW4Q"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Clocks",
+        "artistName" : "Coldplay",
+        "albumName" : "A Rush of Blood to the Head",
+        "trackUri" : "spotify:track:0BCPKOYdS2jbQ8iyB56Zns"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Paradise",
+        "artistName" : "Coldplay",
+        "albumName" : "Mylo Xyloto",
+        "trackUri" : "spotify:track:6nek1Nin9q48AVZcWs9e9D"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Demons",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Night Visions",
+        "trackUri" : "spotify:track:5qaEfEh1AtSdrdrByCP7qR"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "traitor",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:5CZ40GBx1sQ9agT82CLQCT"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "deja vu",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:6HU7h9RYOaPRFeh0R3UeAr"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "vampire",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "GUTS",
+        "trackUri" : "spotify:track:1kuGVB7EU95pJObxwvfwKS"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "good 4 u",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:4ZtFanR9U6ndgddUvNcjcG"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Espresso",
+        "artistName" : "Sabrina Carpenter",
+        "albumName" : "Short n' Sweet",
+        "trackUri" : "spotify:track:2HRqTpkrJO5ggZyyK6NPWz"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Tears",
+        "artistName" : "Sabrina Carpenter",
+        "albumName" : "Man’s Best Friend",
+        "trackUri" : "spotify:track:42VUCXerQ5qTr4Qp6PhKo4"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Please Please Please",
+        "artistName" : "Sabrina Carpenter",
+        "albumName" : "Short n' Sweet",
+        "trackUri" : "spotify:track:2tHwzyyOLoWSFqYNjeVMzj"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Taste",
+        "artistName" : "Sabrina Carpenter",
+        "albumName" : "Short n' Sweet",
+        "trackUri" : "spotify:track:5G2f63n7IPVPPjfNIGih7Q"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "What Makes You Beautiful",
+        "artistName" : "One Direction",
+        "albumName" : "Up All Night",
+        "trackUri" : "spotify:track:4cluDES4hQEUhmXj6TXkSo"
+      },
+      "addedDate" : "2026-02-15"
+    }, {
+      "track" : {
+        "trackName" : "Just the Way You Are",
+        "artistName" : "Bruno Mars",
+        "albumName" : "Doo-Wops & Hooligans",
+        "trackUri" : "spotify:track:47Slg6LuqLaX0VodpSCvPt"
+      },
+      "addedDate" : "2026-02-15"
+    }, {
+      "track" : {
+        "trackName" : "Adventure of a Lifetime",
+        "artistName" : "Coldplay",
+        "albumName" : "A Head Full of Dreams",
+        "trackUri" : "spotify:track:69uxyAqqPIsUyTO8txoP2M"
+      },
+      "addedDate" : "2026-03-16"
+    }, {
+      "track" : {
+        "trackName" : "No Broke Boys",
+        "artistName" : "Disco Lines",
+        "albumName" : "No Broke Boys",
+        "trackUri" : "spotify:track:3cZajhyr8LmtPfHZ9296tj"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Believer",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Evolve",
+        "trackUri" : "spotify:track:0pqnGHJpmpxLKifKRmU6WP"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Thunder",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Evolve",
+        "trackUri" : "spotify:track:1zB4vmk8tFRmM9UULNzbLB"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Bones",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Mercury - Acts 1 & 2",
+        "trackUri" : "spotify:track:54ipXppHLA8U4yqpOFTUhr"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Radioactive",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Night Visions",
+        "trackUri" : "spotify:track:62yJjFtgkhUrXktIoSjgP2"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Whatever It Takes",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Evolve",
+        "trackUri" : "spotify:track:6Qn5zhYkTa37e91HC1D7lb"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Enemy (with JID) - from the series Arcane League of Legends",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Mercury - Acts 1 & 2",
+        "trackUri" : "spotify:track:3CIyK1V4JEJkg02E4EJnDl"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "It's Time",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Night Visions",
+        "trackUri" : "spotify:track:7MXlTgQeo3IVlMpLnZuhxc"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Natural",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Origins",
+        "trackUri" : "spotify:track:2FY7b99s15jUprqC0M5NCT"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Bad Liar",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "Origins",
+        "trackUri" : "spotify:track:2RSHsoi04658QL5xgQVov3"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Fire in These Hills",
+        "artistName" : "Imagine Dragons",
+        "albumName" : "LOOM",
+        "trackUri" : "spotify:track:2Morv8EWzWFsfbqG8vdUfy"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "You'll Always Find Your Way Back Home",
+        "artistName" : "Hannah Montana",
+        "albumName" : "Hannah Montana: The Hits",
+        "trackUri" : "spotify:track:3pLXRflcwNSfCYEZbs0rf9"
+      },
+      "addedDate" : "2026-04-17"
+    }, {
+      "track" : {
+        "trackName" : "White Keys",
+        "artistName" : "Dominic Fike",
+        "albumName" : "White Keys",
+        "trackUri" : "spotify:track:5ViLKrbyL3HD6wsq3AB9eI"
+      },
+      "addedDate" : "2026-05-07"
+    }, {
+      "track" : {
+        "trackName" : "Beauty And A Beat",
+        "artistName" : "Justin Bieber",
+        "albumName" : "Believe",
+        "trackUri" : "spotify:track:190jyVPHYjAqEaOGmMzdyk"
+      },
+      "addedDate" : "2026-05-10"
+    }, {
+      "track" : {
+        "trackName" : "That Should Be Me",
+        "artistName" : "Justin Bieber",
+        "albumName" : "My World 2.0",
+        "trackUri" : "spotify:track:0aPZbnkMoWJaJ5CNVLCj8S"
+      },
+      "addedDate" : "2026-05-15"
+    }, {
+      "track" : {
+        "trackName" : "Grenade",
+        "artistName" : "Bruno Mars",
+        "albumName" : "Doo-Wops & Hooligans",
+        "trackUri" : "spotify:track:4lLtanYk6tkMvooU0tWzG8"
+      },
+      "addedDate" : "2026-05-15"
+    }, {
+      "track" : {
+        "trackName" : "drop dead",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "drop dead",
+        "trackUri" : "spotify:track:7Hc6qcJG4NtyZgbNvQyd8U"
+      },
+      "addedDate" : "2026-05-15"
+    }, {
+      "track" : {
+        "trackName" : "Obsessed",
+        "artistName" : "Mariah Carey",
+        "albumName" : "Memoirs of an imperfect Angel",
+        "trackUri" : "spotify:track:5EGPf0nqO7vEIwsOX6Er98"
+      },
+      "addedDate" : "2026-05-17"
+    }, {
+      "track" : {
+        "trackName" : "The First Time",
+        "artistName" : "Damiano David",
+        "albumName" : "The First Time",
+        "trackUri" : "spotify:track:1cMFYGtNoh5x3hCWrHAVca"
+      },
+      "addedDate" : "2026-05-17"
+    }, {
+      "track" : {
+        "trackName" : "nuts",
+        "artistName" : "Lil Peep",
+        "albumName" : "LIVE FOREVER",
+        "trackUri" : "spotify:track:4k3xDpAdBuM17mNNHhOZkK"
+      },
+      "addedDate" : "2026-05-22"
+    }, {
+      "track" : {
+        "trackName" : "Blinding Lights",
+        "artistName" : "The Weeknd",
+        "albumName" : "After Hours",
+        "trackUri" : "spotify:track:0VjIjW4GlUZAMYd2vXMi3b"
+      },
+      "addedDate" : "2026-05-24"
+    }, {
+      "track" : {
+        "trackName" : "drop dead",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "the cure",
+        "trackUri" : "spotify:track:6IONnntBIPeFt6Ss333OFW"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "drivers license",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:5wANPM4fQCJwkGd4rN57mH"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "happier",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:2tGvwE8GcFKwNdAXMnlbfl"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "jealousy, jealousy",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:0MMyJUC3WNnFS1lit5pTjk"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "lacy",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "GUTS",
+        "trackUri" : "spotify:track:6QT6j7rKt7Vk3IuV2AUO9W"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "1 step forward, 3 steps back",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:4wcBRRpIfesgcyUtis7PEg"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "enough for you",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:2TOzTqQXNmR2zDJXihjZ2e"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "favorite crime",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:5JCoSi02qi3jJeHdZXMmR8"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "hope ur ok",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:1zejeOnykpCoyVSit6Bwp3"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "brutal",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "SOUR",
+        "trackUri" : "spotify:track:6SRsiMl7w1USE4mFqrOhHC"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "the cure",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "the cure",
+        "trackUri" : "spotify:track:4EoJ151oQ5jY48z4RhSE96"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "bad idea right?",
+        "artistName" : "Olivia Rodrigo",
+        "albumName" : "GUTS",
+        "trackUri" : "spotify:track:3IX0yuEVvDbnqUwMBB3ouC"
+      },
+      "addedDate" : "2026-05-25"
+    }, {
+      "track" : {
+        "trackName" : "Sweater Weather",
+        "artistName" : "The Neighbourhood",
+        "albumName" : "I Love You.",
+        "trackUri" : "spotify:track:2QjOHCTQ1Jl3zawyYOpxh6"
+      },
+      "addedDate" : "2026-05-27"
+    }, {
+      "track" : {
+        "trackName" : "Stateside + Zara Larsson",
+        "artistName" : "PinkPantheress",
+        "albumName" : "Fancy Some More?",
+        "trackUri" : "spotify:track:1DwscornXpj8fmOmYVlqZt"
+      },
+      "addedDate" : "2026-05-27"
+    }, {
+      "track" : {
+        "trackName" : "The Fate of Ophelia",
+        "artistName" : "Taylor Swift",
+        "albumName" : "The Life of a Showgirl",
+        "trackUri" : "spotify:track:53iuhJlwXhSER5J2IYYv1W"
+      },
+      "addedDate" : "2026-05-27"
+    }, {
+      "track" : {
+        "trackName" : "Self Aware",
+        "artistName" : "Temper City",
+        "albumName" : "Self Aware",
+        "trackUri" : "spotify:track:4qW3BbQAwZsrnu8a3ZRdyT"
+      },
+      "addedDate" : "2026-06-05"
+    }, {
+      "track" : {
+        "trackName" : "I Wanna Be Yours",
+        "artistName" : "Arctic Monkeys",
+        "albumName" : "AM",
+        "trackUri" : "spotify:track:5XeFesFbtLpXzIVDNQP22n"
+      },
+      "addedDate" : "2026-06-07"
+    }, {
+      "track" : {
+        "trackName" : "Back to the Old House - 2011 Remaster",
+        "artistName" : "The Smiths",
+        "albumName" : "Complete",
+        "trackUri" : "spotify:track:69lwH8H6NZK4Fsmth8rrsL"
+      },
+      "addedDate" : "2026-06-07"
+    }, {
+      "track" : {
+        "trackName" : "Boom Clap",
+        "artistName" : "Charli xcx",
+        "albumName" : "Boom Clap",
+        "trackUri" : "spotify:track:0PjkFSNBbpfYRYpAG4uuGb"
+      },
+      "addedDate" : "2026-06-14"
+    }, {
+      "track" : {
+        "trackName" : "Wonderwall - Remastered",
+        "artistName" : "Oasis",
+        "albumName" : "(What's The Story) Morning Glory?",
+        "trackUri" : "spotify:track:5qqabIl2vWzo9ApSC317sa"
+      },
+      "addedDate" : "2026-06-18"
+    }, {
+      "track" : {
+        "trackName" : "Out of My League",
+        "artistName" : "Fitz and The Tantrums",
+        "albumName" : "More Than Just a Dream",
+        "trackUri" : "spotify:track:2Z5wXgysowvzl0nKGNGU0t"
+      },
+      "addedDate" : "2026-06-19"
+    }, {
+      "track" : {
+        "trackName" : "Iris",
+        "artistName" : "The Goo Goo Dolls",
+        "albumName" : "Dizzy up the Girl",
+        "trackUri" : "spotify:track:6Qyc6fS4DsZjB2mRW9DsQs"
+      },
+      "addedDate" : "2026-06-19"
+    }, {
+      "track" : {
+        "trackName" : "Me Encontra",
+        "artistName" : "Charlie Brown Jr.",
+        "albumName" : "Camisa 10 joga bola até na chuva",
+        "trackUri" : "spotify:track:5yEais1zgeW1MjLrx7tsie"
+      },
+      "addedDate" : "2026-06-20"
+    }, {
+      "track" : {
+        "trackName" : "worry - ultra slowed",
+        "artistName" : "LONOWN",
+        "albumName" : "worry",
+        "trackUri" : "spotify:track:18j6GCxt5aFKbYqdvksL7N"
+      },
+      "addedDate" : "2026-06-21"
+    }, {
+      "track" : {
+        "trackName" : "I Love You So",
+        "artistName" : "The Walters",
+        "albumName" : "I Love You So",
+        "trackUri" : "spotify:track:4SqWKzw0CbA05TGszDgMlc"
+      },
+      "addedDate" : "2026-07-04"
+    }, {
+      "track" : {
+        "trackName" : "Earrings",
+        "artistName" : "Malcolm Todd",
+        "albumName" : "Sweet Boy",
+        "trackUri" : "spotify:track:0eAuGrXyGFYwur9ARUe7LJ"
+      },
+      "addedDate" : "2026-07-04"
+    }, {
+      "track" : {
+        "trackName" : "End of Beginning",
+        "artistName" : "Djo",
+        "albumName" : "DECIDE",
+        "trackUri" : "spotify:track:3qhlB30KknSejmIvZZLjOD"
+      },
+      "addedDate" : "2026-08-03"
+    } ],
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "Rock --reagge",
+    "lastModifiedDate" : "2026-05-11",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "Running Up That Hill (A Deal With God)",
+        "artistName" : "Kate Bush",
+        "albumName" : "Hounds Of Love",
+        "trackUri" : "spotify:track:1PtQJZVZIdWIYdARpZRDFO"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Everybody Wants To Rule The World",
+        "artistName" : "Tears For Fears",
+        "albumName" : "Songs From The Big Chair",
+        "trackUri" : "spotify:track:4RvWPyQ5RL0ao9LPZeSouE"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Billie Jean",
+        "artistName" : "Michael Jackson",
+        "albumName" : "Thriller",
+        "trackUri" : "spotify:track:7J1uxwnxfQLu4APicE5Rnj"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Beat It",
+        "artistName" : "Michael Jackson",
+        "albumName" : "Thriller",
+        "trackUri" : "spotify:track:3BovdzfaX4jb5KFQwoPfAw"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Thriller",
+        "artistName" : "Michael Jackson",
+        "albumName" : "Thriller",
+        "trackUri" : "spotify:track:2LlQb7Uoj1kKyGhlkBf9aC"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Girls Just Want to Have Fun",
+        "artistName" : "Cyndi Lauper",
+        "albumName" : "True Colors: The Best Of Cyndi Lauper",
+        "trackUri" : "spotify:track:459EpH5UZgE6fMNPMLOgMF"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Should I Stay or Should I Go - Remastered",
+        "artistName" : "The Clash",
+        "albumName" : "Combat Rock (Remastered)",
+        "trackUri" : "spotify:track:39shmbIHICJ2Wxnk1fPSdz"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Thunderstruck",
+        "artistName" : "AC/DC",
+        "albumName" : "The Razors Edge",
+        "trackUri" : "spotify:track:57bgtoPSgt236HzfBOd8kj"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Highway to Hell",
+        "artistName" : "AC/DC",
+        "albumName" : "Highway to Hell",
+        "trackUri" : "spotify:track:2zYzyRzz6pRmhPzyfMEC8s"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Back In Black",
+        "artistName" : "AC/DC",
+        "albumName" : "Back In Black",
+        "trackUri" : "spotify:track:08mG3Y1vljYA6bvDt4Wqkj"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "You Shook Me All Night Long",
+        "artistName" : "AC/DC",
+        "albumName" : "Back In Black",
+        "trackUri" : "spotify:track:2SiXAy7TuUkycRVbbWDEpo"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "T.N.T.",
+        "artistName" : "AC/DC",
+        "albumName" : "High Voltage",
+        "trackUri" : "spotify:track:7LRMbd3LEoV5wZJvXT1Lwb"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Rock N Roll Train",
+        "artistName" : "AC/DC",
+        "albumName" : "Black Ice",
+        "trackUri" : "spotify:track:4feXJ5IC3avXsVW9WNFSag"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "It's a Long Way to the Top (If You Wanna Rock 'N' Roll)",
+        "artistName" : "AC/DC",
+        "albumName" : "High Voltage",
+        "trackUri" : "spotify:track:7nemcVsXVFZF01iqpIIo2Y"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Dirty Deeds Done Dirt Cheap",
+        "artistName" : "AC/DC",
+        "albumName" : "Dirty Deeds Done Dirt Cheap",
+        "trackUri" : "spotify:track:2d4e45fmUnguxh6yqC7gNT"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Shoot to Thrill",
+        "artistName" : "AC/DC",
+        "albumName" : "Back In Black",
+        "trackUri" : "spotify:track:0C80GCp0mMuBzLf3EAXqxv"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Could You Be Loved",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Uprising",
+        "trackUri" : "spotify:track:5O4erNlJ74PIF6kGol1ZrC"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Three Little Birds",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Exodus",
+        "trackUri" : "spotify:track:7yFvSYKk3g5g8e7Ffl16ws"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Is This Love",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Kaya",
+        "trackUri" : "spotify:track:6JRLFiX9NJSoRRKxowlBYr"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Jamming",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Exodus",
+        "trackUri" : "spotify:track:3GIChxHmuLmBm5PTNZGDtj"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "One Love / People Get Ready",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Exodus",
+        "trackUri" : "spotify:track:7oNgPClUYdscWWHa5PF1gT"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Natural Mystic",
+        "artistName" : "Bob Marley & The Wailers",
+        "albumName" : "Exodus",
+        "trackUri" : "spotify:track:5uqQyRJV8qLt8zEqnvsBVK"
+      },
+      "addedDate" : "2026-01-11"
+    }, {
+      "track" : {
+        "trackName" : "Sweet Child O' Mine",
+        "artistName" : "Guns N' Roses",
+        "albumName" : "Appetite For Destruction",
+        "trackUri" : "spotify:track:7snQQk1zcKl8gZ92AnueZW"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Red Red Wine",
+        "artistName" : "UB40",
+        "albumName" : "The Best Of UB40 Volume I",
+        "trackUri" : "spotify:track:4POgt5ayni68MeLqclubcC"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Livin' On A Prayer",
+        "artistName" : "Bon Jovi",
+        "albumName" : "Slippery When Wet",
+        "trackUri" : "spotify:track:0ee1DiZF94NSqqpG0XHUzH"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Another Brick in the Wall, Pt. 2",
+        "artistName" : "Pink Floyd",
+        "albumName" : "The Wall",
+        "trackUri" : "spotify:track:4gMgiXfqyzZLMhsksGmbQV"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Breathe (In the Air)",
+        "artistName" : "Pink Floyd",
+        "albumName" : "The Dark Side of the Moon",
+        "trackUri" : "spotify:track:2ctvdKmETyOzPb2GiJJT53"
+      },
+      "addedDate" : "2026-01-19"
+    }, {
+      "track" : {
+        "trackName" : "Tempo Perdido",
+        "artistName" : "Legião Urbana",
+        "albumName" : "Dois",
+        "trackUri" : "spotify:track:7MnT7msJZg3XBAS0OTfGrB"
+      },
+      "addedDate" : "2026-03-03"
+    }, {
+      "track" : {
+        "trackName" : "Exagerado",
+        "artistName" : "Cazuza",
+        "albumName" : "Exagerado",
+        "trackUri" : "spotify:track:4d0DpU7Odiv0ztvX2GxJlk"
+      },
+      "addedDate" : "2026-03-03"
+    }, {
+      "track" : {
+        "trackName" : "Máscara",
+        "artistName" : "Pitty",
+        "albumName" : "Admirável Chip Novo",
+        "trackUri" : "spotify:track:2Y0R8ey56JBZj6Au3HenCq"
+      },
+      "addedDate" : "2026-03-29"
+    }, {
+      "track" : {
+        "trackName" : "Admirável Chip Novo",
+        "artistName" : "Pitty",
+        "albumName" : "Admirável Chip Novo",
+        "trackUri" : "spotify:track:7o7MExeF7niW4VFiie5Zxh"
+      },
+      "addedDate" : "2026-03-29"
+    }, {
+      "track" : {
+        "trackName" : "Quero Ser Feliz Também",
+        "artistName" : "Natiruts",
+        "albumName" : "Nossa Missão",
+        "trackUri" : "spotify:track:09h91oP3t1c5fSEI5P6maS"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "QUANDO VOCÊ SE FOI CHOREI (SORRI, SOU REI)",
+        "artistName" : "DJ TOPO",
+        "albumName" : "QUANDO VOCÊ SE FOI CHOREI (SORRI, SOU REI)",
+        "trackUri" : "spotify:track:4YQ37NPJlIUMFo8Kq51heS"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Tudo Vai Dar Certo",
+        "artistName" : "Natiruts",
+        "albumName" : "Tudo Vai Dar Certo",
+        "trackUri" : "spotify:track:6B8pYtoS3XHrc821hExWf6"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Fogueira de Desilusões",
+        "artistName" : "Natiruts",
+        "albumName" : "Raçaman",
+        "trackUri" : "spotify:track:2oS1fp6sc1JQvuTrx5zujD"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Já Chorei Demais - Ao Vivo",
+        "artistName" : "Natiruts",
+        "albumName" : "Natiruts Acústico no Rio de Janeiro (Ao Vivo)",
+        "trackUri" : "spotify:track:0FGUm2n7t5OusuvkLIS99Z"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Liberdade Pra Dentro Da Cabeça",
+        "artistName" : "Natiruts",
+        "albumName" : "Natiruts",
+        "trackUri" : "spotify:track:4oyaAgUMDBM0j8At75jOHn"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Presente De Um Beija-Flor",
+        "artistName" : "Natiruts",
+        "albumName" : "Natiruts",
+        "trackUri" : "spotify:track:2Iu5NDjHE7GEi1SGfMgyRT"
+      },
+      "addedDate" : "2026-04-04"
+    } ],
+    "numberOfFollowers" : 0
+  }, {
+    "name" : "Kpop",
+    "lastModifiedDate" : "2026-06-23",
+    "collaborators" : [ ],
+    "items" : [ {
+      "track" : {
+        "trackName" : "Gabriela",
+        "artistName" : "KATSEYE",
+        "albumName" : "Gabriela",
+        "trackUri" : "spotify:track:1xOqGUkyxGQRdCvGpvWKmL"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Gnarly",
+        "artistName" : "KATSEYE",
+        "albumName" : "Gnarly",
+        "trackUri" : "spotify:track:1j15Ar0qGDzIR0v3CQv3JL"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "JUMP",
+        "artistName" : "BLACKPINK",
+        "albumName" : "JUMP",
+        "trackUri" : "spotify:track:5H1sKFMzDeMtXwND3V6hRY"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "M.I.A",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:4vyQ2NdodXhtMGsaaMBqSt"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Debut",
+        "artistName" : "KATSEYE",
+        "albumName" : "Debut",
+        "trackUri" : "spotify:track:58AZXyKRlsMBMcrRjpJpVG"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "like JENNIE",
+        "artistName" : "JENNIE",
+        "albumName" : "Ruby",
+        "trackUri" : "spotify:track:0fK7ie6XwGxQTIkpFoWkd1"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "SPAGHETTI",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "SPAGHETTI",
+        "trackUri" : "spotify:track:2N9miXnewVmUrgl6JSK1FI"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Touch",
+        "artistName" : "KATSEYE",
+        "albumName" : "Touch",
+        "trackUri" : "spotify:track:6aJn7Cst74cj4lNIiPRgav"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Mean Girls",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:5AspWMn9KWy9VxeIhZnRcu"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "jellyous",
+        "artistName" : "ILLIT",
+        "albumName" : "jellyous (Feat. Sophie Powers)",
+        "trackUri" : "spotify:track:51pREVFJeAJGvhJ1rYCKZH"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Monster High Fright Song",
+        "artistName" : "Monster High",
+        "albumName" : "Monster High Fright Song",
+        "trackUri" : "spotify:track:7hEKlcqyoj3oOH0jtJveIS"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "GO!",
+        "artistName" : "CORTIS",
+        "albumName" : "COLOR OUTSIDE THE LINES",
+        "trackUri" : "spotify:track:6OWWZtNQORY1McaZmOrwhc"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Killin' It Girl (Solo Version)",
+        "artistName" : "j-hope",
+        "albumName" : "Killin' It Girl (feat. GloRilla)",
+        "trackUri" : "spotify:track:32SrQzg34vQiYjyzjg3wum"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "BOOMBAYAH",
+        "artistName" : "BLACKPINK",
+        "albumName" : "SQUARE ONE",
+        "trackUri" : "spotify:track:13MF2TYuyfITClL1R2ei6e"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "ExtraL (feat. Doechii)",
+        "artistName" : "JENNIE",
+        "albumName" : "Ruby",
+        "trackUri" : "spotify:track:4EIFwndJvGpgFjsEbNuYif"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Tonight I Might",
+        "artistName" : "KATSEYE",
+        "albumName" : "SIS (Soft Is Strong)",
+        "trackUri" : "spotify:track:2Ih0CPdyK7SwbTUUkpun16"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Billyeoon Goyangi (Do the Dance)",
+        "artistName" : "ILLIT",
+        "albumName" : "bomb",
+        "trackUri" : "spotify:track:4p0uVFAXKUISu8yp9gNtWE"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Mantra",
+        "artistName" : "JENNIE",
+        "albumName" : "Ruby",
+        "trackUri" : "spotify:track:1kUyOJb3fzUo8r0OCz5SQk"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "1&Only",
+        "artistName" : "XLOV",
+        "albumName" : "I ONE",
+        "trackUri" : "spotify:track:0lOOUAYUITTHYyGWWAqKIr"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Rockstar",
+        "artistName" : "LISA",
+        "albumName" : "Alter Ego",
+        "trackUri" : "spotify:track:65ZihkVQO3KqPj7ZKxmcev"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Gameboy",
+        "artistName" : "KATSEYE",
+        "albumName" : "BEAUTIFUL CHAOS",
+        "trackUri" : "spotify:track:0LqbLHWFiy0qTfpk1Q1Ggc"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "I'm Pretty",
+        "artistName" : "KATSEYE",
+        "albumName" : "SIS (Soft Is Strong)",
+        "trackUri" : "spotify:track:5Kx8X5HLUm14hBwEFP6i6Y"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "XO (Only If You Say Yes)",
+        "artistName" : "ENHYPEN",
+        "albumName" : "ROMANCE : UNTOLD",
+        "trackUri" : "spotify:track:3RkSwrsIadAvqVtMp5yhaB"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Hollow",
+        "artistName" : "Stray Kids",
+        "albumName" : "Hollow",
+        "trackUri" : "spotify:track:5K1thEZHOgjE89mxwA01T9"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Tick-Tack",
+        "artistName" : "ILLIT",
+        "albumName" : "I'LL LIKE YOU",
+        "trackUri" : "spotify:track:0znsc67nMhP4X9hjhvoyeP"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Outside",
+        "artistName" : "ENHYPEN",
+        "albumName" : "DESIRE : UNLEASH",
+        "trackUri" : "spotify:track:0IXWLMBZeK33mOb044Sxu6"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Bad Desire (With or Without You)",
+        "artistName" : "ENHYPEN",
+        "albumName" : "DESIRE : UNLEASH",
+        "trackUri" : "spotify:track:38pEX03GFZ0PfFDaOrpKOM"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "My Way",
+        "artistName" : "KATSEYE",
+        "albumName" : "SIS (Soft Is Strong)",
+        "trackUri" : "spotify:track:3zUxQpCyUrfEjz6Y07yg4b"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Moonstruck",
+        "artistName" : "ENHYPEN",
+        "albumName" : "ROMANCE : UNTOLD",
+        "trackUri" : "spotify:track:3gYWGRS64XrGSrjD3vvtga"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "HOT",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "HOT (English ver.) (feat. JADE)",
+        "trackUri" : "spotify:track:24Y63uAvj6Oc9jGuTlhlgf"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Cherish (My Love)",
+        "artistName" : "ILLIT",
+        "albumName" : "Cherish (My Love) (Remixes)",
+        "trackUri" : "spotify:track:21LtZQQMQYwVIxc9O9Ygq8"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "Igloo",
+        "artistName" : "KISS OF LIFE",
+        "albumName" : "Lose Yourself",
+        "trackUri" : "spotify:track:2DbDefRFJ5YOfXCKOeCJJh"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "oops!",
+        "artistName" : "ILLIT",
+        "albumName" : "bomb",
+        "trackUri" : "spotify:track:1tO6hb9Ym7aTV8hJ31tLjr"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "ANTIFRAGILE",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "UNFORGIVEN",
+        "trackUri" : "spotify:track:0bMoNdAnxNR0OuQbGDovrr"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "little monster",
+        "artistName" : "ILLIT",
+        "albumName" : "bomb",
+        "trackUri" : "spotify:track:5MaPzLp2vwSqu8YyUZ4zR7"
+      },
+      "addedDate" : "2025-12-08"
+    }, {
+      "track" : {
+        "trackName" : "What is Love?",
+        "artistName" : "TWICE",
+        "albumName" : "What is Love?",
+        "trackUri" : "spotify:track:54mnwt3kO0uYsy0ceg14JP"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "WE GO UP",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "WE GO UP",
+        "trackUri" : "spotify:track:49DTiFx70EuJLV7hDsCo6z"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "PSYCHO",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "WE GO UP",
+        "trackUri" : "spotify:track:7jp2VW62Yt2bDOaRas3hR6"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "DRIP",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:198zDKzyktXRG1PGpidY9h"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "SHEESH",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "BABYMONS7ER",
+        "trackUri" : "spotify:track:1njlnn8ZKHI77Pe9szIONR"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "FOREVER",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:6b6KXDbDn0s0Jepxm8a3nr"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "HOT SAUCE",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "HOT SAUCE",
+        "trackUri" : "spotify:track:3AjfuVk6olyesS7cVfofBE"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "LIKE THAT",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "BABYMONS7ER",
+        "trackUri" : "spotify:track:7GDgpad2BQVuDUzaxHFakc"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "BILLIONAIRE",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:0QICKhP44TRnb4EurQ3tN9"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Magnetic",
+        "artistName" : "ILLIT",
+        "albumName" : "SUPER REAL ME",
+        "trackUri" : "spotify:track:1aKvZDoLGkNMxoRYgkckZG"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "CRAZY",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "CRAZY (Party Remixes 1)",
+        "trackUri" : "spotify:track:4gxEY3Mh5FZZDAJAKPNrCS"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "THIS IS FOR",
+        "artistName" : "TWICE",
+        "albumName" : "THIS IS FOR",
+        "trackUri" : "spotify:track:3598iBWrS4JhJqP5tHlpVK"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "ME+YOU",
+        "artistName" : "TWICE",
+        "albumName" : "TEN: The Story Goes On",
+        "trackUri" : "spotify:track:0hGWmmZuKyd8sO7RCvF6rH"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "CHEER UP",
+        "artistName" : "TWICE",
+        "albumName" : "PAGE TWO",
+        "trackUri" : "spotify:track:7lB4rxNVc7vm33ZSZXVRAQ"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "NOT CUTE ANYMORE",
+        "artistName" : "ILLIT",
+        "albumName" : "NOT CUTE ANYMORE",
+        "trackUri" : "spotify:track:1k0JAiH11gHL9dc5dfQjQr"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Do It",
+        "artistName" : "Stray Kids",
+        "albumName" : "DO IT",
+        "trackUri" : "spotify:track:1KuNhOubescxn3xD6WNI7Q"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "DIVINE",
+        "artistName" : "Stray Kids",
+        "albumName" : "DO IT",
+        "trackUri" : "spotify:track:15nElWknZsgnSIfVihVCQf"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Perfect Night",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "Perfect Night",
+        "trackUri" : "spotify:track:74X2u8JMVooG2QbjRxXwR8"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Smart",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "Smart (Remixes)",
+        "trackUri" : "spotify:track:3lwK3WyKAI5bUuGY1OgGbZ"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Colors",
+        "artistName" : "IZ*ONE",
+        "albumName" : "COLOR*IZ",
+        "trackUri" : "spotify:track:1T5hHpw1R027tHHncKhvlB"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "O' My!",
+        "artistName" : "IZ*ONE",
+        "albumName" : "COLOR*IZ",
+        "trackUri" : "spotify:track:2XbZnOgBguBxqFpQU9JK7D"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "TUNNEL VISION",
+        "artistName" : "ITZY",
+        "albumName" : "TUNNEL VISION",
+        "trackUri" : "spotify:track:5xCiLM4z1C40vHKM9r2xJ1"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Girls Will Be Girls",
+        "artistName" : "ITZY",
+        "albumName" : "Girls Will Be Girls",
+        "trackUri" : "spotify:track:373C7aTyGRJw7sVT4UG6Fh"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Ditto",
+        "artistName" : "NewJeans",
+        "albumName" : "Ditto",
+        "trackUri" : "spotify:track:3r8RuvgbX9s7ammBn07D3W"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "New Jeans",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'Super Shy'",
+        "trackUri" : "spotify:track:6rdkCkjk6D12xRpdMXy0I2"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Super Shy",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'Super Shy'",
+        "trackUri" : "spotify:track:5sdQOyqq2IDhvmx2lHOpwd"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "OMG",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 'OMG'",
+        "trackUri" : "spotify:track:65FftemJ1DbbZ45DUfHJXE"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "ETA",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:56v8WEnGzLByGsDAXDiv4d"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Hype Boy",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:0a4MMyCrzT0En247IhqZbD"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "How Sweet",
+        "artistName" : "NewJeans",
+        "albumName" : "How Sweet",
+        "trackUri" : "spotify:track:38tXZcL1gZRfbqfOG0VMTH"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Attention",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:2pIUpMhHL6L9Z5lnKxJJr9"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Supernatural",
+        "artistName" : "NewJeans",
+        "albumName" : "Supernatural",
+        "trackUri" : "spotify:track:5ocSQW5sIUIOFojwXEz9Ki"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Cookie",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 1st EP 'New Jeans'",
+        "trackUri" : "spotify:track:2DwUdMJ5uxv20EhAildreg"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "ASAP",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:5fpyAakgFOm4YTXkgfPzvV"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Drama",
+        "artistName" : "aespa",
+        "albumName" : "Drama - The 4th Mini Album",
+        "trackUri" : "spotify:track:5XWlyfo0kZ8LF7VSyfS4Ew"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Lovesick Girls",
+        "artistName" : "BLACKPINK",
+        "albumName" : "THE ALBUM",
+        "trackUri" : "spotify:track:4Ws314Ylb27BVsvlZOy30C"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "WHISTLE",
+        "artistName" : "BLACKPINK",
+        "albumName" : "SQUARE ONE",
+        "trackUri" : "spotify:track:6NEoeBLQbOMw92qMeLfI40"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Pretty Savage",
+        "artistName" : "BLACKPINK",
+        "albumName" : "THE ALBUM",
+        "trackUri" : "spotify:track:1XnpzbOGptRwfJhZgLbmSr"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "POP!",
+        "artistName" : "NAYEON",
+        "albumName" : "IM NAYEON",
+        "trackUri" : "spotify:track:3lOMJTQTd6J34faYwASc33"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Black Mamba",
+        "artistName" : "aespa",
+        "albumName" : "Girls - The 2nd Mini Album",
+        "trackUri" : "spotify:track:6Tj9KfzPp7tmgcDdsaPwGE"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "My World",
+        "artistName" : "ILLIT",
+        "albumName" : "SUPER REAL ME",
+        "trackUri" : "spotify:track:2Xiaplc23BureS4EDeE8xa"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "CEREMONY",
+        "artistName" : "Stray Kids",
+        "albumName" : "KARMA",
+        "trackUri" : "spotify:track:62xU1NllqWBCbkZFTXEqzF"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "LALALALA",
+        "artistName" : "Stray Kids",
+        "albumName" : "ROCK-STAR",
+        "trackUri" : "spotify:track:1OG1NoKpZZLrMqMYCk9m84"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "MANIAC",
+        "artistName" : "Stray Kids",
+        "albumName" : "ODDINARY",
+        "trackUri" : "spotify:track:63irPUP3xB74fHdw1Aw9zR"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "God’s Menu",
+        "artistName" : "Stray Kids",
+        "albumName" : "GO LIVE",
+        "trackUri" : "spotify:track:4XPXrcpyNr30Km6aPiflJy"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "BLEEP",
+        "artistName" : "Stray Kids",
+        "albumName" : "KARMA",
+        "trackUri" : "spotify:track:4UP9Dn3u8O4p8oH41EXOai"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Strategy (feat. Megan Thee Stallion)",
+        "artistName" : "TWICE",
+        "albumName" : "STRATEGY",
+        "trackUri" : "spotify:track:5zQUndaoBtXJ10SsApqtvw"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Should I Stay or Should I Go - Remastered",
+        "artistName" : "The Clash",
+        "albumName" : "Stranger Things (Soundtrack from the Netflix Original Series)",
+        "trackUri" : "spotify:track:6SjbzGo7arjfM5cXpXhc5B"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Shut Down",
+        "artistName" : "BLACKPINK",
+        "albumName" : "BORN PINK",
+        "trackUri" : "spotify:track:0ARKW62l9uWIDYMZTUmJHF"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Rockstar",
+        "artistName" : "LISA",
+        "albumName" : "Rockstar",
+        "trackUri" : "spotify:track:6vvPecFTmWxDfEJ6cYT1wa"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Pink Venom",
+        "artistName" : "BLACKPINK",
+        "albumName" : "Pink Venom",
+        "trackUri" : "spotify:track:0skYUMpS0AcbpjcGsAbRGj"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Kill This Love",
+        "artistName" : "BLACKPINK",
+        "albumName" : "KILL THIS LOVE",
+        "trackUri" : "spotify:track:6hvczQ05jc1yGlp9zhb95V"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Queencard",
+        "artistName" : "i-dle",
+        "albumName" : "I feel",
+        "trackUri" : "spotify:track:3xtPQCHJQ3o70PeVAaZSG2"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "TOMBOY",
+        "artistName" : "i-dle",
+        "albumName" : "I NEVER DIE",
+        "trackUri" : "spotify:track:5L7MoCA875qqRJoKnGCxkE"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Super Lady",
+        "artistName" : "i-dle",
+        "albumName" : "2",
+        "trackUri" : "spotify:track:0uLcuydgTo4ErT6aQQayuw"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Nxde",
+        "artistName" : "i-dle",
+        "albumName" : "I love",
+        "trackUri" : "spotify:track:7N1X5WzBTCoDh4ocuPlZUC"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Lucky Girl Syndrome",
+        "artistName" : "ILLIT",
+        "albumName" : "SUPER REAL ME",
+        "trackUri" : "spotify:track:2kIUILBPlz4exX9xIFS275"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Ghost",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "Ghost",
+        "trackUri" : "spotify:track:37qlRGMmN1tStZS0elymXg"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Ghostbusters",
+        "artistName" : "Ray Parker Jr.",
+        "albumName" : "Ghostbusters (Original Motion Picture Soundtrack)",
+        "trackUri" : "spotify:track:3m0y8qLoznUYi73SUBP8GI"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Flame (from the Netflix Series \"Jentry Chau vs the Underworld\")",
+        "artistName" : "KATSEYE",
+        "albumName" : "Flame (from the Netflix Series \"Jentry Chau vs the Underworld\")",
+        "trackUri" : "spotify:track:5tw1Ob0E4iRY8pjvgFk7oU"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Pretty",
+        "artistName" : "IZ*ONE",
+        "albumName" : "Oneiric Diary",
+        "trackUri" : "spotify:track:7Jmx9JHRCeMRsuLGaZI3Re"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "With*One",
+        "artistName" : "IZ*ONE",
+        "albumName" : "Oneiric Diary",
+        "trackUri" : "spotify:track:4ibtE8FK5uFcVPhGath9zk"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "Secret Story of the Swan",
+        "artistName" : "IZ*ONE",
+        "albumName" : "Oneiric Diary",
+        "trackUri" : "spotify:track:7G6WuVZuTbF6JcnA9wOvsD"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "NOT ME",
+        "artistName" : "ILLIT",
+        "albumName" : "NOT CUTE ANYMORE",
+        "trackUri" : "spotify:track:1zEDtR1s5RwARukQ28PHvT"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "As If It's Your Last",
+        "artistName" : "BLACKPINK",
+        "albumName" : "As If It's Your Last",
+        "trackUri" : "spotify:track:4ZxOuNHhpyOj4gv52MtQpT"
+      },
+      "addedDate" : "2025-12-09"
+    }, {
+      "track" : {
+        "trackName" : "HANDS UP",
+        "artistName" : "MEOVV",
+        "albumName" : "HANDS UP",
+        "trackUri" : "spotify:track:2nopDUxom21JoMzFXj9wS0"
+      },
+      "addedDate" : "2025-12-10"
+    }, {
+      "track" : {
+        "trackName" : "MEOW",
+        "artistName" : "MEOVV",
+        "albumName" : "MEOW",
+        "trackUri" : "spotify:track:72gPDy1zVt95zVNali0IhK"
+      },
+      "addedDate" : "2025-12-10"
+    }, {
+      "track" : {
+        "trackName" : "Tell Me",
+        "artistName" : "Wonder Girls",
+        "albumName" : "The Wonder Years",
+        "trackUri" : "spotify:track:2UuKZDzjZ7cVMOvpmuAMYj"
+      },
+      "addedDate" : "2025-12-18"
+    }, {
+      "track" : {
+        "trackName" : "I DO ME",
+        "artistName" : "KiiiKiii",
+        "albumName" : "I DO ME",
+        "trackUri" : "spotify:track:5PclMa9Pxs1OFWSAS6Nid9"
+      },
+      "addedDate" : "2025-12-19"
+    }, {
+      "track" : {
+        "trackName" : "BTG",
+        "artistName" : "KiiiKiii",
+        "albumName" : "UNCUT GEM",
+        "trackUri" : "spotify:track:0YJVQS3v3ocOMPzVy9yuXE"
+      },
+      "addedDate" : "2025-12-19"
+    }, {
+      "track" : {
+        "trackName" : "To Me From Me (Prod. TABLO)",
+        "artistName" : "KiiiKiii",
+        "albumName" : "To Me From Me (Prod. TABLO)",
+        "trackUri" : "spotify:track:6wIMIRovtvzVPxIjq8KhA5"
+      },
+      "addedDate" : "2025-12-19"
+    }, {
+      "track" : {
+        "trackName" : "DANCING ALONE",
+        "artistName" : "KiiiKiii",
+        "albumName" : "DANCING ALONE",
+        "trackUri" : "spotify:track:3vC63Nh3rSREo7qDHgnx8I"
+      },
+      "addedDate" : "2025-12-19"
+    }, {
+      "track" : {
+        "trackName" : "Time Lapse - Instrumental",
+        "artistName" : "KATSEYE",
+        "albumName" : "GOOD BOY (Original Television Soundtrack), Pt. 6",
+        "trackUri" : "spotify:track:0hUXw4gcqg39PdfprC9m2n"
+      },
+      "addedDate" : "2025-12-24"
+    }, {
+      "track" : {
+        "trackName" : "Internet Girl",
+        "artistName" : "KATSEYE",
+        "albumName" : "Internet Girl",
+        "trackUri" : "spotify:track:3THVfoVD5kdCxPviVaCPi7"
+      },
+      "addedDate" : "2026-01-02"
+    }, {
+      "track" : {
+        "trackName" : "I AM",
+        "artistName" : "IVE",
+        "albumName" : "I've IVE",
+        "trackUri" : "spotify:track:70t7Q6AYG6ZgTYmJWcnkUM"
+      },
+      "addedDate" : "2026-01-03"
+    }, {
+      "track" : {
+        "trackName" : "딸기게임 (Strawberry Cheesegame)",
+        "artistName" : "KiiiKiii",
+        "albumName" : "DANCING ALONE",
+        "trackUri" : "spotify:track:3bwIZ1JeL6Atyk9seFX0RY"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Ice Cream (with Selena Gomez)",
+        "artistName" : "BLACKPINK",
+        "albumName" : "THE ALBUM",
+        "trackUri" : "spotify:track:4JUPEh2DVSXFGExu4Uxevz"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Seven (feat. Latto) (Explicit Ver.)",
+        "artistName" : "Jung Kook",
+        "albumName" : "GOLDEN",
+        "trackUri" : "spotify:track:2HRgqmZQC0MC7GeNuDIXHN"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Dirty Work",
+        "artistName" : "aespa",
+        "albumName" : "Dirty Work",
+        "trackUri" : "spotify:track:4qtdab2DABnEokwupCl8lG"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Dynamite",
+        "artistName" : "BTS",
+        "albumName" : "BE",
+        "trackUri" : "spotify:track:5QDLhrAOJJdNAmCTJ8xMyW"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "S-Class",
+        "artistName" : "Stray Kids",
+        "albumName" : "5-STAR",
+        "trackUri" : "spotify:track:3gTQwwDNJ42CCLo3Sf4JDd"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "LALISA",
+        "artistName" : "LISA",
+        "albumName" : "LALISA",
+        "trackUri" : "spotify:track:7uQZVznj0uQOGC9KhV2Mg6"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "SPAGHETTI (Member ver.)",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "SPAGHETTI",
+        "trackUri" : "spotify:track:07ZkZzMHE6EEbHD50WUrgk"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "What is Love?",
+        "artistName" : "TWICE",
+        "albumName" : "Summer Nights",
+        "trackUri" : "spotify:track:3zhbXKFjUDw40pTYyCgt1Y"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "IYKYK (If You Know You Know)",
+        "artistName" : "ILLIT",
+        "albumName" : "I'LL LIKE YOU",
+        "trackUri" : "spotify:track:31UtyhPu6vu9LJBzoygDiQ"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Shut Down",
+        "artistName" : "BLACKPINK",
+        "albumName" : "BORN PINK",
+        "trackUri" : "spotify:track:7gRFDGEzF9UkBV233yv2dc"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "ABCD",
+        "artistName" : "NAYEON",
+        "albumName" : "NA",
+        "trackUri" : "spotify:track:0V2passWyAXnON67kfAj7y"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Armageddon",
+        "artistName" : "aespa",
+        "albumName" : "Armageddon - The 1st Album",
+        "trackUri" : "spotify:track:4b2fMv44GAYpsDSK4ihbsI"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Do It",
+        "artistName" : "Stray Kids",
+        "albumName" : "DO IT",
+        "trackUri" : "spotify:track:56Fu41EhpsPqqfDZsj3eaN"
+      },
+      "addedDate" : "2026-01-12"
+    }, {
+      "track" : {
+        "trackName" : "Talk that Talk",
+        "artistName" : "TWICE",
+        "albumName" : "BETWEEN 1&2",
+        "trackUri" : "spotify:track:0RDqNCRBGrSegk16Avfzuq"
+      },
+      "addedDate" : "2026-01-15"
+    }, {
+      "track" : {
+        "trackName" : "FANCY",
+        "artistName" : "TWICE",
+        "albumName" : "FANCY YOU",
+        "trackUri" : "spotify:track:2qQpFbqqkLOGySgNK8wBXt"
+      },
+      "addedDate" : "2026-01-15"
+    }, {
+      "track" : {
+        "trackName" : "Hold On Tight",
+        "artistName" : "aespa",
+        "albumName" : "Hold On Tight",
+        "trackUri" : "spotify:track:1o844wI52S3TjXGBwvGcc7"
+      },
+      "addedDate" : "2026-01-18"
+    }, {
+      "track" : {
+        "trackName" : "What You Want",
+        "artistName" : "CORTIS",
+        "albumName" : "What You Want",
+        "trackUri" : "spotify:track:3rAcN3CLeSrkhIZN8PHbwb"
+      },
+      "addedDate" : "2026-01-18"
+    }, {
+      "track" : {
+        "trackName" : "Brought The Heat Back",
+        "artistName" : "ENHYPEN",
+        "albumName" : "ROMANCE : UNTOLD",
+        "trackUri" : "spotify:track:3ivdlmTbUSv5JN9W8Tk9V1"
+      },
+      "addedDate" : "2026-01-18"
+    }, {
+      "track" : {
+        "trackName" : "SUPA DUPA LUV",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "WE GO UP",
+        "trackUri" : "spotify:track:5S0QxfYABBoLI4sMk2aCa2"
+      },
+      "addedDate" : "2026-01-22"
+    }, {
+      "track" : {
+        "trackName" : "Blue Valentine",
+        "artistName" : "NMIXX",
+        "albumName" : "Blue Valentine",
+        "trackUri" : "spotify:track:4i0HNuFEH6P6K4UnsY5uUh"
+      },
+      "addedDate" : "2026-01-28"
+    }, {
+      "track" : {
+        "trackName" : "Knife",
+        "artistName" : "ENHYPEN",
+        "albumName" : "THE SIN : VANISH",
+        "trackUri" : "spotify:track:0TKCUjfV3YGuY99MxCKM5w"
+      },
+      "addedDate" : "2026-01-29"
+    }, {
+      "track" : {
+        "trackName" : "XO, My Cyberlove",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:4fr8jAAeEw8CehOFoBdjqL"
+      },
+      "addedDate" : "2026-02-01"
+    }, {
+      "track" : {
+        "trackName" : "Billyeoon Goyangi (Do the Dance) (Slowed + Reverb)",
+        "artistName" : "ILLIT",
+        "albumName" : "Billyeoon Goyangi (Do the Dance) (Remixes)",
+        "trackUri" : "spotify:track:6q1tR5xmqfVajqGRfQk3Eo"
+      },
+      "addedDate" : "2026-02-07"
+    }, {
+      "track" : {
+        "trackName" : "HYPNOTIZE",
+        "artistName" : "XG",
+        "albumName" : "THE CORE - 核",
+        "trackUri" : "spotify:track:3fEX9NgOeklq816Fw00uoo"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "GALA",
+        "artistName" : "XG",
+        "albumName" : "THE CORE - 核",
+        "trackUri" : "spotify:track:748Uvc654IhPLrmiBGlPhd"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "DOWN (Juicy Juicy)",
+        "artistName" : "JO YURI",
+        "albumName" : "See You in My 19th Life, Pt. 3 (Original Television Soundtrack)",
+        "trackUri" : "spotify:track:086PZ9r1W6iNjZyL8qOqTS"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "GLASSY",
+        "artistName" : "JO YURI",
+        "albumName" : "GLASSY",
+        "trackUri" : "spotify:track:6PFfx4sEBWPuFqFB0mgX1D"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "Round and Around",
+        "artistName" : "JO YURI",
+        "albumName" : "Op.22 Y-Waltz : in Major",
+        "trackUri" : "spotify:track:1h7S5xFqtKsh4Lqy2UInH9"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "Love Shhh!",
+        "artistName" : "JO YURI",
+        "albumName" : "Op.22 Y-Waltz : in Major",
+        "trackUri" : "spotify:track:00vy9aiFjxMfnKniQAYzrC"
+      },
+      "addedDate" : "2026-02-17"
+    }, {
+      "track" : {
+        "trackName" : "TOY TOY",
+        "artistName" : "Angel Noise",
+        "albumName" : "TOY TOY",
+        "trackUri" : "spotify:track:4gt19DKG2Np5Uv7vjzfhsa"
+      },
+      "addedDate" : "2026-02-21"
+    }, {
+      "track" : {
+        "trackName" : "White Letter",
+        "artistName" : "Angel Noise",
+        "albumName" : "White Letter",
+        "trackUri" : "spotify:track:1aCwm9wGm0AlprHdOs7iCg"
+      },
+      "addedDate" : "2026-02-21"
+    }, {
+      "track" : {
+        "trackName" : "Ram Pang Pang - BEAT BOX_Ver Remix",
+        "artistName" : "Angel Noise",
+        "albumName" : "Ram Pang Pang",
+        "trackUri" : "spotify:track:5wmHKVLcOHNfdjkslj5dX2"
+      },
+      "addedDate" : "2026-02-21"
+    }, {
+      "track" : {
+        "trackName" : "XL (Extra Love)",
+        "artistName" : "ICHILLIN'",
+        "albumName" : "WILD CHERRY",
+        "trackUri" : "spotify:track:1Y8oXmmSDbwkR66oUoI5ow"
+      },
+      "addedDate" : "2026-02-23"
+    }, {
+      "track" : {
+        "trackName" : "La Luna",
+        "artistName" : "ICHILLIN'",
+        "albumName" : "Bridge of Dreams",
+        "trackUri" : "spotify:track:75kvUnuuMDLR13fW3jD1RE"
+      },
+      "addedDate" : "2026-02-23"
+    }, {
+      "track" : {
+        "trackName" : "SIREN",
+        "artistName" : "ICHILLIN'",
+        "albumName" : "SIREN",
+        "trackUri" : "spotify:track:5o7hrNxAsLMAfuEpXtrRkc"
+      },
+      "addedDate" : "2026-02-23"
+    }, {
+      "track" : {
+        "trackName" : "GO",
+        "artistName" : "BLACKPINK",
+        "albumName" : "DEADLINE",
+        "trackUri" : "spotify:track:0mYa3o6tlUN5HRippmKmwH"
+      },
+      "addedDate" : "2026-02-27"
+    }, {
+      "track" : {
+        "trackName" : "Me and my",
+        "artistName" : "BLACKPINK",
+        "albumName" : "DEADLINE",
+        "trackUri" : "spotify:track:5MXcM263QvCTWriH3nVusc"
+      },
+      "addedDate" : "2026-02-27"
+    }, {
+      "track" : {
+        "trackName" : "Champion",
+        "artistName" : "BLACKPINK",
+        "albumName" : "DEADLINE",
+        "trackUri" : "spotify:track:3oraRy91vke1aof4tIrQfr"
+      },
+      "addedDate" : "2026-02-27"
+    }, {
+      "track" : {
+        "trackName" : "Fxxxboy",
+        "artistName" : "BLACKPINK",
+        "albumName" : "DEADLINE",
+        "trackUri" : "spotify:track:7m0duH1vdTNxM2g8BLfR0F"
+      },
+      "addedDate" : "2026-02-27"
+    }, {
+      "track" : {
+        "trackName" : "TIC TIC (feat. Pabllo Vittar)",
+        "artistName" : "NMIXX",
+        "albumName" : "TIC TIC (feat. Pabllo Vittar)",
+        "trackUri" : "spotify:track:2ZBMbueQLQZAUHio2jplVK"
+      },
+      "addedDate" : "2026-03-03"
+    }, {
+      "track" : {
+        "trackName" : "404 (New Era)",
+        "artistName" : "KiiiKiii",
+        "albumName" : "Delulu Pack",
+        "trackUri" : "spotify:track:24rDDbSlFY9OHrlJb48CRh"
+      },
+      "addedDate" : "2026-03-03"
+    }, {
+      "track" : {
+        "trackName" : "Strawberry Rush",
+        "artistName" : "CHUU",
+        "albumName" : "Strawberry Rush",
+        "trackUri" : "spotify:track:1gq1gf44tZ9cyTdlcyoJd1"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "Only cry in the rain",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:0J92BX2A6XcG2ZbWAxtk1x"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "Canary",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:59BCMqaghgeHN4IpMv7Gdn"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "Cocktail Dress",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:0AYqQD1tff1gGz8u6D9RD2"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "Limoncello",
+        "artistName" : "CHUU",
+        "albumName" : "XO, My Cyberlove",
+        "trackUri" : "spotify:track:1MzrmkSpQO3z0xBIWkh9s0"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "FEARLESS (2023 Ver.)",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "UNFORGIVEN",
+        "trackUri" : "spotify:track:4K8jDTlNhZWEdnzZVGRMtN"
+      },
+      "addedDate" : "2026-03-04"
+    }, {
+      "track" : {
+        "trackName" : "TAXI",
+        "artistName" : "JO YURI",
+        "albumName" : "LOVE ALL",
+        "trackUri" : "spotify:track:0LMqywHzZAAwSPWCfyfz9t"
+      },
+      "addedDate" : "2026-03-07"
+    }, {
+      "track" : {
+        "trackName" : "Kiss a kitty",
+        "artistName" : "CHUU",
+        "albumName" : "Only cry in the rain",
+        "trackUri" : "spotify:track:3PRUZiGcWjM47FznzBR8xN"
+      },
+      "addedDate" : "2026-03-07"
+    }, {
+      "track" : {
+        "trackName" : "The Feels",
+        "artistName" : "TWICE",
+        "albumName" : "Formula of Love: O+T=<3",
+        "trackUri" : "spotify:track:308Ir17KlNdlrbVLHWhlLe"
+      },
+      "addedDate" : "2026-03-09"
+    }, {
+      "track" : {
+        "trackName" : "Feel Special",
+        "artistName" : "TWICE",
+        "albumName" : "Feel Special",
+        "trackUri" : "spotify:track:3Hz3tTQwOdM6XkA0ALB2G9"
+      },
+      "addedDate" : "2026-03-09"
+    }, {
+      "track" : {
+        "trackName" : "Dracula - JENNIE Remix",
+        "artistName" : "Tame Impala",
+        "albumName" : "Dracula (Remix)",
+        "trackUri" : "spotify:track:5yvVYFDUpbnjcnRBgjwTzM"
+      },
+      "addedDate" : "2026-03-17"
+    }, {
+      "track" : {
+        "trackName" : "Catch Catch",
+        "artistName" : "YENA",
+        "albumName" : "LOVE CATCHER",
+        "trackUri" : "spotify:track:2O9bMJticxbQ8FH3NiQ7Xh"
+      },
+      "addedDate" : "2026-03-21"
+    }, {
+      "track" : {
+        "trackName" : "RUDE!",
+        "artistName" : "Hearts2Hearts",
+        "albumName" : "RUDE!",
+        "trackUri" : "spotify:track:2bAQsNqdo62T8akkIvWzGl"
+      },
+      "addedDate" : "2026-03-21"
+    }, {
+      "track" : {
+        "trackName" : "FOCUS",
+        "artistName" : "Hearts2Hearts",
+        "albumName" : "FOCUS - The 1st Mini Album",
+        "trackUri" : "spotify:track:6jYiHr12NVKLzn0X7K8aSK"
+      },
+      "addedDate" : "2026-03-21"
+    }, {
+      "track" : {
+        "trackName" : "SWICY",
+        "artistName" : "UNIS",
+        "albumName" : "The 2nd Mini Album 'SWICY'",
+        "trackUri" : "spotify:track:3owGQ1rmtKXpvwHmF0S2CZ"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Pinky Lady",
+        "artistName" : "UNIS",
+        "albumName" : "Music from THE SPECIALS",
+        "trackUri" : "spotify:track:0YttCAHtwWBIU434qZ5jRW"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Curious",
+        "artistName" : "UNIS",
+        "albumName" : "CURIOUS",
+        "trackUri" : "spotify:track:0O0ivmVOezvyrCkcxEvrCl"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Girls Never Die",
+        "artistName" : "tripleS",
+        "albumName" : "<ASSEMBLE24>",
+        "trackUri" : "spotify:track:45OflED18VsURGw2z0Y6Cv"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Generation",
+        "artistName" : "tripleS",
+        "albumName" : "Acid Angel from Asia <ACCESS>",
+        "trackUri" : "spotify:track:3KuCXHNvtheCDzwZpaRR9I"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Cameo Love",
+        "artistName" : "tripleS",
+        "albumName" : "msnz <Beyond Beauty>",
+        "trackUri" : "spotify:track:5qXYa17Aq4gHdmf3DVucBm"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Rising",
+        "artistName" : "tripleS",
+        "albumName" : "ASSEMBLE",
+        "trackUri" : "spotify:track:53k2MlAwVH8RpHxkkjBg4B"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Social Path",
+        "artistName" : "Stray Kids",
+        "albumName" : "Social Path",
+        "trackUri" : "spotify:track:0fkL0fOhEzRK8WFe2ixt2d"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Lose My Breath (Stray Kids Ver.)",
+        "artistName" : "Stray Kids",
+        "albumName" : "Lose My Breath (Remixes)",
+        "trackUri" : "spotify:track:5NxxixRIBePmP5iNl9lPOt"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Christmas EveL",
+        "artistName" : "Stray Kids",
+        "albumName" : "Christmas EveL",
+        "trackUri" : "spotify:track:5npCUsfrlhdyjxyCa32maW"
+      },
+      "addedDate" : "2026-03-22"
+    }, {
+      "track" : {
+        "trackName" : "Dance The Night Away",
+        "artistName" : "TWICE",
+        "albumName" : "Summer Nights",
+        "trackUri" : "spotify:track:4DYIDSMIB5y2UmZFv9fxeX"
+      },
+      "addedDate" : "2026-03-25"
+    }, {
+      "track" : {
+        "trackName" : "Chocolate",
+        "artistName" : "CHUU",
+        "albumName" : "Chocolate",
+        "trackUri" : "spotify:track:0e9skrsECOVqRRNFgFdA5c"
+      },
+      "addedDate" : "2026-03-29"
+    }, {
+      "track" : {
+        "trackName" : "Ice Cream",
+        "artistName" : "YUNA",
+        "albumName" : "Ice Cream",
+        "trackUri" : "spotify:track:5JJl9DV0DAg5ekxnBSqZyO"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "jellyous",
+        "artistName" : "ILLIT",
+        "albumName" : "bomb",
+        "trackUri" : "spotify:track:0wFU2pYHZi45Ws1VD6aSJX"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "Really Like You",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:3entdIWiOuQfcXIkJEABsV"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "Cherish (My Love)",
+        "artistName" : "ILLIT",
+        "albumName" : "I'LL LIKE YOU",
+        "trackUri" : "spotify:track:2MoUuJhpSO4a0czxvsrSC6"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "TT",
+        "artistName" : "TWICE",
+        "albumName" : "Twicecoaster: Lane 1",
+        "trackUri" : "spotify:track:60jFaQV7Z4boGC4ob5B5c6"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "Cupid",
+        "artistName" : "FIFTY FIFTY",
+        "albumName" : "The Beginning",
+        "trackUri" : "spotify:track:4TqmTBSWsZXMj3LouLEvXn"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "Pretty Please",
+        "artistName" : "Hearts2Hearts",
+        "albumName" : "Pretty Please",
+        "trackUri" : "spotify:track:6oBDhkYQDhFS2q0wQ6xZLO"
+      },
+      "addedDate" : "2026-03-30"
+    }, {
+      "track" : {
+        "trackName" : "BATTER UP",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "BATTER UP",
+        "trackUri" : "spotify:track:3VBj0lzjmhTzVFPEDOjNCG"
+      },
+      "addedDate" : "2026-04-03"
+    }, {
+      "track" : {
+        "trackName" : "Blink (feat. TZUYU)",
+        "artistName" : "Corbyn Besson",
+        "albumName" : "Blink (feat. TZUYU)",
+        "trackUri" : "spotify:track:25qp5LiSuet6rvl950jrGD"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "Smart",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "EASY",
+        "trackUri" : "spotify:track:4lR8sYGMGZPvthF2yUfo7T"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "ALL FOR YOU",
+        "artistName" : "ILLIT",
+        "albumName" : "ALL FOR YOU, 2027",
+        "trackUri" : "spotify:track:7i3A3RHpnqoOBEX9GcP1Ms"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "ATTITUDE",
+        "artistName" : "aespa",
+        "albumName" : "ATTITUDE",
+        "trackUri" : "spotify:track:6QIY4JAyzPH6UuFsyndaPs"
+      },
+      "addedDate" : "2026-04-04"
+    }, {
+      "track" : {
+        "trackName" : "BURNING UP",
+        "artistName" : "MEOVV",
+        "albumName" : "BURNING UP",
+        "trackUri" : "spotify:track:3uqgFeHo4Jr1D3gVIHQlD7"
+      },
+      "addedDate" : "2026-04-05"
+    }, {
+      "track" : {
+        "trackName" : "BODY",
+        "artistName" : "MEOVV",
+        "albumName" : "TOXIC",
+        "trackUri" : "spotify:track:0u18ibQ2zk470oLSP3D5WR"
+      },
+      "addedDate" : "2026-04-05"
+    }, {
+      "track" : {
+        "trackName" : "BEEP",
+        "artistName" : "izna",
+        "albumName" : "BEEP",
+        "trackUri" : "spotify:track:21LesVOMCk5j8LqsFBvCc5"
+      },
+      "addedDate" : "2026-04-05"
+    }, {
+      "track" : {
+        "trackName" : "PINKY UP",
+        "artistName" : "KATSEYE",
+        "albumName" : "PINKY UP",
+        "trackUri" : "spotify:track:4KmkJjHTNlr1jFY56Lyz4E"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "Bittersweet",
+        "artistName" : "Baby DONT Cry",
+        "albumName" : "The 1st Mini Album [AFTER CRY]",
+        "trackUri" : "spotify:track:4attgopd8pmrJ03fSDeOI2"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "I DONT CARE",
+        "artistName" : "Baby DONT Cry",
+        "albumName" : "I DONT CARE",
+        "trackUri" : "spotify:track:7h6DJy4HspkjUtOdYtfqv4"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "Bet You’ll Regret It",
+        "artistName" : "Baby DONT Cry",
+        "albumName" : "F Girl",
+        "trackUri" : "spotify:track:2bVH1pUiX20bp2VAm5JcHj"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "F Girl",
+        "artistName" : "Baby DONT Cry",
+        "albumName" : "F Girl",
+        "trackUri" : "spotify:track:5HaVN6uKNnLu3GVEmbrSBd"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "STILL",
+        "artistName" : "I.MET.U",
+        "albumName" : "STILL",
+        "trackUri" : "spotify:track:4upqNi2I83nKmsc4gifdT9"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "VELVET TRIGGER",
+        "artistName" : "I.MET.U",
+        "albumName" : "VELVET TRIGGER",
+        "trackUri" : "spotify:track:4vJ8d9xnCAPwOCO4yFHB0K"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "BOUNCY (K-HOT CHILLI PEPPERS)",
+        "artistName" : "ATEEZ",
+        "albumName" : "THE WORLD EP.2 : OUTLAW",
+        "trackUri" : "spotify:track:5KyOUICJIvO0z71MBdPGiX"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "On The Road",
+        "artistName" : "ATEEZ",
+        "albumName" : "GOLDEN HOUR : Part.4",
+        "trackUri" : "spotify:track:0HAUnsOCQNH1fqIvlf7Fpp"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "This World",
+        "artistName" : "ATEEZ",
+        "albumName" : "THE WORLD EP.2 : OUTLAW",
+        "trackUri" : "spotify:track:6QDcmN2Avrim8kNoCHkw9s"
+      },
+      "addedDate" : "2026-04-10"
+    }, {
+      "track" : {
+        "trackName" : "긴 밤 (feat. GIRIBOY)",
+        "artistName" : "Seori",
+        "albumName" : "긴 밤 (feat. Giriboy)",
+        "trackUri" : "spotify:track:45ryK5kAHyUxV1C73fdur5"
+      },
+      "addedDate" : "2026-04-14"
+    }, {
+      "track" : {
+        "trackName" : "Dive with you (feat. eaJ)",
+        "artistName" : "Seori",
+        "albumName" : "Dive with you (feat. eaJ)",
+        "trackUri" : "spotify:track:5KlXKygDyS1CS8ToYA1iHZ"
+      },
+      "addedDate" : "2026-04-16"
+    }, {
+      "track" : {
+        "trackName" : "Get Up",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:1wUnuiXMMvhudmzvcCtlZP"
+      },
+      "addedDate" : "2026-04-16"
+    }, {
+      "track" : {
+        "trackName" : "Super Shy",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:0kwrPQkiGVE8KTHalH1uMo"
+      },
+      "addedDate" : "2026-04-17"
+    }, {
+      "track" : {
+        "trackName" : "New Jeans",
+        "artistName" : "NewJeans",
+        "albumName" : "NewJeans 2nd EP 'Get Up'",
+        "trackUri" : "spotify:track:7woEDtme8YkFiWeyiinIjy"
+      },
+      "addedDate" : "2026-04-17"
+    }, {
+      "track" : {
+        "trackName" : "EASY",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "EASY",
+        "trackUri" : "spotify:track:2O4Bb2WCkjlTPO827OnBMI"
+      },
+      "addedDate" : "2026-04-20"
+    }, {
+      "track" : {
+        "trackName" : "FEARLESS",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "FEARLESS",
+        "trackUri" : "spotify:track:296nXCOv97WJNRWzIBQnoj"
+      },
+      "addedDate" : "2026-04-20"
+    }, {
+      "track" : {
+        "trackName" : "Who is she",
+        "artistName" : "KISS OF LIFE",
+        "albumName" : "Who is she",
+        "trackUri" : "spotify:track:16iOs2f9G9qRknDgM9cfAw"
+      },
+      "addedDate" : "2026-04-21"
+    }, {
+      "track" : {
+        "trackName" : "Sticky",
+        "artistName" : "KISS OF LIFE",
+        "albumName" : "Sticky",
+        "trackUri" : "spotify:track:4e1aewX6ATPcdfQIqr7gqO"
+      },
+      "addedDate" : "2026-04-21"
+    }, {
+      "track" : {
+        "trackName" : "SWIM",
+        "artistName" : "BTS",
+        "albumName" : "ARIRANG",
+        "trackUri" : "spotify:track:68lbSrXDORS51pmyjZv712"
+      },
+      "addedDate" : "2026-04-26"
+    }, {
+      "track" : {
+        "trackName" : "Hooligan",
+        "artistName" : "BTS",
+        "albumName" : "ARIRANG",
+        "trackUri" : "spotify:track:20dAJsyno9ZoBLJtqgQnUI"
+      },
+      "addedDate" : "2026-04-26"
+    }, {
+      "track" : {
+        "trackName" : "MOON",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "춤 (CHOOM)",
+        "trackUri" : "spotify:track:4ni36cZOQZldZGpHyLHFqX"
+      },
+      "addedDate" : "2026-05-04"
+    }, {
+      "track" : {
+        "trackName" : "CHOOM",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "춤 (CHOOM)",
+        "trackUri" : "spotify:track:4cox7ONwuCwUvfZ9fsGDVu"
+      },
+      "addedDate" : "2026-05-05"
+    }, {
+      "track" : {
+        "trackName" : "I LIKE IT",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "춤 (CHOOM)",
+        "trackUri" : "spotify:track:7vKgGaEDN3shr8HBlCbIWg"
+      },
+      "addedDate" : "2026-05-09"
+    }, {
+      "track" : {
+        "trackName" : "LOCKED IN",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "춤 (CHOOM)",
+        "trackUri" : "spotify:track:1vvoCAUWVRBjCarEvB6Khd"
+      },
+      "addedDate" : "2026-05-09"
+    }, {
+      "track" : {
+        "trackName" : "Alcohol-Free",
+        "artistName" : "TWICE",
+        "albumName" : "Taste of Love",
+        "trackUri" : "spotify:track:0BTaaKT4RMbs5M73tOHX5Y"
+      },
+      "addedDate" : "2026-05-17"
+    }, {
+      "track" : {
+        "trackName" : "CELEBRATION",
+        "artistName" : "LE SSERAFIM",
+        "albumName" : "CELEBRATION",
+        "trackUri" : "spotify:track:7Cy79KgYPsjOTX7VITI1U1"
+      },
+      "addedDate" : "2026-05-19"
+    }, {
+      "track" : {
+        "trackName" : "GO",
+        "artistName" : "BLACKPINK",
+        "albumName" : "DEADLINE",
+        "trackUri" : "spotify:track:3FZPp9lBUvhsxFxKJi3VkB"
+      },
+      "addedDate" : "2026-06-03"
+    }, {
+      "track" : {
+        "trackName" : "Pink Venom",
+        "artistName" : "BLACKPINK",
+        "albumName" : "BORN PINK",
+        "trackUri" : "spotify:track:5zwwW9Oq7ubSxoCGyW1nbY"
+      },
+      "addedDate" : "2026-06-03"
+    }, {
+      "track" : {
+        "trackName" : "Moonwalkin'",
+        "artistName" : "LNGSHOT",
+        "albumName" : "SHOT CALLERS",
+        "trackUri" : "spotify:track:46V2ciN6F5bxjQWityNhkY"
+      },
+      "addedDate" : "2026-06-06"
+    }, {
+      "track" : {
+        "trackName" : "SUGAR HONEY ICE TEA",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "SUGAR HONEY ICE TEA",
+        "trackUri" : "spotify:track:16ck09A3j0tqvV6t3fW1DD"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "CLIK CLAK",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:0Rq9lIn9fl4wiW9Tg72ifr"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "Woke Up In Tokyo (RUKA & ASA)",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:2prYdDrdqzyZgk2PyXps1F"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "WILD",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "WE GO UP",
+        "trackUri" : "spotify:track:4s31m7ZtBWsK3BfndIGP4E"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "FOREVER",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "FOREVER",
+        "trackUri" : "spotify:track:0Md02V4hwKO5Vu5B7GD8tQ"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "Stuck In The Middle (Remix)",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "BABYMONS7ER",
+        "trackUri" : "spotify:track:2fJgQ2gjt5boaD9sMqwMTw"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "Love In My Heart",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:7uGZIgNGAM4y7cyLj9SPlw"
+      },
+      "addedDate" : "2026-06-23"
+    }, {
+      "track" : {
+        "trackName" : "Love, Maybe",
+        "artistName" : "BABYMONSTER",
+        "albumName" : "DRIP",
+        "trackUri" : "spotify:track:5Mysty4YeFTdu2Xm7O2yHM"
+      },
+      "addedDate" : "2026-06-23"
+    } ],
+    "numberOfFollowers" : 0
+  } ]
+}

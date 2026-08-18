@@ -1,0 +1,812 @@
+{
+  "spotify:chat:4Awts6BJOFsXNJMZ6C5yKn" : {
+    "group_name" : null,
+    "members" : [ "22bmvg6c3btc5hrfls6x53yhq", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2024-02-03T01:00:14.215Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:4ItljeeAXtHsnsnnQojaO2",
+      "uri" : "spotify:chat-message:4Y8AffB9VyMPDgleUuA6Hr"
+    }, {
+      "time" : "2024-02-03T22:33:07.440Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:654pM5YvB8zivxVamxsneE",
+      "uri" : "spotify:chat-message:4Y6HSCMRXvYOH97jp1TDOL"
+    }, {
+      "time" : "2024-02-03T23:16:10.376Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4GtolNl9yxH580Y32fQ4qN",
+      "uri" : "spotify:chat-message:6yWVzhqJSFyRT1xg46fnpU"
+    }, {
+      "time" : "2024-04-13T13:48:43.407Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:784AdNOgrGhD6suxBrSd9P",
+      "uri" : "spotify:chat-message:0MP4TIwVmK4GgMCnWe0Afw"
+    }, {
+      "time" : "2024-06-15T01:11:38.623Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:61rputyFcUsC1ldct1OKRr",
+      "uri" : "spotify:chat-message:3Mm6xaHkS0HlD7JA9VUKmh"
+    }, {
+      "time" : "2024-09-28T13:24:07.596Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:7zHhP0CHO4cONkImJ0Oau6",
+      "uri" : "spotify:chat-message:4UryRvhcQmLhkA4TdvaN8p"
+    }, {
+      "time" : "2024-12-31T20:27:37.503Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:58JPjsCFHyZWcZIaBti7Ru",
+      "uri" : "spotify:chat-message:6DioCMpom92kR6FPzeBIlc"
+    }, {
+      "time" : "2025-08-04T21:49:27.140Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:6P2Ui9YtutmM0cUPrOQMbP",
+      "uri" : "spotify:chat-message:3KVh9oOxxarnnjIzXttglV"
+    }, {
+      "time" : "2025-10-04T14:53:13.006Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "\uD83D\uDE0D\uD83D\uDE0D\uD83D\uDE0D",
+      "uri" : "spotify:chat-message:7mAJFCdsmZGTiKyf50Msuu"
+    }, {
+      "time" : "2025-10-06T00:40:59.863Z",
+      "from" : "pedrosoethe",
+      "message" : "Oiiii",
+      "uri" : "spotify:chat-message:1upJBGWNdPIlaH80UuntpS"
+    }, {
+      "time" : "2025-10-06T01:04:49.217Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Oie ☺️",
+      "uri" : "spotify:chat-message:1fLts51pJynCT92ArANgYE"
+    }, {
+      "time" : "2025-10-17T20:42:33.720Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5uyK1WM8qe14n70kvh3IUM?si=5vZJRLM1TcuT2ZJTNrb-7Q%0A",
+      "uri" : "spotify:chat-message:2jH4ZXRiqzOT3BvNBSBsHm"
+    }, {
+      "time" : "2025-10-17T20:42:33.721Z",
+      "from" : "pedrosoethe",
+      "message" : "Lembrei de você",
+      "uri" : "spotify:chat-message:0GQgVION8d7xncd4FoNsKh"
+    }, {
+      "time" : "2025-10-17T21:04:57.455Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Eu AMOOO essa música \uD83D\uDE0D",
+      "uri" : "spotify:chat-message:6US7YfCM6aXQaAmsnfTYRK"
+    }, {
+      "time" : "2025-10-17T21:39:01.277Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:35E2eKIEXXnP5q9L51iOAk?si=JGgeqCTaQROy2UEcKzDvgg&context=spotify:search:killing+t",
+      "uri" : "spotify:chat-message:6uZhd0DaxP8rgQciTapyZu"
+    }, {
+      "time" : "2025-10-17T21:39:01.278Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Agora essa aqui é uma perfeição",
+      "uri" : "spotify:chat-message:4ekBuLSHDKpxSAKmtAV1dk"
+    }, {
+      "time" : "2025-10-17T21:41:28.179Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:6oXAFRQx2GHOEG2oYSKRjR?si=Cjq7PnukTaSXYJ4QgvuZtw&context=spotify:search:killing+moon",
+      "uri" : "spotify:chat-message:7y5akgFPVs4GqdKggf6xtZ"
+    }, {
+      "time" : "2025-10-17T22:23:18.602Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Gostei q vc ouviu uma música e lembrou de mim \uD83E\uDD70",
+      "uri" : "spotify:chat-message:7b3Bpb0QFe5GBlJAXVBhc2"
+    }, {
+      "time" : "2025-10-17T22:32:48.144Z",
+      "from" : "pedrosoethe",
+      "message" : "\uD83D\uDE18\uD83D\uDE18\uD83D\uDE18",
+      "uri" : "spotify:chat-message:1rnMCYiQMjBP5FVJU8GgWq"
+    }, {
+      "time" : "2025-10-22T00:15:57.247Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "spotify:track:5H6Jp0syB5yEPk7SWYdlmk?context=spotify:artist:776Uo845nYHJpNaStv1Ds4&si=Kt2_Ubf0Q_avUTetOVgp5w",
+      "uri" : "spotify:chat-message:6Z4iXgxv2KY8K0p6FHiAQg"
+    }, {
+      "time" : "2025-10-22T10:46:54.415Z",
+      "from" : "pedrosoethe",
+      "message" : "Amoooo",
+      "uri" : "spotify:chat-message:38CWRYeUwWTMYblce3cIyc"
+    }, {
+      "time" : "2025-10-22T10:47:29.159Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:6kvCH4eS92QkpBNdTmjLEz?si=OJ6mSEqwQVCkROu88637CA%0A",
+      "uri" : "spotify:chat-message:4UxwjR1kCUwiLrrs5nSK4l"
+    }, {
+      "time" : "2025-10-22T10:47:37.695Z",
+      "from" : "pedrosoethe",
+      "message" : "Gosto muito deste álbum dele",
+      "uri" : "spotify:chat-message:2UYnt07iZRbkJ0NjeAJK0U"
+    }, {
+      "time" : "2025-10-22T11:23:16.507Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "É muuuuuito bom!!!! \uD83D\uDE0D\uD83D\uDE0D\uD83D\uDE0D",
+      "uri" : "spotify:chat-message:6hamvJkD2yKvmzJGoMcdEO"
+    }, {
+      "time" : "2025-10-22T11:24:25.797Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Faz anos q não ouvia esse álbum! Vou ouvir de novo hj!",
+      "uri" : "spotify:chat-message:6rIHbSDiXR8gf6XsG0ZDgi"
+    }, {
+      "time" : "2025-10-22T13:43:12.818Z",
+      "from" : "pedrosoethe",
+      "message" : "Ele é lindo",
+      "uri" : "spotify:chat-message:0ynTsbsVY5R26kf6xUtvnI"
+    }, {
+      "time" : "2025-10-22T22:19:49.353Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:1mZfzcclmxrk7QtfzOLF00?si=YwA2fmUdT1GMoUHBVRTX0A%0A",
+      "uri" : "spotify:chat-message:6diT0YnH0lTyTaIZth9snk"
+    }, {
+      "time" : "2025-10-23T03:48:35.162Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Essa música é perfeita em todos os sentidos \uD83D\uDC95",
+      "uri" : "spotify:chat-message:3bcYECnxwAdlRFNdV5yeqY"
+    }, {
+      "time" : "2025-10-23T03:49:47.501Z",
+      "from" : "22bmvg6c3btc5hrfls6x53yhq",
+      "message" : "Fico emocionada toda vez q ouço \nInexplicável",
+      "uri" : "spotify:chat-message:0HonGCEMm9ql7i7mq3hQeU"
+    } ]
+  },
+  "spotify:chat:2DqrBWcxXnF172Qu224pQ6" : {
+    "group_name" : null,
+    "members" : [ "12150312000", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2026-07-15T12:03:14.292Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4Ror9FLIzN2CAA55gGaPiW",
+      "uri" : "spotify:chat-message:5MesNQZw1YplOl6bN0A6SB"
+    } ]
+  },
+  "spotify:chat:6BToeqjt3WYXskadcaxmP0" : {
+    "group_name" : null,
+    "members" : [ "Deborah C. Bonacci", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2022-12-28T00:47:20.605Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:6vRDTaPLjpDAwj4ETixyeX",
+      "uri" : "spotify:chat-message:0rS0hFm8j9IXz5Lp05Hiyu"
+    }, {
+      "time" : "2022-12-28T00:52:03.434Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:4ZKgPZ9d4V5WW6H2s4qMD3",
+      "uri" : "spotify:chat-message:20T5ALK1SvhGf7JMl75Zhm"
+    }, {
+      "time" : "2023-01-10T20:20:58.494Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:2G6chemqdiNHxEw1ucZ7pw",
+      "uri" : "spotify:chat-message:1yTYd95u5N0DgNFPDQaBVZ"
+    }, {
+      "time" : "2023-01-10T20:25:08.298Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:1wWWK8HMmqryEqxaZ3duJ4",
+      "uri" : "spotify:chat-message:41MJHi48K5rBffQ16KlKqk"
+    }, {
+      "time" : "2023-01-10T20:47:08.385Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:album:4NADQYGeB4aeApBwGmBQl4",
+      "uri" : "spotify:chat-message:58bWzxnNBVpMh9dUmpUCHx"
+    }, {
+      "time" : "2023-01-10T21:04:48.051Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:2kFYChSHSu046vjfGfAr41",
+      "uri" : "spotify:chat-message:6Z8f4EZKV6pn7dOMaTkPYd"
+    }, {
+      "time" : "2023-01-10T21:16:32.472Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:2ITVvrNiINKRiW7wA3w6w6",
+      "uri" : "spotify:chat-message:61TdR4OVJH7eowccQ90doQ"
+    }, {
+      "time" : "2023-01-11T10:36:52.786Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:279o49AIcWuS6kIqVozTGL",
+      "uri" : "spotify:chat-message:4f9g4PvhFjZ3JHTQVAZ1RJ"
+    }, {
+      "time" : "2023-01-13T08:56:42.966Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:50QMS2zosvUxhucf6zMRUy",
+      "uri" : "spotify:chat-message:3MYthL3nL8kMzCHIPaOxVN"
+    }, {
+      "time" : "2023-01-13T12:25:49.499Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:31dzIMOW5SH3UejDcmY6Ws",
+      "uri" : "spotify:chat-message:4I1iPHLDMyCjiKZN36hnvQ"
+    }, {
+      "time" : "2023-01-21T20:31:31.587Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:episode:0VRRwUtEpOARhbekolQ1QK",
+      "uri" : "spotify:chat-message:66K4oHvamGTHLePLT6UYCf"
+    }, {
+      "time" : "2023-01-28T15:35:46.990Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:63m3fusWaHBnB3isFfAlRd",
+      "uri" : "spotify:chat-message:4En2sHOlGX4fq1litEQRK1"
+    }, {
+      "time" : "2023-02-05T19:32:50.010Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:63FLIj5L2qTI2nSArBny5p",
+      "uri" : "spotify:chat-message:6JlpzewCx9sZ98iucGjzPN"
+    }, {
+      "time" : "2023-02-09T21:59:39.679Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4R8PxdNP56SdYFF2wl5c06",
+      "uri" : "spotify:chat-message:2z7LJDg8ZFWmP5jU0J2hUj"
+    }, {
+      "time" : "2023-02-10T21:03:22.538Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:02cUNVfa6psOeBdy2YYZGe",
+      "uri" : "spotify:chat-message:7IMLsfHwxijZO9L6a2e981"
+    }, {
+      "time" : "2023-02-13T15:45:02.261Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:2lfdbxZXN3OU4Hz2ffJ36x",
+      "uri" : "spotify:chat-message:0jnXqNzFBXkObnzSzeLzF9"
+    }, {
+      "time" : "2023-03-10T16:04:41.682Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:4VDfpqLKbbuMMRIl14LLTg",
+      "uri" : "spotify:chat-message:0Df69hoWoXspF49F3XWmev"
+    }, {
+      "time" : "2023-03-13T23:13:10.581Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:24w0AeGooUIswDDJl5uA3c",
+      "uri" : "spotify:chat-message:214xnkRo3qJUGkZLoJBBBI"
+    }, {
+      "time" : "2023-05-06T23:18:35.735Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:playlist:1aMMegUlxwKDywB4XBhmRt",
+      "uri" : "spotify:chat-message:43jyLjAFVzRaToTbpPKj9G"
+    }, {
+      "time" : "2023-05-11T03:01:52.961Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:0VjIjW4GlUZAMYd2vXMi3b",
+      "uri" : "spotify:chat-message:5ZU9ZBrU1hZ1imVYD8FRQQ"
+    }, {
+      "time" : "2023-05-15T22:52:09.973Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:6V6ztx8hwKwNtASM8D3xQB",
+      "uri" : "spotify:chat-message:3zkHC85a2Z3wNfwTlyQfFL"
+    }, {
+      "time" : "2023-05-16T00:28:41.032Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:episode:1SrwBbPOJWlxSwOxEmjWQa",
+      "uri" : "spotify:chat-message:72zNLBwtxxgaAT6kDN9zys"
+    }, {
+      "time" : "2023-05-26T02:10:11.792Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:24XBA2gKtKnNt2TdPcMc7P",
+      "uri" : "spotify:chat-message:7dovlac2o4IcCoct5hq1PQ"
+    }, {
+      "time" : "2023-05-28T18:17:36.732Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:3Dbgo1HE3DErIBNDIO4Hyd",
+      "uri" : "spotify:chat-message:4W1h4odoxvIx3beoOiMa5f"
+    }, {
+      "time" : "2023-06-13T16:16:30.291Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:playlist:37i9dQZF1DX9XIFQuFvzM4",
+      "uri" : "spotify:chat-message:407mFx9Lm1yyx824xiXPKD"
+    }, {
+      "time" : "2023-06-17T01:59:24.640Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:episode:2plO7fTLoPLW6tFeyehcxd",
+      "uri" : "spotify:chat-message:7skzKvfHMBCcubZhPDVjaG"
+    }, {
+      "time" : "2023-06-17T15:25:57.784Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:0MMe6HyOCDo6GYBZZCwkyt",
+      "uri" : "spotify:chat-message:4ErgytjAfWhZJXT1ktXRVW"
+    }, {
+      "time" : "2023-07-02T13:40:25.625Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4kRh9lyQMQyg0MK1kzKAzN",
+      "uri" : "spotify:chat-message:4JCE4sAnIkbjI01JcwDXRn"
+    }, {
+      "time" : "2023-08-12T17:08:56.933Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:3R4mm0vRlhxxNWPxP5AUzb",
+      "uri" : "spotify:chat-message:7wEkb9w0kBN3EcziI1ISPH"
+    }, {
+      "time" : "2023-09-30T14:19:57.608Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:2lR3CpEWIctTaKoEmPBtF5",
+      "uri" : "spotify:chat-message:4RytuQqq0d5IFKhxXMGdWK"
+    }, {
+      "time" : "2023-09-30T16:04:14.527Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:playlist:4i1nrCKU9piIHA446tXWyq?pt=5f8406e3e33e44b505e00c54b13fe971",
+      "uri" : "spotify:chat-message:08ibQVJzll4xn8vIoLPytz"
+    }, {
+      "time" : "2023-10-15T15:50:48.369Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:playlist:2iuRLrxUr14hvTQ1sb9Fyw",
+      "uri" : "spotify:chat-message:2QSN8qyQGLvfQzUXSXArrn"
+    }, {
+      "time" : "2023-11-16T18:20:16.261Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:55ueZnKTDXQhzWte60LV2L",
+      "uri" : "spotify:chat-message:0Que9X3riRbMCSPbBT4UNf"
+    }, {
+      "time" : "2023-11-18T01:16:10.656Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:1NgjW8K5Qbn7tYQW52hGgo",
+      "uri" : "spotify:chat-message:4xJliJ6NxcmA070CqHXOl5"
+    }, {
+      "time" : "2024-01-22T23:14:34.269Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5BgGeoSWQeCNrxs0OTBivx",
+      "uri" : "spotify:chat-message:1dCH8GDJ1jcduNAQqOU6Cz"
+    }, {
+      "time" : "2024-02-05T22:35:19.995Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:6l7VxGCmqeseT0K0L9tRXh",
+      "uri" : "spotify:chat-message:1PaZXKVIeeb6mROw8o6r9i"
+    }, {
+      "time" : "2024-03-14T00:04:16.107Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:0z1b34WikhOH9ZxU8QDWcv",
+      "uri" : "spotify:chat-message:7giaZZk05FD6oFqviXyuWo"
+    }, {
+      "time" : "2024-05-18T10:46:23.284Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:1AL1RPAS8xiZGehR3ch7mp",
+      "uri" : "spotify:chat-message:0LKYbIlmJyW7kbP0Bg7Jtf"
+    }, {
+      "time" : "2024-06-03T10:34:33.583Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:54M93Gj4Fkl1CJXWLPhNKh",
+      "uri" : "spotify:chat-message:7l0SzzANeZcATgVAsmRacN"
+    }, {
+      "time" : "2024-06-03T13:41:11.260Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4L0Xc1wKbQxLPbL3vXQWdi",
+      "uri" : "spotify:chat-message:0yQJiQh3zDsI4KdixMyeh2"
+    }, {
+      "time" : "2024-06-07T23:12:45.360Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:02Alfcz9tiZnoEj5fki2Al",
+      "uri" : "spotify:chat-message:2vjBvrlvSnpsGAwjFakySe"
+    }, {
+      "time" : "2024-06-15T22:34:10.747Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6uhj7EIZZm3OwVr0gWfkQn",
+      "uri" : "spotify:chat-message:426njWOwKOMMNqUtFAnXfX"
+    }, {
+      "time" : "2024-07-11T01:10:11.292Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:1VD0dpNJZjdQ0lelA5JTHv",
+      "uri" : "spotify:chat-message:1fWWsQIMmCNanmCfcm9UGO"
+    }, {
+      "time" : "2024-10-06T14:00:29.527Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7aQWuNqheTpisZfM0gP2oG",
+      "uri" : "spotify:chat-message:4xCEZjkr06oM1w0jukG3sm"
+    }, {
+      "time" : "2025-01-14T16:20:54.509Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:28VyGnf80OGPfdHS4aFPiT",
+      "uri" : "spotify:chat-message:342EceZzMm6YGcf4joQs0v"
+    }, {
+      "time" : "2025-02-03T01:34:53.238Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:0ks96s96ygipkQxpIcWPHw",
+      "uri" : "spotify:chat-message:6eEEtVPqm2soMiPtUWdOCq"
+    }, {
+      "time" : "2025-03-01T03:35:32.994Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:album:34Srx0wthOKzz3mJLPmfM2",
+      "uri" : "spotify:chat-message:2Cea61oFffKzD0DI7bMLjW"
+    }, {
+      "time" : "2025-03-11T20:27:32.213Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:4VDfpqLKbbuMMRIl14LLTg",
+      "uri" : "spotify:chat-message:6VVJr0jbkIbRk6Ru3eEkNH"
+    }, {
+      "time" : "2025-03-11T20:46:46.257Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:1qEyqHR1xsj2MC4Qy0dsaI",
+      "uri" : "spotify:chat-message:3X8mNlI4kkcl7e4DDpEKrW"
+    }, {
+      "time" : "2025-03-14T20:50:05.619Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:album:6wymZtyTRGT7AftVkVs2bi",
+      "uri" : "spotify:chat-message:6qXmtBgTzxkGhIfGtCBglk"
+    }, {
+      "time" : "2025-04-18T01:23:21.228Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:artist:1yqs45BSh7457Flyhmdv7f",
+      "uri" : "spotify:chat-message:3yXdqc382bOjd23GVtXAYg"
+    }, {
+      "time" : "2025-04-20T14:45:24.413Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:4egy2d8QiyXn5tzVQiptTb",
+      "uri" : "spotify:chat-message:6NWeCI4tVM1vPiktLZPTZb"
+    }, {
+      "time" : "2025-04-20T14:53:52.693Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7y4CK8bbzxpyKu73WOvgHJ",
+      "uri" : "spotify:chat-message:11EbE6JDHRppr9FQvZTpXC"
+    }, {
+      "time" : "2025-08-04T21:49:27.140Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:6P2Ui9YtutmM0cUPrOQMbP",
+      "uri" : "spotify:chat-message:1WkZOlAa6FxverKifi3ETB"
+    }, {
+      "time" : "2026-02-20T21:24:58.558Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:37i9dQZF1DZ06evO1mK8cO",
+      "uri" : "spotify:chat-message:3OFq4BJwily9FCfpJjnXOK"
+    }, {
+      "time" : "2026-05-17T20:37:59.422Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:4SgD6LC6N0amHNobm1JXaS",
+      "uri" : "spotify:chat-message:4xG5ZMGeK6A2hGi4qJT9EA"
+    }, {
+      "time" : "2026-05-17T20:48:15.769Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:6M21EUVSXQca71OxevveOe",
+      "uri" : "spotify:chat-message:4WyjJv4YvLUMKIUA7V9wlk"
+    }, {
+      "time" : "2026-05-18T13:06:10.597Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5ytqlD1Nwaf1dxvPDUKQeA",
+      "uri" : "spotify:chat-message:2Lq5Zd7ciHn1DRx4oPwekk"
+    }, {
+      "time" : "2026-06-04T18:50:54.083Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:0f9SMd9Krtgc4USEppPYYq",
+      "uri" : "spotify:chat-message:7CB75BC3idpY1eHXBDMSxm"
+    }, {
+      "time" : "2026-06-04T18:51:23.042Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:3NaqJmZwrYA1IMYB9zqBBp?si=GZkjRtJrTvmYc7KZi-lBuw%0A",
+      "uri" : "spotify:chat-message:0vgaGqD9kkRf1un7lCPipD"
+    }, {
+      "time" : "2026-06-04T18:51:36.759Z",
+      "from" : "Deborah C. Bonacci",
+      "message" : "spotify:track:3NaqJmZwrYA1IMYB9zqBBp",
+      "uri" : "spotify:chat-message:2dxQ43JF9yqj3syCTQIJNd"
+    }, {
+      "time" : "2026-06-15T13:03:56.731Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4rnuiYZD1tTMILDKCYDTkg",
+      "uri" : "spotify:chat-message:6FSZYyCfrqpwNXp0PVq1G3"
+    }, {
+      "time" : "2026-07-19T12:11:45.052Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:artist:4KhnLZjONKS3nuYzXoqoXi",
+      "uri" : "spotify:chat-message:74Y08L53sd2vtaNrjpxvLP"
+    } ]
+  },
+  "spotify:chat:3zz88Y9lDgKndHjlODca3A" : {
+    "group_name" : null,
+    "members" : [ "Arthurbsoethe", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2023-11-05T21:32:29.982Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:2uiAobYhD3ohlH4ztGY0vd",
+      "uri" : "spotify:chat-message:1qaKOFsalwXFmEMbXVLWKG"
+    }, {
+      "time" : "2025-07-31T19:53:02.167Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:1TN4aNhUPVB7kK0l8P6rqZ",
+      "uri" : "spotify:chat-message:0kP7AjltmjdxQfl6M5cg7u"
+    }, {
+      "time" : "2025-10-09T01:01:45.146Z",
+      "from" : "Arthurbsoethe",
+      "message" : "spotify:track:2jvuMDqBK04WvCYYz5qjvG",
+      "uri" : "spotify:chat-message:3OfpOpMj6BkMgNHhP5RYQX"
+    }, {
+      "time" : "2025-10-13T00:00:09.904Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5KV5QatI2tY5ZLmYMj5mxI",
+      "uri" : "spotify:chat-message:5xRFJ4LlAzEr6jEwqRccNJ"
+    }, {
+      "time" : "2026-03-28T17:00:18.255Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5nHMuwMdmUUy3NLMxacyBx",
+      "uri" : "spotify:chat-message:42EIXhY9VpYm041d8lqM1o"
+    }, {
+      "time" : "2026-04-07T16:00:30.351Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:55mW03rqsI9s3xUnuruF7G",
+      "uri" : "spotify:chat-message:0hsr46ogKqfEFWYSCc56Wa"
+    }, {
+      "time" : "2026-04-20T16:25:02.211Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4s6qyTWg5r4EyOi2QIwM9g",
+      "uri" : "spotify:chat-message:7fDciVnqtrBFvgP7sW2xxM"
+    }, {
+      "time" : "2026-05-13T21:00:10.423Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:37i9dQZF1CKMXUWhRTLk8i",
+      "uri" : "spotify:chat-message:7N1xe5kbIH96ek1Smmj2Zg"
+    }, {
+      "time" : "2026-05-23T22:00:57.354Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:3KvKMHMlRj30a7IjHXQVzu",
+      "uri" : "spotify:chat-message:1dUJuuMujZUDePkoWhm1tS"
+    }, {
+      "time" : "2026-06-08T18:19:27.534Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7xki0BmuOllyquWqjhETyr",
+      "uri" : "spotify:chat-message:5gu4NZndAGuyvb9UO66vlH"
+    }, {
+      "time" : "2026-06-09T01:49:40.354Z",
+      "from" : "Arthurbsoethe",
+      "message" : "spotify:track:5CkhGGuCO3r8Tv9dqYM2af",
+      "uri" : "spotify:chat-message:2Tiz12618eTTqkf2xQBKtK"
+    }, {
+      "time" : "2026-07-05T01:00:12.438Z",
+      "from" : "Arthurbsoethe",
+      "message" : "spotify:track:1RxAzmAuN6KldKrMeVKkf2",
+      "uri" : "spotify:chat-message:226i3sZZOrclJz3yYJCt0W"
+    }, {
+      "time" : "2026-08-07T18:58:35.777Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:34iOH7LY3vme5rQxsVILZ4",
+      "uri" : "spotify:chat-message:081gacIM1aAbdwMUbvGcFC"
+    }, {
+      "time" : "2026-08-09T23:24:18.788Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:6azIGETFuMbii3GRkXQJxn",
+      "uri" : "spotify:chat-message:3nbP8W6w0Yg7y1FD4NPHSi"
+    }, {
+      "time" : "2026-08-10T12:24:55.287Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7h1YqA5MZrRxmkUFpukRcp",
+      "uri" : "spotify:chat-message:0DnBtAswTJWrmdzhToiRlS"
+    } ]
+  },
+  "spotify:chat:6pv0QgZEEGxd4LE2ILI3Ic" : {
+    "group_name" : null,
+    "members" : [ "Nadja Azevedo", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2024-09-02T16:27:32.964Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:playlist:29Kmomf4qFieIf8JTubvYn",
+      "uri" : "spotify:chat-message:5x5I7MNIaG3A8GYVzjntTs"
+    }, {
+      "time" : "2025-04-12T21:07:50.908Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6J4gdn9L1im9uqzqBLhht6",
+      "uri" : "spotify:chat-message:569uBgu4K0mmWy5YnJahIT"
+    }, {
+      "time" : "2025-04-19T12:43:26.484Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:0T5iIrXA4p5GsubkhuBIKV",
+      "uri" : "spotify:chat-message:1Nm1PZvpruk2Xgnp8wyfX1"
+    }, {
+      "time" : "2025-04-19T12:56:32.933Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4MPkQ1BppSZR0PnZ5HWL0i",
+      "uri" : "spotify:chat-message:0CgCjs389zyaZUanN2DU04"
+    }, {
+      "time" : "2025-04-19T16:37:46.464Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:6QAsrXPnMSXIbV0yEJHlEX",
+      "uri" : "spotify:chat-message:7CCUjphkPTaHm9goWdXnvw"
+    }, {
+      "time" : "2025-04-20T22:21:41.140Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:artist:2AwDU4ovhw5i65Ovx6iNLC",
+      "uri" : "spotify:chat-message:6uF9f9me60i5ovX3krkhCy"
+    }, {
+      "time" : "2025-04-22T23:11:45.452Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:1yctSMp7P3SkSCHsnkUI7b",
+      "uri" : "spotify:chat-message:01l8IsXmzIekGRiu2pWdJz"
+    }, {
+      "time" : "2025-04-24T16:47:01.915Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:1Cj2vqUwlJVG27gJrun92y",
+      "uri" : "spotify:chat-message:7E0kWqPkLuKTaaSB4NCQsO"
+    }, {
+      "time" : "2025-04-24T17:15:06.465Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6l8EbYRtQMgKOyc1gcDHF9",
+      "uri" : "spotify:chat-message:5WS4LTnkGUZNLEq6sa9aN8"
+    }, {
+      "time" : "2025-04-25T23:31:00.430Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:6M21EUVSXQca71OxevveOe",
+      "uri" : "spotify:chat-message:2xokLytBn4C1t5GJBCWdqA"
+    }, {
+      "time" : "2025-04-28T18:58:07.252Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:album:1tcn5JXZJC0xVAFIE3iZat",
+      "uri" : "spotify:chat-message:57LdcIRAajpmXI3aIvEy3w"
+    }, {
+      "time" : "2025-04-28T19:08:22.643Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6vzogE1JYvJIpIGUS0bePs",
+      "uri" : "spotify:chat-message:4gV4SfSUvn9DM6HqwGAJPm"
+    }, {
+      "time" : "2025-04-28T23:16:23.555Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:0YpsPSIF1iDYm5tb6V0tNW?pt=6da4619f0ccb3c48068318122eef9a5e",
+      "uri" : "spotify:chat-message:14ovemVQbXDEdAJDXOJJHX"
+    }, {
+      "time" : "2025-05-01T12:05:30.478Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:7dAqB8UPj51HdbVjQTGs8n",
+      "uri" : "spotify:chat-message:1HEdmO6g4jkdwzhD1ZDqcC"
+    }, {
+      "time" : "2025-05-01T19:32:42.430Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:episode:2zaTTGUVrIR7ObL9HNHuov",
+      "uri" : "spotify:chat-message:5SYUy7DtVodwE1CuFDoLu5"
+    }, {
+      "time" : "2025-05-02T13:03:11.641Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6uYglXA8uPK7KgDkC4VEzy",
+      "uri" : "spotify:chat-message:5P7k8kjZYHtz6Wf31ohbLM"
+    }, {
+      "time" : "2025-05-02T20:52:49.208Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:6vgwRZDCE1piqBzTGNl42l",
+      "uri" : "spotify:chat-message:2m97zeh2JH3yzmy1o2uuAH"
+    }, {
+      "time" : "2025-05-03T19:09:10.897Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:33TV3dRHN8tHU0NdCEv5ab",
+      "uri" : "spotify:chat-message:3KVXfjDiruWkFkrlq2ENws"
+    }, {
+      "time" : "2025-05-04T13:09:15.311Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5D7DMAMmaxoTJIV27i5lDJ",
+      "uri" : "spotify:chat-message:78inyu2L5AtbQX7iDsiHLJ"
+    }, {
+      "time" : "2025-05-04T13:46:30.749Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7tqhbajSfrz2F7E1Z75ASX",
+      "uri" : "spotify:chat-message:5SOgEI1VniKPohnzcht4PM"
+    }, {
+      "time" : "2025-05-06T11:40:30.735Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:2TuwPzSEFPpAFEugYlDVsl",
+      "uri" : "spotify:chat-message:5BiXo0vNBaTkYnOi4TPCM6"
+    }, {
+      "time" : "2025-05-06T11:42:42.947Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:2TuwPzSEFPpAFEugYlDVsl",
+      "uri" : "spotify:chat-message:19Z6DeZMEIFRMvNoarB2Ze"
+    }, {
+      "time" : "2025-05-09T11:54:17.849Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:5D7DMAMmaxoTJIV27i5lDJ",
+      "uri" : "spotify:chat-message:0OO6JYqVYTQCDyardTEdzh"
+    }, {
+      "time" : "2025-05-09T15:57:14.544Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4ybAw525VM4O7FelMjxi7K",
+      "uri" : "spotify:chat-message:7IcNES7ulHqXIPHHOR2LI3"
+    }, {
+      "time" : "2025-05-12T19:11:51.237Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:2iUxWUv5TovjBmayOcWohB",
+      "uri" : "spotify:chat-message:3spkVvmtBqE4o66NdLa7lc"
+    }, {
+      "time" : "2025-05-14T11:36:48.385Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7krbQbYq63hcwVMNW1R0tD",
+      "uri" : "spotify:chat-message:2NlEQHivWKeZcs3bpz3l8O"
+    }, {
+      "time" : "2025-05-15T01:38:47.085Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:show:5WL58oj8CwrXjqUMGoSwxx",
+      "uri" : "spotify:chat-message:5XuUyw1ytsSR11LhKdNsrU"
+    }, {
+      "time" : "2025-06-01T17:40:30.895Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:5KfWGOC0Ql9ATrCVw3w3ky",
+      "uri" : "spotify:chat-message:0Hrdn8kmJqWRYr2L8ytr9b"
+    }, {
+      "time" : "2025-06-18T11:42:10.765Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:3rxaHOs90qgyh8ABdPJNtl",
+      "uri" : "spotify:chat-message:0hwvZuLAJ1V1wFV1LtXF4x"
+    }, {
+      "time" : "2025-08-21T12:35:45.155Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:5Fydh31AheclytAjf3ae2o",
+      "uri" : "spotify:chat-message:5TFlrYF0sB5cEX4gR7YslC"
+    }, {
+      "time" : "2025-08-24T15:34:51.435Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4iH8g2F3ygsoRoGpnMOsI3",
+      "uri" : "spotify:chat-message:3HGXjZfPd7GjMZJSbQuEUB"
+    }, {
+      "time" : "2025-10-10T11:27:54.982Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:artist:2AwDU4ovhw5i65Ovx6iNLC",
+      "uri" : "spotify:chat-message:5KATNCQgRoeM00VdiB5UAx"
+    }, {
+      "time" : "2025-10-14T00:48:52.597Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:66BKEEA0Zz3IOIP0TMv2tD",
+      "uri" : "spotify:chat-message:7MVFjHOrJ0YEtXldOoS8CJ"
+    }, {
+      "time" : "2025-11-02T14:49:19.803Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:playlist:0uaLenPuU5bYOleAmHJPd5?si=i3Bb0f4_SjCn3Z26g4EkaQ",
+      "uri" : "spotify:chat-message:4NlVt3ipPcRjRiD5bbS4SU"
+    }, {
+      "time" : "2025-11-02T14:49:19.804Z",
+      "from" : "Nadja Azevedo",
+      "message" : "Pronto amor \uD83D\uDE18",
+      "uri" : "spotify:chat-message:6YOcDPgz8RYlvMyDWXYkLb"
+    }, {
+      "time" : "2025-12-30T19:07:07.754Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:12iJpUhGiXEjoffVdqsbqc",
+      "uri" : "spotify:chat-message:43P8R1Z0HqRESjGVoKuXGE"
+    }, {
+      "time" : "2025-12-30T20:51:46.511Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:7G3D6EPwo2iEPEdla9CMM9",
+      "uri" : "spotify:chat-message:1bis5pxUKE9zCIgSdRdqV1"
+    }, {
+      "time" : "2026-02-20T21:24:58.558Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:playlist:37i9dQZF1DZ06evO1mK8cO",
+      "uri" : "spotify:chat-message:3ByV33FnFVHhUwTeEcMU4m"
+    }, {
+      "time" : "2026-05-11T19:30:28.144Z",
+      "from" : "Nadja Azevedo",
+      "message" : "spotify:track:6CfWBJzZ0OR99SVF9wl7Dc",
+      "uri" : "spotify:chat-message:54Z332tEmxrNecqsiBvVYg"
+    }, {
+      "time" : "2026-06-01T11:53:38.188Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:4fiOTntQKr24p07FvQDHZE",
+      "uri" : "spotify:chat-message:7dMLcYGUlMhx1524kzDFm9"
+    } ]
+  },
+  "spotify:chat:5hT9ffOJY0EHsPmQfHGiSm" : {
+    "group_name" : null,
+    "members" : [ "12185098687", "pedrosoethe" ],
+    "messages" : [ {
+      "time" : "2026-05-23T11:30:39.969Z",
+      "from" : "12185098687",
+      "message" : "spotify:track:1FqoABp16S9K1TuvRqn9Xh",
+      "uri" : "spotify:chat-message:4LRTXmPCyqZhRDzyKk9AEI"
+    }, {
+      "time" : "2026-07-18T15:19:36.988Z",
+      "from" : "12185098687",
+      "message" : "spotify:track:5REpTIk9GXnUKnt6wdRLQ8",
+      "uri" : "spotify:chat-message:3VYC4ktz0L8J4gXSYc0nZc"
+    }, {
+      "time" : "2026-07-18T15:47:29.614Z",
+      "from" : "pedrosoethe",
+      "message" : "spotify:track:7GL3s6j0n9StQiTcaSvtHL?si=hhMkaF6URg-ph69vbA11Sg%0A",
+      "uri" : "spotify:chat-message:5gwDTCQnkrmOFa0QUmy5r1"
+    }, {
+      "time" : "2026-07-18T15:47:40.346Z",
+      "from" : "pedrosoethe",
+      "message" : "Veio na sequência bom também",
+      "uri" : "spotify:chat-message:2qvY0hrdPdg2h6e5C76Er7"
+    }, {
+      "time" : "2026-07-18T15:48:12.199Z",
+      "from" : "12185098687",
+      "message" : "Show vou ouvir!",
+      "uri" : "spotify:chat-message:3SGr80DmzFmLnvlBfKf4bF"
+    }, {
+      "time" : "2026-07-18T15:57:50.001Z",
+      "from" : "12185098687",
+      "message" : "spotify:track:5oABn2E9jiDrmhDdiNWbKS?rowId=8419c65d0e94a874&si=eK164fLrQ_WvgLsEZP7phw",
+      "uri" : "spotify:chat-message:2sTOTCXo5iGrkuw3GOyg5W"
+    }, {
+      "time" : "2026-07-18T15:57:50.002Z",
+      "from" : "12185098687",
+      "message" : "Boa também",
+      "uri" : "spotify:chat-message:4BhIbZ2cPSf66wvoX8brlP"
+    }, {
+      "time" : "2026-08-05T22:20:45.288Z",
+      "from" : "12185098687",
+      "message" : "spotify:track:1FNzZtRwanUIg7JIsN94Tb?si=szzrKJnWSxOG8cc0ft97rw",
+      "uri" : "spotify:chat-message:324JmEQFznD1ImuCR692fF"
+    } ]
+  }
+}

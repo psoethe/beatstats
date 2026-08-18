@@ -1,0 +1,7 @@
+{
+  "podcastShows" : [ {
+    "showName" : "Grandes Duvidas da Humanidas",
+    "roles" : "s4pod-org-admin,s4pod-episodes-admin,s4pod-settings-admin,s4pod-interact-editor,s4pod-monetize-admin,s4pod-analytics-viewer,s4pod-hosted-owner",
+    "authorizationDate" : "2026-03-14"
+  } ]
+}
