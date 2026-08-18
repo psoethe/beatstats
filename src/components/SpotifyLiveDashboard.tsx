@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSpotify } from '../hooks/useSpotify';
+import { getPlaylistTracks } from '../lib/spotify';
 import {
   Headphones,
   Clock,
@@ -14,8 +15,27 @@ import {
   Info,
   Calendar,
   Sparkles,
+  ChevronDown,
+  ChevronUp,
+  FolderPlus,
+  BarChart2,
+  PieChart as PieChartIcon,
+  Flame,
+  Music2,
+  TrendingUp,
 } from 'lucide-react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import {
+  PieChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+  Legend,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
 const PIE_COLORS = ['#1DB954', '#38bdf8', '#a855f7', '#f59e0b', '#ec4899', '#10b981', '#6366f1', '#e11d48'];
 
@@ -42,11 +62,17 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
     disconnectSpotify,
   } = useSpotify(userEmail);
 
-  const [activeSubTab, setActiveSubTab] = useState<'tracks' | 'artists' | 'recent' | 'playlists'>('tracks');
+  const [activeSubTab, setActiveSubTab] = useState<'tracks' | 'artists' | 'albums' | 'recent' | 'playlists'>('tracks');
   const [searchFilter, setSearchFilter] = useState('');
   const [showApiExplanation, setShowApiExplanation] = useState(false);
+  const [chartMode, setChartMode] = useState<'genres' | 'decades' | 'popularity'>('genres');
 
-  // Genre aggregation from live top artists
+  // Selected playlist state for track inspection
+  const [expandedPlaylistId, setExpandedPlaylistId] = useState<string | null>(null);
+  const [playlistTracksCache, setPlaylistTracksCache] = useState<Record<string, any[]>>({});
+  const [loadingPlaylistId, setLoadingPlaylistId] = useState<string | null>(null);
+
+  // 1. Genre aggregation
   const genreData = useMemo(() => {
     if (!topArtists || topArtists.length === 0) return [];
     const counts: Record<string, number> = {};
@@ -54,8 +80,8 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
       if (Array.isArray(artist.genres)) {
         artist.genres.forEach(g => {
           if (g && typeof g === 'string') {
-            const formattedGenre = g.charAt(0).toUpperCase() + g.slice(1);
-            counts[formattedGenre] = (counts[formattedGenre] || 0) + 1;
+            const formatted = g.charAt(0).toUpperCase() + g.slice(1);
+            counts[formatted] = (counts[formatted] || 0) + 1;
           }
         });
       }
@@ -67,13 +93,74 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
       .slice(0, 6);
   }, [topArtists]);
 
+  // 2. Decades analysis based on album release dates
+  const decadeData = useMemo(() => {
+    if (!topTracks || topTracks.length === 0) return [];
+    const counts: Record<string, number> = {};
+
+    topTracks.forEach(t => {
+      const dateStr = t.album?.release_date || '';
+      const year = parseInt(dateStr.slice(0, 4), 10);
+      if (!isNaN(year) && year > 1920) {
+        const decade = `${Math.floor(year / 10) * 10}s`;
+        counts[decade] = (counts[decade] || 0) + 1;
+      }
+    });
+
+    return Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [topTracks]);
+
+  // 3. Average popularity metric
+  const popularityMetrics = useMemo(() => {
+    if (!topTracks || topTracks.length === 0) return { avg: 0, label: 'N/A' };
+    const valid = topTracks.filter(t => typeof t.popularity === 'number');
+    if (valid.length === 0) return { avg: 0, label: 'N/A' };
+
+    const sum = valid.reduce((acc, t) => acc + (t.popularity || 0), 0);
+    const avg = Math.round(sum / valid.length);
+
+    let label = 'Equilibrado';
+    if (avg >= 70) label = 'Mainstream & Grandes Hits';
+    else if (avg >= 45) label = 'Eclético & Clássicos';
+    else label = 'Underground & Joias Raras';
+
+    return { avg, label };
+  }, [topTracks]);
+
+  // 4. Top Albums aggregation
+  const topAlbums = useMemo(() => {
+    if (!topTracks || topTracks.length === 0) return [];
+    const albumMap: Record<string, { album: any; artist: string; count: number; tracks: string[] }> = {};
+
+    topTracks.forEach(t => {
+      const album = t.album;
+      if (album && album.id) {
+        if (!albumMap[album.id]) {
+          albumMap[album.id] = {
+            album,
+            artist: t.artists?.map((a: any) => a.name).join(', ') || 'Vários Artistas',
+            count: 0,
+            tracks: [],
+          };
+        }
+        albumMap[album.id].count += 1;
+        albumMap[album.id].tracks.push(t.name);
+      }
+    });
+
+    return Object.values(albumMap).sort((a, b) => b.count - a.count);
+  }, [topTracks]);
+
+  // Filtered lists
   const filteredTracks = useMemo(() => {
     if (!searchFilter.trim()) return topTracks;
     const q = searchFilter.toLowerCase().trim();
     return topTracks.filter(
       t =>
         t.name.toLowerCase().includes(q) ||
-        t.artists.some(a => a.name.toLowerCase().includes(q)) ||
+        t.artists.some((a: any) => a.name.toLowerCase().includes(q)) ||
         t.album?.name.toLowerCase().includes(q)
     );
   }, [topTracks, searchFilter]);
@@ -82,15 +169,56 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
     if (!searchFilter.trim()) return topArtists;
     const q = searchFilter.toLowerCase().trim();
     return topArtists.filter(
-      a => a.name.toLowerCase().includes(q) || (a.genres || []).some(g => g.toLowerCase().includes(q))
+      a => a.name.toLowerCase().includes(q) || (a.genres || []).some((g: string) => g.toLowerCase().includes(q))
     );
   }, [topArtists, searchFilter]);
+
+  const filteredAlbums = useMemo(() => {
+    if (!searchFilter.trim()) return topAlbums;
+    const q = searchFilter.toLowerCase().trim();
+    return topAlbums.filter(
+      item =>
+        item.album.name.toLowerCase().includes(q) ||
+        item.artist.toLowerCase().includes(q)
+    );
+  }, [topAlbums, searchFilter]);
+
+  const filteredPlaylists = useMemo(() => {
+    if (!searchFilter.trim()) return playlists;
+    const q = searchFilter.toLowerCase().trim();
+    return playlists.filter(
+      pl =>
+        pl.name.toLowerCase().includes(q) ||
+        pl.owner?.display_name?.toLowerCase().includes(q)
+    );
+  }, [playlists, searchFilter]);
+
+  // Handle playlist track expansion
+  const togglePlaylistExpand = async (playlistId: string) => {
+    if (expandedPlaylistId === playlistId) {
+      setExpandedPlaylistId(null);
+      return;
+    }
+
+    setExpandedPlaylistId(playlistId);
+    if (!playlistTracksCache[playlistId]) {
+      setLoadingPlaylistId(playlistId);
+      try {
+        const res = await getPlaylistTracks(playlistId, 50, userEmail);
+        const tracks = res?.items || [];
+        setPlaylistTracksCache(prev => ({ ...prev, [playlistId]: tracks }));
+      } catch (e) {
+        console.error('Erro ao carregar faixas da playlist:', e);
+      } finally {
+        setLoadingPlaylistId(null);
+      }
+    }
+  };
 
   // If not connected to Spotify API
   if (!isSpotifyConnected) {
     return (
       <div className="max-w-2xl mx-auto py-12 px-4 space-y-8 animate-fadeIn">
-        {/* Connect Hero */}
         <div className="bg-[#181818] border border-[#282828] p-8 sm:p-12 rounded-3xl text-center shadow-2xl relative overflow-hidden flex flex-col items-center gap-6">
           <div className="w-20 h-20 rounded-3xl bg-[#1DB954]/15 border border-[#1DB954]/30 flex items-center justify-center text-[#1DB954] shadow-inner">
             <Radio size={40} />
@@ -101,7 +229,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
               Conectar sua Conta Spotify
             </h2>
             <p className="text-xs sm:text-sm text-[#A7A7A7] leading-relaxed">
-              Clique no botão abaixo para autorizar o BeatStats e carregar seus artistas mais ouvidos, músicas favoritas, reproduções recentes e o que está tocando agora no seu Spotify.
+              Clique no botão abaixo para autorizar o BeatStats e carregar seus artistas mais ouvidos, músicas favoritas, álbuns de destaque, reproduções recentes e o que está tocando agora no seu Spotify.
             </p>
           </div>
 
@@ -112,7 +240,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             </div>
           )}
 
-          {/* 1-Click Connect Button */}
           <div className="w-full max-w-sm pt-2">
             <button
               type="button"
@@ -132,7 +259,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
     );
   }
 
-  // If connected to Spotify API
   return (
     <div className="space-y-6 animate-fadeIn">
       {/* Live Profile Banner */}
@@ -180,12 +306,10 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
 
         {/* Live Controls: Time Range + Refresh + Logout */}
         <div className="flex flex-wrap items-center gap-2 z-10 self-start md:self-auto">
-          {/* Time Range Selector with clearer labels */}
           <div className="flex items-center gap-1 bg-[#121212] p-1.5 rounded-2xl border border-[#282828]">
             <button
               type="button"
               onClick={() => setTimeRange('short_term')}
-              title="Últimas ~4 semanas de escuta"
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'short_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
@@ -197,7 +321,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             <button
               type="button"
               onClick={() => setTimeRange('medium_term')}
-              title="Últimos ~6 meses de escuta"
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'medium_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
@@ -209,7 +332,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             <button
               type="button"
               onClick={() => setTimeRange('long_term')}
-              title="Afinidade calculada pelo algoritmo do Spotify (~1 ano)"
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'long_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
@@ -242,7 +364,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
         <div className="absolute right-0 top-0 w-96 h-96 bg-[#1DB954]/5 rounded-full blur-3xl pointer-events-none" />
       </div>
 
-      {/* Explanatory Banner: Como funciona o cálculo da API vs Arquivos JSON */}
+      {/* Explanatory Banner */}
       <div className="bg-[#181818]/70 border border-[#282828] p-4 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#A7A7A7]">
         <div className="flex items-start sm:items-center gap-2.5">
           <Info size={16} className="text-[#1DB954] shrink-0 mt-0.5 sm:mt-0" />
@@ -254,9 +376,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
               <>Exibindo afinidade dos <strong>últimos 6 meses</strong> calculadas pelo algoritmo do Spotify.</>
             )}
             {timeRange === 'long_term' && (
-              <>
-                Exibindo afinidade de <strong>Longo Prazo (~1 ano)</strong> calculada pelo algoritmo do Spotify.
-              </>
+              <>Exibindo afinidade de <strong>Longo Prazo (~1 ano)</strong> calculada pelo algoritmo do Spotify.</>
             )}
           </span>
         </div>
@@ -269,7 +389,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
         </button>
       </div>
 
-      {/* Expanded API vs JSON details */}
       {showApiExplanation && (
         <div className="bg-[#121212] border border-[#2c2c2c] p-5 rounded-2xl text-xs space-y-3 text-[#B3B3B3] animate-fadeIn">
           <div className="flex items-center gap-2 text-white font-bold text-sm">
@@ -280,24 +399,24 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             <div className="bg-[#181818] p-3.5 rounded-xl border border-[#282828] space-y-1">
               <strong className="text-white block font-bold text-xs">🟢 Spotify Live API (Esta tela):</strong>
               <p className="text-[11px] text-[#999] leading-relaxed">
-                A API oficial do Spotify não faz uma soma cronológica simples de streams, mas sim um <strong>ranking algorítmico de afinidade</strong> ponderado por repetição e período recente (dividido em 4 semanas, 6 meses e ~12 meses para o <em>long_term</em>).
+                A API oficial calcula um <strong>ranking de afinidade</strong> ponderado por repetição recente (janelas de 4 semanas, 6 meses e ~12 meses).
               </p>
             </div>
             <div className="bg-[#181818] p-3.5 rounded-xl border border-[#282828] space-y-1">
               <strong className="text-white block font-bold text-xs">📁 Arquivos Exportados (Aba superior):</strong>
               <p className="text-[11px] text-[#999] leading-relaxed">
-                Os arquivos JSON exportados contêm <strong>100% dos logs brutos</strong> de reprodução com contagem exata de minutos, milissegundos e histórico de anos anteriores.
+                Os arquivos JSON contêm <strong>100% dos logs brutos</strong> de reprodução de todos os anos da conta com contagem exata de minutos ouvidos.
               </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* Currently Playing Widget (if available) */}
+      {/* Currently Playing Widget */}
       {currentlyPlaying?.item && (
         <div className="bg-gradient-to-r from-emerald-950/40 to-[#181818] border border-emerald-500/30 p-4 sm:p-5 rounded-2xl shadow-xl flex items-center justify-between gap-4 animate-fadeIn">
           <div className="flex items-center gap-3.5 min-w-0">
-            {currentlyPlaying.item.album?.images[0]?.url ? (
+            {currentlyPlaying.item.album?.images?.[0]?.url ? (
               <img
                 src={currentlyPlaying.item.album.images[0].url}
                 alt={currentlyPlaying.item.name}
@@ -317,18 +436,17 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
               </div>
               <h4 className="text-sm font-bold text-white truncate">{currentlyPlaying.item.name}</h4>
               <p className="text-xs text-[#A7A7A7] truncate">
-                {currentlyPlaying.item.artists.map(a => a.name).join(', ')} • {currentlyPlaying.item.album?.name}
+                {currentlyPlaying.item.artists?.map((a: any) => a.name).join(', ')} • {currentlyPlaying.item.album?.name}
               </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* Highlights & Genre Breakdown */}
+      {/* Highlights & DNA Musical Suite */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Highlights */}
+        {/* Highlights: #1 Artist & #1 Track */}
         <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* #1 Artist */}
           {topArtists[0] && (
             <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
               {topArtists[0].images && topArtists[0].images[0]?.url ? (
@@ -356,7 +474,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             </div>
           )}
 
-          {/* #1 Track */}
           {topTracks[0] && (
             <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
               {topTracks[0].album?.images && topTracks[0].album.images[0]?.url ? (
@@ -376,65 +493,125 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                 </span>
                 <h4 className="text-base font-black text-white truncate">{topTracks[0].name}</h4>
                 <p className="text-xs text-[#727272] truncate">
-                  {topTracks[0].artists.map(a => a.name).join(', ')}
+                  {topTracks[0].artists?.map((a: any) => a.name).join(', ')}
                 </p>
               </div>
             </div>
           )}
-        </div>
 
-        {/* Top Genres Pie */}
-        <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl shadow-lg flex flex-col justify-between min-h-[220px]">
-          <h3 className="text-xs font-bold uppercase text-[#A7A7A7] tracking-wider mb-2">
-            Gêneros Predominantes
-          </h3>
-
-          <div className="h-44 w-full flex items-center justify-center">
-            {isDataLoading ? (
-              <div className="flex items-center justify-center gap-2 text-xs text-[#727272]">
-                <RefreshCw size={14} className="animate-spin text-[#1DB954]" />
-                <span>Processando gêneros...</span>
+          {/* Quick Metrics: Popularity & Total Tracks */}
+          <div className="bg-[#181818] border border-[#282828] p-4 rounded-2xl flex items-center justify-between sm:col-span-2">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+                <Flame size={20} />
               </div>
-            ) : genreData.length === 0 ? (
-              <div className="text-center p-3 space-y-1">
-                <p className="text-xs text-[#A7A7A7] font-semibold">Gêneros não catalogados</p>
-                <p className="text-[11px] text-[#666] leading-tight">
-                  Os artistas deste período não possuem tags de gênero na API do Spotify.
+              <div>
+                <span className="text-[10px] font-bold uppercase text-[#727272]">Perfil Musical no Spotify</span>
+                <p className="text-sm font-black text-white flex items-center gap-2">
+                  <span>{popularityMetrics.label}</span>
+                  <span className="text-xs text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded-md border border-purple-800/40">
+                    Índice: {popularityMetrics.avg}/100
+                  </span>
                 </p>
               </div>
-            ) : (
-              <ResponsiveContainer width="100%" height={170}>
-                <PieChart>
-                  <Pie
-                    data={genreData}
-                    dataKey="value"
-                    nameKey="name"
-                    cx="50%"
-                    cy="45%"
-                    innerRadius={30}
-                    outerRadius={55}
-                    paddingAngle={3}
+            </div>
+            <div className="text-right">
+              <span className="text-[10px] font-bold uppercase text-[#727272]">Álbuns Distintos</span>
+              <p className="text-sm font-bold text-white">{topAlbums.length} álbuns</p>
+            </div>
+          </div>
+        </div>
+
+        {/* DNA Musical Card (Genres / Decades Selector) */}
+        <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl shadow-lg flex flex-col justify-between min-h-[220px]">
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <h3 className="text-xs font-bold uppercase text-[#A7A7A7] tracking-wider">
+              {chartMode === 'genres' ? 'Gêneros Musicais' : 'Épocas & Décadas'}
+            </h3>
+            <div className="flex items-center gap-1 bg-[#121212] p-1 rounded-lg border border-[#282828]">
+              <button
+                type="button"
+                onClick={() => setChartMode('genres')}
+                title="Ver gêneros"
+                className={`p-1 rounded-md text-[10px] font-bold cursor-pointer ${
+                  chartMode === 'genres' ? 'bg-[#1DB954] text-black' : 'text-[#A7A7A7]'
+                }`}
+              >
+                <PieChartIcon size={12} />
+              </button>
+              <button
+                type="button"
+                onClick={() => setChartMode('decades')}
+                title="Ver distribuição por décadas"
+                className={`p-1 rounded-md text-[10px] font-bold cursor-pointer ${
+                  chartMode === 'decades' ? 'bg-[#1DB954] text-black' : 'text-[#A7A7A7]'
+                }`}
+              >
+                <BarChart2 size={12} />
+              </button>
+            </div>
+          </div>
+
+          <div className="h-44 w-full flex items-center justify-center">
+            {chartMode === 'genres' ? (
+              genreData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={170}>
+                  <PieChart>
+                    <Pie
+                      data={genreData}
+                      dataKey="value"
+                      nameKey="name"
+                      cx="50%"
+                      cy="45%"
+                      innerRadius={30}
+                      outerRadius={55}
+                      paddingAngle={3}
+                    >
+                      {genreData.map((entry, index) => (
+                        <Cell key={`genre-${index}`} fill={PIE_COLORS[index % PIE_COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      contentStyle={{ backgroundColor: '#242424', border: '1px solid #383838', borderRadius: '12px' }}
+                      labelStyle={{ color: '#fff', fontWeight: 'bold' }}
+                    />
+                    <Legend wrapperStyle={{ fontSize: '10px', color: '#A7A7A7', paddingTop: '4px' }} iconType="circle" />
+                  </PieChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="text-center p-3 space-y-2">
+                  <span className="text-[11px] text-[#A7A7A7] font-semibold block">Gêneros não catalogados</span>
+                  <button
+                    type="button"
+                    onClick={() => setChartMode('decades')}
+                    className="px-3 py-1.5 bg-[#242424] hover:bg-[#2e2e2e] text-[#1DB954] text-[11px] font-bold rounded-lg border border-[#383838] transition-all cursor-pointer"
                   >
-                    {genreData.map((entry, index) => (
-                      <Cell key={`genre-${index}`} fill={PIE_COLORS[index % PIE_COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    contentStyle={{ backgroundColor: '#242424', border: '1px solid #383838', borderRadius: '12px' }}
-                    labelStyle={{ color: '#fff', fontWeight: 'bold' }}
-                  />
-                  <Legend
-                    wrapperStyle={{ fontSize: '10px', color: '#A7A7A7', paddingTop: '4px' }}
-                    iconType="circle"
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+                    Ver Linha do Tempo de Décadas ➔
+                  </button>
+                </div>
+              )
+            ) : (
+              decadeData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={170}>
+                  <BarChart data={decadeData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <XAxis dataKey="name" stroke="#727272" fontSize={10} />
+                    <YAxis stroke="#727272" fontSize={10} allowDecimals={false} />
+                    <Tooltip
+                      contentStyle={{ backgroundColor: '#242424', border: '1px solid #383838', borderRadius: '12px' }}
+                      labelStyle={{ color: '#fff', fontWeight: 'bold' }}
+                    />
+                    <Bar dataKey="count" fill="#1DB954" radius={[4, 4, 0, 0]} name="Músicas" />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <p className="text-xs text-[#727272]">Sem dados de data para este período</p>
+              )
             )}
           </div>
         </div>
       </div>
 
-      {/* Sub Tabs Navigation */}
+      {/* Sub Tabs Navigation: Tracks, Artists, Albums, Recent, Playlists */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#282828] pb-2">
         <div className="flex items-center gap-2 overflow-x-auto">
           <button
@@ -461,6 +638,19 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
           >
             <User size={14} />
             <span>Top Artistas ({topArtists.length})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveSubTab('albums')}
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              activeSubTab === 'albums'
+                ? 'bg-[#1DB954] text-black shadow-md'
+                : 'text-[#A7A7A7] hover:text-white hover:bg-[#202020]'
+            }`}
+          >
+            <Music2 size={14} />
+            <span>Top Álbuns ({topAlbums.length})</span>
           </button>
 
           <button
@@ -496,7 +686,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             type="text"
             value={searchFilter}
             onChange={e => setSearchFilter(e.target.value)}
-            placeholder="Filtrar por nome ou artista..."
+            placeholder="Filtrar por nome, artista ou álbum..."
             className="w-full bg-[#181818] text-xs text-white placeholder-[#666] px-3 py-2 rounded-xl border border-[#282828] focus:border-[#1DB954] outline-none"
           />
         </div>
@@ -528,21 +718,28 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                     {track.name}
                   </h4>
                   <p className="text-xs text-[#A7A7A7] truncate">
-                    {track.artists.map(a => a.name).join(', ')} • {track.album?.name}
+                    {track.artists?.map((a: any) => a.name).join(', ')} • {track.album?.name}
                   </p>
                 </div>
               </div>
 
-              {track.external_urls?.spotify && (
-                <a
-                  href={track.external_urls.spotify}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2 rounded-xl bg-[#242424] text-[#A7A7A7] hover:text-white hover:bg-[#1DB954] hover:text-black transition-all shrink-0"
-                >
-                  <ExternalLink size={13} />
-                </a>
-              )}
+              <div className="flex items-center gap-2 shrink-0">
+                {typeof track.popularity === 'number' && (
+                  <span className="text-[10px] text-[#727272] bg-[#242424] px-2 py-0.5 rounded-md border border-[#333]">
+                    {track.popularity}%
+                  </span>
+                )}
+                {track.external_urls?.spotify && (
+                  <a
+                    href={track.external_urls.spotify}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 rounded-xl bg-[#242424] text-[#A7A7A7] hover:text-white hover:bg-[#1DB954] hover:text-black transition-all"
+                  >
+                    <ExternalLink size={13} />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -575,8 +772,49 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                 <p className="text-[11px] text-[#727272] truncate">
                   {(artist.genres && artist.genres.length > 0)
                     ? artist.genres.slice(0, 2).join(', ')
-                    : 'Artista Spotify'}
+                    : `${artist.followers?.total || 0} seguidores`}
                 </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* SubTab Content: Top Albums */}
+      {activeSubTab === 'albums' && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredAlbums.map((item, i) => (
+            <div
+              key={item.album.id || i}
+              className="bg-[#181818] hover:bg-[#202020] border border-[#282828] p-4 rounded-2xl flex items-start gap-4 transition-all group"
+            >
+              <span className="font-black text-xs text-[#555] w-5 text-right shrink-0 mt-1">#{i + 1}</span>
+              {item.album.images && item.album.images[0]?.url ? (
+                <img
+                  src={item.album.images[0].url}
+                  alt={item.album.name}
+                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333] shadow-md"
+                />
+              ) : (
+                <div className="w-16 h-16 rounded-2xl bg-[#242424] flex items-center justify-center shrink-0">
+                  <Disc3 size={20} />
+                </div>
+              )}
+              <div className="min-w-0 flex-1 space-y-1">
+                <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
+                  {item.album.name}
+                </h4>
+                <p className="text-xs text-[#A7A7A7] truncate">{item.artist}</p>
+                <div className="flex items-center gap-2 pt-1">
+                  <span className="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-md border border-emerald-800/40 font-bold">
+                    {item.count} {item.count === 1 ? 'música no Top 50' : 'músicas no Top 50'}
+                  </span>
+                  {item.album.release_date && (
+                    <span className="text-[10px] text-[#727272]">
+                      {item.album.release_date.slice(0, 4)}
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           ))}
@@ -603,7 +841,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                 <div className="min-w-0">
                   <h4 className="font-bold text-sm text-white truncate">{item.track?.name}</h4>
                   <p className="text-xs text-[#A7A7A7] truncate">
-                    {item.track?.artists.map(a => a.name).join(', ')}
+                    {item.track?.artists?.map((a: any) => a.name).join(', ')}
                   </p>
                 </div>
               </div>
@@ -615,31 +853,114 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
         </div>
       )}
 
-      {/* SubTab Content: Playlists */}
+      {/* SubTab Content: Playlists with Track Inspector & Covers */}
       {activeSubTab === 'playlists' && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {playlists.map((pl, idx) => (
-            <div
-              key={pl.id || idx}
-              className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex flex-col justify-between gap-3 hover:border-[#383838] transition-all"
-            >
-              <div>
-                <h4 className="font-bold text-sm text-white">{pl.name}</h4>
-                <p className="text-xs text-[#727272] mt-1">{pl.tracks?.total || 0} faixas</p>
-              </div>
-              {pl.external_urls?.spotify && (
-                <a
-                  href={pl.external_urls.spotify}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-xs text-[#1DB954] hover:underline inline-flex items-center gap-1 font-semibold self-start"
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredPlaylists.map((pl, idx) => {
+              const trackCount =
+                pl.tracks?.total ??
+                pl.total_tracks ??
+                pl.tracks?.items?.length ??
+                pl.total ??
+                0;
+              const isExpanded = expandedPlaylistId === pl.id;
+              const cachedTracks = playlistTracksCache[pl.id] || [];
+              const isLoadingTracks = loadingPlaylistId === pl.id;
+
+              return (
+                <div
+                  key={pl.id || idx}
+                  className={`bg-[#181818] border rounded-2xl p-5 flex flex-col justify-between gap-3 transition-all ${
+                    isExpanded ? 'border-[#1DB954] shadow-lg shadow-[#1DB954]/10' : 'border-[#282828] hover:border-[#383838]'
+                  }`}
                 >
-                  <span>Abrir no Spotify</span>
-                  <ExternalLink size={12} />
-                </a>
-              )}
-            </div>
-          ))}
+                  <div className="flex items-start gap-3.5">
+                    {pl.images && pl.images[0]?.url ? (
+                      <img
+                        src={pl.images[0].url}
+                        alt={pl.name}
+                        className="w-14 h-14 rounded-xl object-cover shrink-0 shadow-md border border-[#333]"
+                      />
+                    ) : (
+                      <div className="w-14 h-14 rounded-xl bg-[#242424] flex items-center justify-center shrink-0 text-[#1DB954]">
+                        <ListMusic size={22} />
+                      </div>
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-bold text-sm text-white truncate" title={pl.name}>{pl.name}</h4>
+                      <p className="text-xs text-[#727272] mt-0.5">
+                        {trackCount > 0 ? `${trackCount} faixas` : 'Playlist Spotify'} • Por {pl.owner?.display_name || 'Spotify'}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2 border-t border-[#242424] gap-2">
+                    <button
+                      type="button"
+                      onClick={() => togglePlaylistExpand(pl.id)}
+                      className="text-xs font-bold text-[#1DB954] hover:underline inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      {isExpanded ? (
+                        <>
+                          <ChevronUp size={14} />
+                          <span>Ocultar faixas</span>
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown size={14} />
+                          <span>Ver faixas da playlist</span>
+                        </>
+                      )}
+                    </button>
+
+                    {pl.external_urls?.spotify && (
+                      <a
+                        href={pl.external_urls.spotify}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-xs text-[#A7A7A7] hover:text-white inline-flex items-center gap-1"
+                      >
+                        <span>Abrir</span>
+                        <ExternalLink size={11} />
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Expanded Playlist Track List */}
+                  {isExpanded && (
+                    <div className="mt-3 pt-3 border-t border-[#282828] space-y-2 animate-fadeIn max-h-60 overflow-y-auto pr-1">
+                      {isLoadingTracks ? (
+                        <div className="flex items-center justify-center py-4 gap-2 text-xs text-[#727272]">
+                          <RefreshCw size={14} className="animate-spin text-[#1DB954]" />
+                          <span>Buscando faixas na API do Spotify...</span>
+                        </div>
+                      ) : cachedTracks.length > 0 ? (
+                        cachedTracks.map((item: any, tIdx: number) => {
+                          const track = item.track || item;
+                          if (!track || !track.name) return null;
+                          return (
+                            <div key={tIdx} className="flex items-center justify-between text-xs py-1 text-[#ccc] hover:text-white">
+                              <span className="truncate pr-2">
+                                <strong className="text-white">{track.name}</strong> • {track.artists?.map((a: any) => a.name).join(', ')}
+                              </span>
+                              {track.duration_ms && (
+                                <span className="text-[10px] text-[#666] shrink-0">
+                                  {Math.floor(track.duration_ms / 60000)}:{String(Math.floor((track.duration_ms % 60000) / 1000)).padStart(2, '0')}
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })
+                      ) : (
+                        <p className="text-xs text-[#727272] py-2 text-center">Nenhuma faixa encontrada na playlist.</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>

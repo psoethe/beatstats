@@ -243,3 +243,7 @@ export const getRecentlyPlayed = (limit = 50, userEmail?: string) =>
   fetchWebApi(`v1/me/player/recently-played?limit=${limit}`, userEmail);
 export const getCurrentlyPlaying = (userEmail?: string) => fetchWebApi('v1/me/player/currently-playing', userEmail);
 export const getUserPlaylists = (limit = 50, userEmail?: string) => fetchWebApi(`v1/me/playlists?limit=${limit}`, userEmail);
+export const getPlaylistTracks = (playlistId: string, limit = 50, userEmail?: string) =>
+  fetchWebApi(`v1/playlists/${playlistId}/tracks?limit=${limit}`, userEmail);
+export const getAlbumDetails = (albumId: string, userEmail?: string) =>
+  fetchWebApi(`v1/albums/${albumId}`, userEmail);
