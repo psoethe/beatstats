@@ -1,13 +1,12 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { AuthUser, ALLOWED_EMAILS, isEmailAuthorized } from '../types/auth';
 
 const STORAGE_USER_KEY = 'beatstats_auth_user';
-const STORAGE_CLIENT_ID_KEY = 'beatstats_google_client_id';
 
-// Default public Google OAuth Web Client ID for localhost/web apps or fallback
-const DEFAULT_CLIENT_ID =
+// Production Google OAuth Web Client ID configured in Google Cloud
+export const GOOGLE_CLIENT_ID =
   import.meta.env.VITE_GOOGLE_CLIENT_ID ||
-  '948491873138-0m55h6g18h77g6g7u4n88i6q4u881o2m.apps.googleusercontent.com';
+  '806254169295-b6i2e34kstm2cuidblpdeebkuv88l3lu.apps.googleusercontent.com';
 
 export function useAuth() {
   const [user, setUser] = useState<AuthUser | null>(() => {
@@ -25,19 +24,9 @@ export function useAuth() {
     return null;
   });
 
-  const [googleClientId, setGoogleClientIdState] = useState<string>(() => {
-    return localStorage.getItem(STORAGE_CLIENT_ID_KEY) || DEFAULT_CLIENT_ID;
-  });
-
   const [authError, setAuthError] = useState<string | null>(null);
 
-  const setGoogleClientId = useCallback((clientId: string) => {
-    const trimmed = clientId.trim();
-    localStorage.setItem(STORAGE_CLIENT_ID_KEY, trimmed);
-    setGoogleClientIdState(trimmed);
-  }, []);
-
-  // Handle Google JWT Token response from GIS
+  // Handle Google JWT Token response from Google Identity Services (GIS)
   const handleGoogleCredentialResponse = useCallback((credentialResponse: any) => {
     setAuthError(null);
     try {
@@ -86,7 +75,7 @@ export function useAuth() {
     }
   }, []);
 
-  // Handle OAuth2 Token flow (popup)
+  // Handle OAuth2 Access Token popup flow
   const handleGoogleAccessToken = useCallback(async (accessToken: string) => {
     setAuthError(null);
     try {
@@ -101,7 +90,7 @@ export function useAuth() {
 
       if (!isEmailAuthorized(email)) {
         setAuthError(
-          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão.`
+          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão de acesso.`
         );
         return;
       }
@@ -134,8 +123,7 @@ export function useAuth() {
     isAuthenticated: !!user,
     authError,
     setAuthError,
-    googleClientId,
-    setGoogleClientId,
+    googleClientId: GOOGLE_CLIENT_ID,
     handleGoogleCredentialResponse,
     handleGoogleAccessToken,
     logout,

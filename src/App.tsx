@@ -82,7 +82,6 @@ export default function App() {
         onGoogleSuccess={handleGoogleCredentialResponse}
         onAccessToken={handleGoogleAccessToken}
         googleClientId={googleClientId}
-        onSaveClientId={setGoogleClientId}
         error={authError}
       />
     );
