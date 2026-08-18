@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { useSpotify } from '../hooks/useSpotify';
-import { getPlaylistTracks } from '../lib/spotify';
 import {
   Headphones,
   Clock,
@@ -14,11 +13,10 @@ import {
   Radio,
   Info,
   Calendar,
-  ChevronDown,
-  ChevronUp,
   BarChart2,
   Flame,
   Music2,
+  Users2,
 } from 'lucide-react';
 import {
   ResponsiveContainer,
@@ -59,11 +57,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
   const [searchFilter, setSearchFilter] = useState('');
   const [showApiExplanation, setShowApiExplanation] = useState(false);
 
-  // Selected playlist state for track inspection
-  const [expandedPlaylistId, setExpandedPlaylistId] = useState<string | null>(null);
-  const [playlistTracksCache, setPlaylistTracksCache] = useState<Record<string, any[]>>({});
-  const [loadingPlaylistId, setLoadingPlaylistId] = useState<string | null>(null);
-
   // 1. Decades analysis exclusively based on album release dates
   const decadeData = useMemo(() => {
     if (!topTracks || topTracks.length === 0) return [];
@@ -89,7 +82,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
 
   // 2. Average popularity & musical taste profile
   const popularityMetrics = useMemo(() => {
-    // Collect popularity from tracks and fallback to artists
     let scores: number[] = [];
     if (topTracks && topTracks.length > 0) {
       scores = topTracks
@@ -180,33 +172,6 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
     );
   }, [playlists, searchFilter]);
 
-  // Handle playlist track expansion
-  const togglePlaylistExpand = async (playlistId: string) => {
-    if (expandedPlaylistId === playlistId) {
-      setExpandedPlaylistId(null);
-      return;
-    }
-
-    setExpandedPlaylistId(playlistId);
-    if (!playlistTracksCache[playlistId]) {
-      setLoadingPlaylistId(playlistId);
-      try {
-        const res = await getPlaylistTracks(playlistId, 50, userEmail);
-        const rawItems = res?.items || res?.tracks?.items || (Array.isArray(res) ? res : []);
-        const extracted = rawItems
-          .map((it: any) => it.track || it.episode || it)
-          .filter((t: any) => t && (t.name || t.trackName));
-
-        setPlaylistTracksCache(prev => ({ ...prev, [playlistId]: extracted }));
-      } catch (e) {
-        console.error('Erro ao carregar faixas da playlist:', e);
-        setPlaylistTracksCache(prev => ({ ...prev, [playlistId]: [] }));
-      } finally {
-        setLoadingPlaylistId(null);
-      }
-    }
-  };
-
   // If not connected to Spotify API
   if (!isSpotifyConnected) {
     return (
@@ -280,7 +245,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
             </div>
 
             <p className="text-xs sm:text-sm text-[#A7A7A7] flex items-center gap-3">
-              <span>{spotifyUser?.followers?.total || 0} seguidores</span>
+              <span>{spotifyUser?.followers?.total ? `${spotifyUser.followers.total.toLocaleString('pt-BR')} seguidores` : 'Perfil Spotify'}</span>
               {spotifyUser?.external_urls?.spotify && (
                 <a
                   href={spotifyUser.external_urls.spotify}
@@ -404,15 +369,20 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
         </div>
       )}
 
-      {/* Currently Playing Widget */}
+      {/* Currently Playing Widget (Clickable) */}
       {currentlyPlaying?.item && (
-        <div className="bg-gradient-to-r from-emerald-950/40 to-[#181818] border border-emerald-500/30 p-4 sm:p-5 rounded-2xl shadow-xl flex items-center justify-between gap-4 animate-fadeIn">
+        <a
+          href={currentlyPlaying.item.external_urls?.spotify || `https://open.spotify.com/track/${currentlyPlaying.item.id}`}
+          target="_blank"
+          rel="noreferrer"
+          className="bg-gradient-to-r from-emerald-950/40 to-[#181818] hover:to-[#222222] border border-emerald-500/30 hover:border-emerald-400/60 p-4 sm:p-5 rounded-2xl shadow-xl flex items-center justify-between gap-4 transition-all group block cursor-pointer"
+        >
           <div className="flex items-center gap-3.5 min-w-0">
             {currentlyPlaying.item.album?.images?.[0]?.url ? (
               <img
                 src={currentlyPlaying.item.album.images[0].url}
                 alt={currentlyPlaying.item.name}
-                className="w-12 h-12 rounded-xl object-cover shadow-md shrink-0"
+                className="w-12 h-12 rounded-xl object-cover shadow-md shrink-0 group-hover:scale-105 transition-transform"
               />
             ) : (
               <div className="w-12 h-12 rounded-xl bg-[#1DB954]/20 text-[#1DB954] flex items-center justify-center shrink-0">
@@ -426,69 +396,94 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                   Tocando Agora no seu Spotify
                 </span>
               </div>
-              <h4 className="text-sm font-bold text-white truncate">{currentlyPlaying.item.name}</h4>
+              <h4 className="text-sm font-bold text-white truncate group-hover:text-[#1DB954] transition-colors">
+                {currentlyPlaying.item.name}
+              </h4>
               <p className="text-xs text-[#A7A7A7] truncate">
                 {currentlyPlaying.item.artists?.map((a: any) => a.name).join(', ')} • {currentlyPlaying.item.album?.name}
               </p>
             </div>
           </div>
-        </div>
+          <ExternalLink size={16} className="text-[#A7A7A7] group-hover:text-[#1DB954] shrink-0" />
+        </a>
       )}
 
       {/* Highlights & Decades Timeline Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left 2 Cols: #1 Artist, #1 Track, and Musical Profile Badge */}
+        {/* Left 2 Cols: Clickable #1 Artist, Clickable #1 Track, and Profile Score */}
         <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* #1 Artist (Clickable) */}
           {topArtists[0] && (
-            <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
+            <a
+              href={topArtists[0].external_urls?.spotify || `https://open.spotify.com/artist/${topArtists[0].id}`}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-[#1DB954]/50 p-5 rounded-2xl flex items-center gap-4 shadow-lg transition-all group cursor-pointer"
+            >
               {topArtists[0].images && topArtists[0].images[0]?.url ? (
                 <img
                   src={topArtists[0].images[0].url}
                   alt={topArtists[0].name}
-                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333]"
+                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333] group-hover:scale-105 transition-transform"
                 />
               ) : (
                 <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl shrink-0">
                   <Award size={24} />
                 </div>
               )}
-              <div className="min-w-0">
-                <span className="text-[10px] font-bold uppercase text-emerald-400 tracking-wider">
-                  Artista #1 no Período
-                </span>
-                <h4 className="text-base font-black text-white truncate">{topArtists[0].name}</h4>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-emerald-400 tracking-wider">
+                    Artista #1 no Período
+                  </span>
+                  <ExternalLink size={12} className="text-[#666] group-hover:text-[#1DB954]" />
+                </div>
+                <h4 className="text-base font-black text-white truncate group-hover:text-[#1DB954] transition-colors">
+                  {topArtists[0].name}
+                </h4>
                 <p className="text-xs text-[#727272] truncate">
                   {(topArtists[0].genres && topArtists[0].genres.length > 0)
                     ? topArtists[0].genres.slice(0, 3).join(', ')
-                    : 'Artista Spotify'}
+                    : (topArtists[0].followers?.total ? `${topArtists[0].followers.total.toLocaleString('pt-BR')} seguidores` : 'Artista Spotify')}
                 </p>
               </div>
-            </div>
+            </a>
           )}
 
+          {/* #1 Track (Clickable) */}
           {topTracks[0] && (
-            <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
+            <a
+              href={topTracks[0].external_urls?.spotify || `https://open.spotify.com/track/${topTracks[0].id}`}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-sky-500/50 p-5 rounded-2xl flex items-center gap-4 shadow-lg transition-all group cursor-pointer"
+            >
               {topTracks[0].album?.images && topTracks[0].album.images[0]?.url ? (
                 <img
                   src={topTracks[0].album.images[0].url}
                   alt={topTracks[0].name}
-                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333]"
+                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333] group-hover:scale-105 transition-transform"
                 />
               ) : (
                 <div className="w-16 h-16 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl shrink-0">
                   <Disc3 size={24} />
                 </div>
               )}
-              <div className="min-w-0">
-                <span className="text-[10px] font-bold uppercase text-sky-400 tracking-wider">
-                  Faixa #1 no Período
-                </span>
-                <h4 className="text-base font-black text-white truncate">{topTracks[0].name}</h4>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-sky-400 tracking-wider">
+                    Faixa #1 no Período
+                  </span>
+                  <ExternalLink size={12} className="text-[#666] group-hover:text-sky-400" />
+                </div>
+                <h4 className="text-base font-black text-white truncate group-hover:text-sky-400 transition-colors">
+                  {topTracks[0].name}
+                </h4>
                 <p className="text-xs text-[#727272] truncate">
                   {topTracks[0].artists?.map((a: any) => a.name).join(', ')}
                 </p>
               </div>
-            </div>
+            </a>
           )}
 
           {/* Profile Metrics Bar */}
@@ -502,7 +497,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                 <p className="text-sm font-black text-white flex items-center gap-2">
                   <span>{popularityMetrics.label}</span>
                   <span className="text-xs text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded-md border border-purple-800/40 font-semibold">
-                    Score: {popularityMetrics.avg}/100
+                    Índice: {popularityMetrics.avg}/100
                   </span>
                 </p>
               </div>
@@ -632,13 +627,16 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
         </div>
       </div>
 
-      {/* SubTab Content: Tracks */}
+      {/* SubTab Content: Tracks (Clickable to open Spotify) */}
       {activeSubTab === 'tracks' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {filteredTracks.map((track, i) => (
-            <div
+            <a
               key={track.id || i}
-              className="bg-[#181818] hover:bg-[#202020] border border-[#282828] p-3.5 rounded-2xl flex items-center justify-between gap-3 transition-all group"
+              href={track.external_urls?.spotify || `https://open.spotify.com/track/${track.id}`}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-[#1DB954]/50 p-3.5 rounded-2xl flex items-center justify-between gap-3 transition-all group cursor-pointer"
             >
               <div className="flex items-center gap-3 min-w-0">
                 <span className="font-black text-xs text-[#555] w-5 text-right shrink-0">#{i + 1}</span>
@@ -646,7 +644,7 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                   <img
                     src={track.album.images[0].url}
                     alt={track.name}
-                    className="w-11 h-11 rounded-xl object-cover shrink-0"
+                    className="w-11 h-11 rounded-xl object-cover shrink-0 group-hover:scale-105 transition-transform"
                   />
                 ) : (
                   <div className="w-11 h-11 rounded-xl bg-[#242424] flex items-center justify-center shrink-0">
@@ -669,71 +667,81 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                     {track.popularity}%
                   </span>
                 )}
-                {track.external_urls?.spotify && (
-                  <a
-                    href={track.external_urls.spotify}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-2 rounded-xl bg-[#242424] text-[#A7A7A7] hover:text-white hover:bg-[#1DB954] hover:text-black transition-all"
-                  >
-                    <ExternalLink size={13} />
-                  </a>
-                )}
+                <ExternalLink size={14} className="text-[#666] group-hover:text-[#1DB954] transition-colors" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
       )}
 
-      {/* SubTab Content: Artists */}
+      {/* SubTab Content: Artists (Clickable to open Spotify) */}
       {activeSubTab === 'artists' && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredArtists.map((artist, i) => (
-            <div
-              key={artist.id || i}
-              className="bg-[#181818] hover:bg-[#202020] border border-[#282828] p-4 rounded-2xl flex items-center gap-4 transition-all group"
-            >
-              <span className="font-black text-xs text-[#555] w-5 text-right shrink-0">#{i + 1}</span>
-              {artist.images && artist.images[0]?.url ? (
-                <img
-                  src={artist.images[0].url}
-                  alt={artist.name}
-                  className="w-14 h-14 rounded-2xl object-cover shrink-0 border border-[#333]"
-                />
-              ) : (
-                <div className="w-14 h-14 rounded-2xl bg-[#242424] flex items-center justify-center shrink-0">
-                  <User size={18} />
+          {filteredArtists.map((artist, i) => {
+            const followersStr =
+              artist.followers?.total && artist.followers.total > 0
+                ? `${artist.followers.total.toLocaleString('pt-BR')} seguidores`
+                : (artist.popularity ? `Popularidade: ${artist.popularity}%` : 'Artista Spotify');
+
+            return (
+              <a
+                key={artist.id || i}
+                href={artist.external_urls?.spotify || `https://open.spotify.com/artist/${artist.id}`}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-[#1DB954]/50 p-4 rounded-2xl flex items-center gap-4 transition-all group cursor-pointer"
+              >
+                <span className="font-black text-xs text-[#555] w-5 text-right shrink-0">#{i + 1}</span>
+                {artist.images && artist.images[0]?.url ? (
+                  <img
+                    src={artist.images[0].url}
+                    alt={artist.name}
+                    className="w-14 h-14 rounded-2xl object-cover shrink-0 border border-[#333] group-hover:scale-105 transition-transform"
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-2xl bg-[#242424] flex items-center justify-center shrink-0">
+                    <User size={18} />
+                  </div>
+                )}
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
+                      {artist.name}
+                    </h4>
+                    <ExternalLink size={12} className="text-[#666] group-hover:text-[#1DB954] shrink-0 ml-1" />
+                  </div>
+                  <p className="text-[11px] text-[#A7A7A7] truncate mt-0.5">
+                    {(artist.genres && artist.genres.length > 0)
+                      ? artist.genres.slice(0, 2).join(', ')
+                      : 'Artista Spotify'}
+                  </p>
+                  <p className="text-[10px] text-[#666] truncate mt-0.5">
+                    {followersStr}
+                  </p>
                 </div>
-              )}
-              <div className="min-w-0 flex-1">
-                <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
-                  {artist.name}
-                </h4>
-                <p className="text-[11px] text-[#727272] truncate">
-                  {(artist.genres && artist.genres.length > 0)
-                    ? artist.genres.slice(0, 2).join(', ')
-                    : `${artist.followers?.total || 0} seguidores`}
-                </p>
-              </div>
-            </div>
-          ))}
+              </a>
+            );
+          })}
         </div>
       )}
 
-      {/* SubTab Content: Top Albums */}
+      {/* SubTab Content: Top Albums (Clickable to open Spotify) */}
       {activeSubTab === 'albums' && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredAlbums.map((item, i) => (
-            <div
+            <a
               key={item.album.id || item.album.name || i}
-              className="bg-[#181818] hover:bg-[#202020] border border-[#282828] p-4 rounded-2xl flex items-start gap-4 transition-all group"
+              href={item.album.external_urls?.spotify || `https://open.spotify.com/album/${item.album.id}`}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-[#1DB954]/50 p-4 rounded-2xl flex items-start gap-4 transition-all group cursor-pointer"
             >
               <span className="font-black text-xs text-[#555] w-5 text-right shrink-0 mt-1">#{i + 1}</span>
               {item.album.images && item.album.images[0]?.url ? (
                 <img
                   src={item.album.images[0].url}
                   alt={item.album.name}
-                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333] shadow-md"
+                  className="w-16 h-16 rounded-2xl object-cover shrink-0 border border-[#333] shadow-md group-hover:scale-105 transition-transform"
                 />
               ) : (
                 <div className="w-16 h-16 rounded-2xl bg-[#242424] flex items-center justify-center shrink-0">
@@ -741,13 +749,16 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                 </div>
               )}
               <div className="min-w-0 flex-1 space-y-1">
-                <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
-                  {item.album.name}
-                </h4>
+                <div className="flex items-center justify-between">
+                  <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
+                    {item.album.name}
+                  </h4>
+                  <ExternalLink size={12} className="text-[#666] group-hover:text-[#1DB954] shrink-0 ml-1" />
+                </div>
                 <p className="text-xs text-[#A7A7A7] truncate">{item.artist}</p>
                 <div className="flex items-center gap-2 pt-1">
                   <span className="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-md border border-emerald-800/40 font-bold">
-                    {item.count} {item.count === 1 ? 'música no Top 50' : 'músicas no Top 50'}
+                    {item.count} {item.count === 1 ? 'música no Top' : 'músicas no Top'}
                   </span>
                   {item.album.release_date && (
                     <span className="text-[10px] text-[#727272]">
@@ -756,22 +767,28 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                   )}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       )}
 
-      {/* SubTab Content: Recently Played */}
+      {/* SubTab Content: Recently Played (Clickable to open Spotify) */}
       {activeSubTab === 'recent' && (
-        <div className="bg-[#181818] border border-[#282828] rounded-2xl p-6 shadow-xl divide-y divide-[#222222]">
+        <div className="bg-[#181818] border border-[#282828] rounded-2xl p-4 sm:p-6 shadow-xl divide-y divide-[#222222]">
           {recentlyPlayed.map((item, idx) => (
-            <div key={idx} className="py-3 flex items-center justify-between gap-4">
+            <a
+              key={idx}
+              href={item.track?.external_urls?.spotify || `https://open.spotify.com/track/${item.track?.id}`}
+              target="_blank"
+              rel="noreferrer"
+              className="py-3 px-2 flex items-center justify-between gap-4 hover:bg-[#222222] rounded-xl transition-all group cursor-pointer block"
+            >
               <div className="flex items-center gap-3 min-w-0">
                 {item.track?.album?.images && item.track.album.images[0]?.url ? (
                   <img
                     src={item.track.album.images[0].url}
                     alt={item.track.name}
-                    className="w-10 h-10 rounded-xl object-cover shrink-0"
+                    className="w-10 h-10 rounded-xl object-cover shrink-0 group-hover:scale-105 transition-transform"
                   />
                 ) : (
                   <div className="w-10 h-10 rounded-xl bg-[#242424] flex items-center justify-center shrink-0">
@@ -779,131 +796,78 @@ export const SpotifyLiveDashboard: React.FC<SpotifyLiveDashboardProps> = ({ user
                   </div>
                 )}
                 <div className="min-w-0">
-                  <h4 className="font-bold text-sm text-white truncate">{item.track?.name}</h4>
+                  <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors">
+                    {item.track?.name}
+                  </h4>
                   <p className="text-xs text-[#A7A7A7] truncate">
                     {item.track?.artists?.map((a: any) => a.name).join(', ')}
                   </p>
                 </div>
               </div>
-              <span className="text-xs text-[#727272] shrink-0">
-                {new Date(item.played_at).toLocaleString()}
-              </span>
-            </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="text-xs text-[#727272]">
+                  {new Date(item.played_at).toLocaleString([], { dateStyle: 'short', timeStyle: 'short' })}
+                </span>
+                <ExternalLink size={13} className="text-[#666] group-hover:text-[#1DB954]" />
+              </div>
+            </a>
           ))}
         </div>
       )}
 
-      {/* SubTab Content: Playlists with Track Inspector & Covers */}
+      {/* SubTab Content: Playlists (Clickable 1-Click Cards with Covers) */}
       {activeSubTab === 'playlists' && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredPlaylists.map((pl, idx) => {
-              const trackCount =
-                pl.tracks?.total ??
-                pl.total_tracks ??
-                pl.tracks?.items?.length ??
-                pl.total ??
-                0;
-              const isExpanded = expandedPlaylistId === pl.id;
-              const cachedTracks = playlistTracksCache[pl.id] || [];
-              const isLoadingTracks = loadingPlaylistId === pl.id;
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredPlaylists.map((pl, idx) => {
+            const trackCount =
+              pl.tracks?.total ??
+              pl.total_tracks ??
+              pl.tracks?.items?.length ??
+              pl.total ??
+              0;
 
-              return (
-                <div
-                  key={pl.id || idx}
-                  className={`bg-[#181818] border rounded-2xl p-5 flex flex-col justify-between gap-3 transition-all ${
-                    isExpanded ? 'border-[#1DB954] shadow-lg shadow-[#1DB954]/10' : 'border-[#282828] hover:border-[#383838]'
-                  }`}
-                >
-                  <div className="flex items-start gap-3.5">
-                    {pl.images && pl.images[0]?.url ? (
-                      <img
-                        src={pl.images[0].url}
-                        alt={pl.name}
-                        className="w-14 h-14 rounded-xl object-cover shrink-0 shadow-md border border-[#333]"
-                      />
-                    ) : (
-                      <div className="w-14 h-14 rounded-xl bg-[#242424] flex items-center justify-center shrink-0 text-[#1DB954]">
-                        <ListMusic size={22} />
-                      </div>
-                    )}
-                    <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-sm text-white truncate" title={pl.name}>{pl.name}</h4>
-                      <p className="text-xs text-[#727272] mt-0.5">
-                        {trackCount > 0 ? `${trackCount} faixas` : 'Playlist'} • Por {pl.owner?.display_name || 'Spotify'}
-                      </p>
-                    </div>
-                  </div>
+            const playlistUrl = pl.external_urls?.spotify || `https://open.spotify.com/playlist/${pl.id}`;
 
-                  <div className="flex items-center justify-between pt-2 border-t border-[#242424] gap-2">
-                    <button
-                      type="button"
-                      onClick={() => togglePlaylistExpand(pl.id)}
-                      className="text-xs font-bold text-[#1DB954] hover:underline inline-flex items-center gap-1 cursor-pointer"
-                    >
-                      {isExpanded ? (
-                        <>
-                          <ChevronUp size={14} />
-                          <span>Ocultar faixas</span>
-                        </>
-                      ) : (
-                        <>
-                          <ChevronDown size={14} />
-                          <span>Ver faixas da playlist</span>
-                        </>
-                      )}
-                    </button>
-
-                    {pl.external_urls?.spotify && (
-                      <a
-                        href={pl.external_urls.spotify}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-xs text-[#A7A7A7] hover:text-white inline-flex items-center gap-1"
-                      >
-                        <span>Abrir</span>
-                        <ExternalLink size={11} />
-                      </a>
-                    )}
-                  </div>
-
-                  {/* Expanded Playlist Track List */}
-                  {isExpanded && (
-                    <div className="mt-3 pt-3 border-t border-[#282828] space-y-2 animate-fadeIn max-h-60 overflow-y-auto pr-1">
-                      {isLoadingTracks ? (
-                        <div className="flex items-center justify-center py-4 gap-2 text-xs text-[#727272]">
-                          <RefreshCw size={14} className="animate-spin text-[#1DB954]" />
-                          <span>Buscando faixas na API do Spotify...</span>
-                        </div>
-                      ) : cachedTracks.length > 0 ? (
-                        cachedTracks.map((track: any, tIdx: number) => {
-                          if (!track) return null;
-                          const name = track.name || track.trackName || 'Faixa sem título';
-                          const artist = track.artists?.map((a: any) => a.name).join(', ') || track.artistName || '';
-                          return (
-                            <div key={tIdx} className="flex items-center justify-between text-xs py-1 text-[#ccc] hover:text-white">
-                              <span className="truncate pr-2">
-                                <strong className="text-white">{name}</strong> {artist ? `• ${artist}` : ''}
-                              </span>
-                              {track.duration_ms && (
-                                <span className="text-[10px] text-[#666] shrink-0">
-                                  {Math.floor(track.duration_ms / 60000)}:{String(Math.floor((track.duration_ms % 60000) / 1000)).padStart(2, '0')}
-                                </span>
-                              )}
-                            </div>
-                          );
-                        })
-                      ) : (
-                        <p className="text-xs text-[#727272] py-2 text-center">
-                          Esta playlist não retornou faixas pela API pública ou é colaborativa externa.
-                        </p>
-                      )}
+            return (
+              <a
+                key={pl.id || idx}
+                href={playlistUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#181818] hover:bg-[#222222] border border-[#282828] hover:border-[#1DB954]/50 p-5 rounded-2xl flex flex-col justify-between gap-4 transition-all group shadow-lg cursor-pointer block"
+              >
+                <div className="flex items-start gap-3.5">
+                  {pl.images && pl.images[0]?.url ? (
+                    <img
+                      src={pl.images[0].url}
+                      alt={pl.name}
+                      className="w-16 h-16 rounded-xl object-cover shrink-0 shadow-md border border-[#333] group-hover:scale-105 transition-transform"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-xl bg-[#242424] flex items-center justify-center shrink-0 text-[#1DB954]">
+                      <ListMusic size={26} />
                     </div>
                   )}
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-bold text-sm text-white truncate group-hover:text-[#1DB954] transition-colors" title={pl.name}>
+                      {pl.name}
+                    </h4>
+                    <p className="text-xs text-[#A7A7A7] mt-1">
+                      {trackCount > 0 ? `${trackCount} faixas` : 'Playlist Oficial'}
+                    </p>
+                    <p className="text-[11px] text-[#666] mt-0.5 truncate">
+                      Por {pl.owner?.display_name || 'Spotify'}
+                    </p>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+
+                <div className="flex items-center justify-between pt-3 border-t border-[#242424] text-xs font-bold text-[#1DB954]">
+                  <span>Ouvir Playlist no Spotify</span>
+                  <ExternalLink size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </a>
+            );
+          })}
         </div>
       )}
     </div>
