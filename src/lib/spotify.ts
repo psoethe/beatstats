@@ -228,7 +228,9 @@ export const fetchWebApi = async (endpoint: string, userEmail?: string, method: 
   if (res.status === 204) return null;
 
   if (!res.ok) {
-    throw new Error(`Erro Spotify API: ${res.statusText}`);
+    const errorData = await res.json().catch(() => ({}));
+    console.warn(`Erro na chamada ${endpoint}:`, errorData);
+    throw new Error(errorData.error?.message || `Erro Spotify API: ${res.statusText}`);
   }
 
   return await res.json();
@@ -243,7 +245,11 @@ export const getRecentlyPlayed = (limit = 50, userEmail?: string) =>
   fetchWebApi(`v1/me/player/recently-played?limit=${limit}`, userEmail);
 export const getCurrentlyPlaying = (userEmail?: string) => fetchWebApi('v1/me/player/currently-playing', userEmail);
 export const getUserPlaylists = (limit = 50, userEmail?: string) => fetchWebApi(`v1/me/playlists?limit=${limit}`, userEmail);
-export const getPlaylistTracks = (playlistId: string, limit = 50, userEmail?: string) =>
-  fetchWebApi(`v1/playlists/${playlistId}/tracks?limit=${limit}`, userEmail);
-export const getAlbumDetails = (albumId: string, userEmail?: string) =>
-  fetchWebApi(`v1/albums/${albumId}`, userEmail);
+export const getPlaylistTracks = (playlistId: string, limit = 50, userEmail?: string) => {
+  const cleanId = String(playlistId).replace(/^spotify:playlist:/, '').trim();
+  return fetchWebApi(`v1/playlists/${cleanId}/tracks?limit=${limit}`, userEmail);
+};
+export const getAlbumDetails = (albumId: string, userEmail?: string) => {
+  const cleanId = String(albumId).replace(/^spotify:album:/, '').trim();
+  return fetchWebApi(`v1/albums/${cleanId}`, userEmail);
+};
