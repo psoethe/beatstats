@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { AuthUser, ALLOWED_EMAILS, isEmailAuthorized } from '../types/auth';
+import { AuthUser, isEmailAuthorized, isFamilyAdmin } from '../types/auth';
 
 const STORAGE_USER_KEY = 'beatstats_auth_user';
 
@@ -53,9 +53,7 @@ export function useAuth() {
       const sub = payload.sub;
 
       if (!isEmailAuthorized(email)) {
-        setAuthError(
-          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão para acessar este painel.`
-        );
+        setAuthError(`Acesso inválido para a conta Google "${email}".`);
         return;
       }
 
@@ -89,9 +87,7 @@ export function useAuth() {
       const email = (data.email || '').toLowerCase().trim();
 
       if (!isEmailAuthorized(email)) {
-        setAuthError(
-          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão de acesso.`
-        );
+        setAuthError(`Acesso inválido para a conta Google "${email}".`);
         return;
       }
 
@@ -121,12 +117,12 @@ export function useAuth() {
   return {
     user,
     isAuthenticated: !!user,
+    isFamilyAdmin: user ? isFamilyAdmin(user.email) : false,
     authError,
     setAuthError,
     googleClientId: GOOGLE_CLIENT_ID,
     handleGoogleCredentialResponse,
     handleGoogleAccessToken,
     logout,
-    allowedEmails: ALLOWED_EMAILS,
   };
 }

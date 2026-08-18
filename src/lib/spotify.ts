@@ -1,5 +1,22 @@
-const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID || 'COLOQUE_SEU_CLIENT_ID_AQUI';
-const REDIRECT_URI = window.location.origin + '/';
+/**
+ * Spotify Web API integration (OAuth 2.0 PKCE)
+ */
+
+export const getStoredSpotifyClientId = (): string => {
+  return (
+    localStorage.getItem('spotify_client_id') ||
+    import.meta.env.VITE_SPOTIFY_CLIENT_ID ||
+    ''
+  );
+};
+
+export const setStoredSpotifyClientId = (clientId: string) => {
+  localStorage.setItem('spotify_client_id', clientId.trim());
+};
+
+const getRedirectUri = () => {
+  return window.location.origin + window.location.pathname;
+};
 
 const generateRandomString = (length: number) => {
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -20,25 +37,39 @@ const base64encode = (input: ArrayBuffer) => {
     .replace(/\//g, '_');
 };
 
-export const redirectToAuthCodeFlow = async () => {
+export const redirectToSpotifyAuth = async (customClientId?: string) => {
+  const clientId = customClientId || getStoredSpotifyClientId();
+  if (!clientId) {
+    throw new Error('Spotify Client ID não configurado.');
+  }
+
   const codeVerifier = generateRandomString(64);
-  window.sessionStorage.setItem('code_verifier', codeVerifier);
+  window.sessionStorage.setItem('spotify_code_verifier', codeVerifier);
 
   const hashed = await sha256(codeVerifier);
   const codeChallenge = base64encode(hashed);
 
-  const scope = 'user-top-read user-read-recently-played user-read-currently-playing user-read-private user-read-email';
+  const scope = [
+    'user-top-read',
+    'user-read-recently-played',
+    'user-read-currently-playing',
+    'user-read-private',
+    'user-read-email',
+    'playlist-read-private',
+    'playlist-read-collaborative',
+  ].join(' ');
+
+  const redirectUri = getRedirectUri();
+  window.sessionStorage.setItem('spotify_auth_redirect_uri', redirectUri);
+
   const authUrl = new URL('https://accounts.spotify.com/authorize');
-
-  window.sessionStorage.setItem('auth_redirect_uri', REDIRECT_URI);
-
   const params = {
     response_type: 'code',
-    client_id: SPOTIFY_CLIENT_ID,
+    client_id: clientId,
     scope,
     code_challenge_method: 'S256',
     code_challenge: codeChallenge,
-    redirect_uri: REDIRECT_URI,
+    redirect_uri: redirectUri,
   };
 
   authUrl.search = new URLSearchParams(params).toString();
@@ -46,15 +77,16 @@ export const redirectToAuthCodeFlow = async () => {
 };
 
 export const getAccessToken = async (code: string) => {
-  const verifier = window.sessionStorage.getItem('code_verifier');
-  const storedRedirectUri = window.sessionStorage.getItem('auth_redirect_uri') || REDIRECT_URI;
-  
+  const clientId = getStoredSpotifyClientId();
+  const verifier = window.sessionStorage.getItem('spotify_code_verifier');
+  const storedRedirectUri = window.sessionStorage.getItem('spotify_auth_redirect_uri') || getRedirectUri();
+
   if (!verifier) {
-    throw new Error('Code verifier is missing');
+    throw new Error('Code verifier está ausente.');
   }
 
   const params = new URLSearchParams({
-    client_id: SPOTIFY_CLIENT_ID,
+    client_id: clientId,
     grant_type: 'authorization_code',
     code,
     redirect_uri: storedRedirectUri,
@@ -70,32 +102,32 @@ export const getAccessToken = async (code: string) => {
   });
 
   if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(errorData.error_description || 'Failed to fetch access token');
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error_description || 'Falha ao obter token de acesso do Spotify');
   }
 
   const data = await response.json();
-  
-  // Store tokens
+
   window.localStorage.setItem('spotify_access_token', data.access_token);
   if (data.refresh_token) {
     window.localStorage.setItem('spotify_refresh_token', data.refresh_token);
   }
-  
-  const expiryTime = Date.now() + (data.expires_in * 1000);
+
+  const expiryTime = Date.now() + data.expires_in * 1000;
   window.localStorage.setItem('spotify_token_expiry', expiryTime.toString());
-  
+
   return data.access_token;
 };
 
 export const refreshAccessToken = async () => {
+  const clientId = getStoredSpotifyClientId();
   const refreshToken = window.localStorage.getItem('spotify_refresh_token');
   if (!refreshToken) {
-    throw new Error('No refresh token available');
+    throw new Error('Nenhum refresh token disponível.');
   }
 
   const params = new URLSearchParams({
-    client_id: SPOTIFY_CLIENT_ID,
+    client_id: clientId,
     grant_type: 'refresh_token',
     refresh_token: refreshToken,
   });
@@ -109,19 +141,19 @@ export const refreshAccessToken = async () => {
   });
 
   if (!response.ok) {
-    throw new Error('Failed to refresh token');
+    throw new Error('Falha ao renovar token do Spotify.');
   }
 
   const data = await response.json();
-  
+
   window.localStorage.setItem('spotify_access_token', data.access_token);
   if (data.refresh_token) {
     window.localStorage.setItem('spotify_refresh_token', data.refresh_token);
   }
-  
-  const expiryTime = Date.now() + (data.expires_in * 1000);
+
+  const expiryTime = Date.now() + data.expires_in * 1000;
   window.localStorage.setItem('spotify_token_expiry', expiryTime.toString());
-  
+
   return data.access_token;
 };
 
@@ -132,12 +164,11 @@ export const getValidToken = async () => {
   if (!token || !expiry) return null;
 
   if (Date.now() > parseInt(expiry, 10) - 60000) {
-    // Refresh token if within 1 minute of expiring
     try {
       return await refreshAccessToken();
     } catch (e) {
-      console.error('Failed to refresh token', e);
-      logout();
+      console.error('Falha ao renovar token:', e);
+      logoutSpotify();
       return null;
     }
   }
@@ -145,16 +176,15 @@ export const getValidToken = async () => {
   return token;
 };
 
-export const logout = () => {
+export const logoutSpotify = () => {
   window.localStorage.removeItem('spotify_access_token');
   window.localStorage.removeItem('spotify_refresh_token');
   window.localStorage.removeItem('spotify_token_expiry');
-  window.location.reload();
 };
 
 const fetchWebApi = async (endpoint: string, method: string = 'GET') => {
   const token = await getValidToken();
-  if (!token) throw new Error('No valid token');
+  if (!token) throw new Error('Não autenticado no Spotify');
 
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
     method,
@@ -163,18 +193,21 @@ const fetchWebApi = async (endpoint: string, method: string = 'GET') => {
     },
   });
 
-  if (res.status === 204) return null; // No content (e.g. not playing anything)
-  
+  if (res.status === 204) return null;
+
   if (!res.ok) {
-    throw new Error(`API Error: ${res.statusText}`);
+    throw new Error(`Erro Spotify API: ${res.statusText}`);
   }
 
   return await res.json();
 };
 
 export const getUserProfile = () => fetchWebApi('v1/me');
-export const getTopArtists = (timeRange = 'short_term') => fetchWebApi(`v1/me/top/artists?time_range=${timeRange}&limit=20`);
-export const getTopTracks = (timeRange = 'short_term') => fetchWebApi(`v1/me/top/tracks?time_range=${timeRange}&limit=20`);
-export const getRecentlyPlayed = () => fetchWebApi('v1/me/player/recently-played?limit=50');
+export const getTopArtists = (timeRange = 'long_term', limit = 50) =>
+  fetchWebApi(`v1/me/top/artists?time_range=${timeRange}&limit=${limit}`);
+export const getTopTracks = (timeRange = 'long_term', limit = 50) =>
+  fetchWebApi(`v1/me/top/tracks?time_range=${timeRange}&limit=${limit}`);
+export const getRecentlyPlayed = (limit = 50) =>
+  fetchWebApi(`v1/me/player/recently-played?limit=${limit}`);
 export const getCurrentlyPlaying = () => fetchWebApi('v1/me/player/currently-playing');
-export const getAudioFeatures = (ids: string[]) => fetchWebApi(`v1/audio-features?ids=${ids.join(',')}`);
+export const getUserPlaylists = (limit = 50) => fetchWebApi(`v1/me/playlists?limit=${limit}`);

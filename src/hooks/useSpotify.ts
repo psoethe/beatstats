@@ -1,35 +1,39 @@
 import { useState, useEffect, useCallback } from 'react';
-import { 
-  getAccessToken, 
-  getValidToken, 
-  getUserProfile, 
-  getTopArtists, 
-  getTopTracks, 
-  getCurrentlyPlaying, 
+import {
+  getAccessToken,
+  getValidToken,
+  getUserProfile,
+  getTopArtists,
+  getTopTracks,
+  getCurrentlyPlaying,
   getRecentlyPlayed,
-  getAudioFeatures
+  getUserPlaylists,
+  logoutSpotify,
+  redirectToSpotifyAuth,
+  getStoredSpotifyClientId,
+  setStoredSpotifyClientId,
 } from '../lib/spotify';
-import { 
-  SpotifyUser, 
-  SpotifyArtist, 
-  SpotifyTrack, 
+import {
+  SpotifyUser,
+  SpotifyArtist,
+  SpotifyTrack,
   SpotifyCurrentlyPlaying,
   SpotifyRecentlyPlayedItem,
-  SpotifyAudioFeatures
 } from '../types';
 
 export const useSpotify = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  
-  const [user, setUser] = useState<SpotifyUser | null>(null);
+  const [isSpotifyConnected, setIsSpotifyConnected] = useState<boolean>(false);
+  const [isConnecting, setIsConnecting] = useState<boolean>(true);
+  const [spotifyError, setSpotifyError] = useState<string | null>(null);
+
+  const [spotifyUser, setSpotifyUser] = useState<SpotifyUser | null>(null);
   const [topArtists, setTopArtists] = useState<SpotifyArtist[]>([]);
   const [topTracks, setTopTracks] = useState<SpotifyTrack[]>([]);
-  const [audioFeatures, setAudioFeatures] = useState<SpotifyAudioFeatures[]>([]);
   const [recentlyPlayed, setRecentlyPlayed] = useState<SpotifyRecentlyPlayedItem[]>([]);
   const [currentlyPlaying, setCurrentlyPlaying] = useState<SpotifyCurrentlyPlaying | null>(null);
-  
-  const [timeRange, setTimeRange] = useState<'short_term' | 'medium_term' | 'long_term'>('short_term');
+  const [playlists, setPlaylists] = useState<any[]>([]);
+
+  const [timeRange, setTimeRange] = useState<'short_term' | 'medium_term' | 'long_term'>('long_term');
   const [isDataLoading, setIsDataLoading] = useState<boolean>(false);
 
   // Check auth and handle callback
@@ -37,77 +41,107 @@ export const useSpotify = () => {
     const initAuth = async () => {
       const params = new URLSearchParams(window.location.search);
       const code = params.get('code');
-      
+
       if (code) {
-        // Immediately remove code from URL to prevent strict-mode double firing
         window.history.replaceState({}, document.title, window.location.pathname);
         try {
           await getAccessToken(code);
-          setIsAuthenticated(true);
-        } catch (error) {
-          console.error('Error during token exchange', error);
+          setIsSpotifyConnected(true);
+        } catch (error: any) {
+          console.error('Erro na troca de token do Spotify:', error);
+          setSpotifyError(error.message || 'Falha ao autenticar com Spotify');
         }
       } else {
         const token = await getValidToken();
-        setIsAuthenticated(!!token);
+        setIsSpotifyConnected(!!token);
       }
-      setIsLoading(false);
+      setIsConnecting(false);
     };
 
     initAuth();
   }, []);
 
-  const fetchData = useCallback(async () => {
-    if (!isAuthenticated) return;
-    
+  const fetchLiveSpotifyData = useCallback(async () => {
+    if (!isSpotifyConnected) return;
+
     setIsDataLoading(true);
+    setSpotifyError(null);
     try {
       const [
         profileData,
         artistsData,
         tracksData,
         recentData,
-        playingData
+        playingData,
+        playlistsData,
       ] = await Promise.all([
-        getUserProfile(),
-        getTopArtists(timeRange),
-        getTopTracks(timeRange),
-        getRecentlyPlayed(),
-        getCurrentlyPlaying()
+        getUserProfile().catch(() => null),
+        getTopArtists(timeRange, 50).catch(() => ({ items: [] })),
+        getTopTracks(timeRange, 50).catch(() => ({ items: [] })),
+        getRecentlyPlayed(50).catch(() => ({ items: [] })),
+        getCurrentlyPlaying().catch(() => null),
+        getUserPlaylists(50).catch(() => ({ items: [] })),
       ]);
 
-      const tracks = tracksData?.items || [];
-      
-      setUser(profileData || null);
+      if (profileData) setSpotifyUser(profileData);
       setTopArtists(artistsData?.items || []);
-      setTopTracks(tracks);
-      // Audio features are deprecated by Spotify and return 403 Forbidden
-      setAudioFeatures([]);
+      setTopTracks(tracksData?.items || []);
       setRecentlyPlayed(recentData?.items || []);
       setCurrentlyPlaying(playingData || null);
-    } catch (error) {
-      console.error('Error fetching Spotify data', error);
+      setPlaylists(playlistsData?.items || []);
+    } catch (error: any) {
+      console.error('Erro ao buscar dados ao vivo do Spotify:', error);
+      setSpotifyError(error.message || 'Erro ao carregar dados do Spotify');
     } finally {
       setIsDataLoading(false);
     }
-  }, [isAuthenticated, timeRange]);
+  }, [isSpotifyConnected, timeRange]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    if (isSpotifyConnected) {
+      fetchLiveSpotifyData();
+    }
+  }, [isSpotifyConnected, fetchLiveSpotifyData]);
+
+  const connectSpotify = async (customClientId?: string) => {
+    setSpotifyError(null);
+    if (customClientId) {
+      setStoredSpotifyClientId(customClientId);
+    }
+    try {
+      await redirectToSpotifyAuth(customClientId);
+    } catch (e: any) {
+      setSpotifyError(e.message || 'Falha ao iniciar autenticação com Spotify');
+    }
+  };
+
+  const disconnectSpotify = () => {
+    logoutSpotify();
+    setIsSpotifyConnected(false);
+    setSpotifyUser(null);
+    setTopArtists([]);
+    setTopTracks([]);
+    setRecentlyPlayed([]);
+    setCurrentlyPlaying(null);
+  };
 
   return {
-    isAuthenticated,
-    isLoading,
-    isDataLoading,
-    user,
+    isSpotifyConnected,
+    isConnecting,
+    spotifyError,
+    spotifyUser,
     topArtists,
     topTracks,
-    audioFeatures,
     recentlyPlayed,
     currentlyPlaying,
+    playlists,
     timeRange,
     setTimeRange,
-    refreshData: fetchData
+    isDataLoading,
+    fetchLiveSpotifyData,
+    connectSpotify,
+    disconnectSpotify,
+    spotifyClientId: getStoredSpotifyClientId(),
+    setStoredSpotifyClientId,
   };
 };

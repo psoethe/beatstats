@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ShieldCheck, Lock, AlertCircle, RefreshCw } from 'lucide-react';
-import { ALLOWED_EMAILS } from '../types/auth';
+import { ShieldCheck, Lock, AlertCircle, RefreshCw, Radio, Sparkles } from 'lucide-react';
+import { FAMILY_ADMIN_EMAILS } from '../types/auth';
 
 interface AuthScreenProps {
   onGoogleSuccess: (credentialResponse: any) => void;
@@ -112,30 +112,28 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
           </div>
           <div>
             <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Spotify Family Stats
+              BeatStats
             </h1>
-            <p className="text-xs text-[#A7A7A7] mt-1">Autenticação Obrigatória com Google</p>
+            <p className="text-xs text-[#A7A7A7] mt-1">Dashboard de Estatísticas do Spotify</p>
           </div>
         </div>
 
-        {/* Whitelist Banner */}
-        <div className="bg-[#121212] border border-[#282828] p-4 rounded-2xl text-left space-y-2">
+        {/* Info Banner */}
+        <div className="bg-[#121212] border border-[#282828] p-4 rounded-2xl text-left space-y-2.5">
           <div className="flex items-center gap-2 text-xs font-bold text-[#1DB954] uppercase tracking-wider">
             <ShieldCheck size={16} />
-            <span>Acesso Restrito</span>
+            <span>Login com Google</span>
           </div>
           <p className="text-xs text-[#A7A7A7] leading-relaxed">
-            O painel é protegido e acessível apenas através do login com as seguintes contas Google:
+            Faça login com sua conta Google para acessar o painel e conectar sua conta Spotify.
           </p>
-          <div className="flex flex-wrap gap-1.5 pt-1">
-            {ALLOWED_EMAILS.map(email => (
-              <span
-                key={email}
-                className="bg-[#242424] text-white font-mono text-[11px] px-2.5 py-1 rounded-lg border border-[#383838]"
-              >
-                {email}
-              </span>
-            ))}
+          <div className="pt-1 text-[11px] text-[#727272] border-t border-[#222]">
+            <p>
+              • Contas da família (<code className="text-white">psoethe@gmail.com</code>, <code className="text-white">alicebsoethe@gmail.com</code>): Acesso aos arquivos históricos privados.
+            </p>
+            <p className="mt-1">
+              • Qualquer conta Google: Acesso completo para conectar com a <strong>Spotify Live API</strong> e trazer suas próprias estatísticas!
+            </p>
           </div>
         </div>
 
