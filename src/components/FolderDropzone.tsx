@@ -1,5 +1,21 @@
 import React, { useRef, useState } from 'react';
-import { FolderOpen, FileText, UploadCloud, Sparkles, AlertCircle, FileArchive, CheckCircle2 } from 'lucide-react';
+import {
+  FolderOpen,
+  FileText,
+  UploadCloud,
+  Sparkles,
+  AlertCircle,
+  FileArchive,
+  CheckCircle2,
+  ExternalLink,
+  HelpCircle,
+  Clock,
+  ShieldCheck,
+  ChevronDown,
+  ChevronUp,
+  Download,
+  Info,
+} from 'lucide-react';
 import JSZip from 'jszip';
 import { parseUploadedFiles } from '../utils/parser';
 import { getDemoAccounts } from '../utils/demoData';
@@ -14,6 +30,7 @@ export const FolderDropzone: React.FC<FolderDropzoneProps> = ({ onDataLoaded }) 
   const [isProcessing, setIsProcessing] = useState(false);
   const [progressMsg, setProgressMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [showHowToGuide, setShowHowToGuide] = useState(true);
 
   const folderInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -111,9 +128,9 @@ export const FolderDropzone: React.FC<FolderDropzoneProps> = ({ onDataLoaded }) 
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6">
-      {/* Title */}
-      <div className="text-center mb-10">
+    <div className="max-w-4xl mx-auto py-10 px-4 sm:px-6 space-y-8">
+      {/* Header */}
+      <div className="text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1DB954]/15 border border-[#1DB954]/30 text-[#1DB954] text-xs font-bold uppercase tracking-wider mb-4">
           <Sparkles size={14} />
           <span>Ingestão Multi-Contas Spotify</span>
@@ -216,8 +233,146 @@ export const FolderDropzone: React.FC<FolderDropzoneProps> = ({ onDataLoaded }) 
         )}
       </div>
 
+      {/* STEP-BY-STEP GUIDE: COMO SOLICITAR OS DADOS MAIS RICOS DO SPOTIFY */}
+      <div className="bg-[#181818] border border-[#282828] rounded-3xl overflow-hidden shadow-2xl transition-all">
+        <button
+          type="button"
+          onClick={() => setShowHowToGuide(!showHowToGuide)}
+          className="w-full p-6 sm:p-7 flex items-center justify-between gap-4 text-left hover:bg-[#202020] transition-all cursor-pointer"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="w-10 h-10 rounded-xl bg-[#1DB954]/15 text-[#1DB954] flex items-center justify-center font-bold">
+              <Download size={20} />
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+                <span>Como solicitar os Dados Mais Ricos (Histórico Completo) no Spotify</span>
+                <span className="bg-[#1DB954]/15 text-[#1DB954] text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full border border-[#1DB954]/30 hidden sm:inline-block">
+                  Passo a Passo
+                </span>
+              </h3>
+              <p className="text-xs text-[#A7A7A7]">
+                Saiba como exportar todo o histórico de vida da conta desde o primeiro dia
+              </p>
+            </div>
+          </div>
+          <div className="p-2 rounded-xl bg-[#242424] text-[#A7A7A7]">
+            {showHowToGuide ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </div>
+        </button>
+
+        {showHowToGuide && (
+          <div className="p-6 sm:p-8 pt-0 border-t border-[#242424] space-y-6 text-sm">
+            {/* Comparison banner: Básico vs Estendido */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              {/* Option 1: Básico */}
+              <div className="bg-[#121212] p-5 rounded-2xl border border-[#282828] space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase text-[#A7A7A7] tracking-wider">
+                    Opção 1: Dados da Conta (Básico)
+                  </span>
+                  <span className="text-[11px] font-bold text-amber-400 bg-amber-950/40 px-2 py-0.5 rounded-md border border-amber-800/40">
+                    3 a 5 dias
+                  </span>
+                </div>
+                <p className="text-xs text-[#B3B3B3] leading-relaxed">
+                  Contém playlists, buscas, biblioteca e o histórico de reprodução apenas do <strong>último ano</strong> (<code className="text-white">StreamingHistory_music_0.json</code>).
+                </p>
+              </div>
+
+              {/* Option 2: Estendido (Rico) */}
+              <div className="bg-gradient-to-br from-[#121212] to-emerald-950/30 p-5 rounded-2xl border border-emerald-500/30 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase text-[#1DB954] tracking-wider flex items-center gap-1">
+                    <Sparkles size={13} />
+                    Opção 2: Histórico Estendido (Mais Rico)
+                  </span>
+                  <span className="text-[11px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-md border border-emerald-800/40">
+                    Até 30 dias
+                  </span>
+                </div>
+                <p className="text-xs text-[#B3B3B3] leading-relaxed">
+                  Contém <strong>toda a história de vida da conta</strong> (<code className="text-white">endsong_*.json</code>): data/hora exata UTC, motivo de término/início, se pulou a faixa, shuffle, dispositivo (iOS/Android/PC) e país.
+                </p>
+              </div>
+            </div>
+
+            {/* Step-by-step numbered steps */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-black uppercase text-[#1DB954] tracking-wider">
+                Passo a Passo para Solicitar:
+              </h4>
+
+              <ol className="space-y-3.5 text-xs text-[#B3B3B3]">
+                <li className="flex items-start gap-3 bg-[#121212] p-3.5 rounded-xl border border-[#242424]">
+                  <span className="w-6 h-6 rounded-lg bg-[#1DB954] text-black font-black flex items-center justify-center shrink-0 text-xs">
+                    1
+                  </span>
+                  <div>
+                    <span className="font-bold text-white block mb-0.5">Acesse a página de Privacidade do Spotify:</span>
+                    Clique no link oficial: 👉{' '}
+                    <a
+                      href="https://www.spotify.com/account/privacy"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[#1DB954] font-bold underline inline-flex items-center gap-1 hover:text-[#1ed760]"
+                    >
+                      <span>spotify.com/account/privacy</span>
+                      <ExternalLink size={12} />
+                    </a>{' '}
+                    e faça login com a conta que deseja exportar.
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3 bg-[#121212] p-3.5 rounded-xl border border-[#242424]">
+                  <span className="w-6 h-6 rounded-lg bg-[#1DB954] text-black font-black flex items-center justify-center shrink-0 text-xs">
+                    2
+                  </span>
+                  <div>
+                    <span className="font-bold text-white block mb-0.5">Vá até a seção "Baixar seus dados" (Download your data):</span>
+                    Role a página até a opção de download de dados pessoais.
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3 bg-[#121212] p-3.5 rounded-xl border border-[#242424]">
+                  <span className="w-6 h-6 rounded-lg bg-[#1DB954] text-black font-black flex items-center justify-center shrink-0 text-xs">
+                    3
+                  </span>
+                  <div>
+                    <span className="font-bold text-white block mb-0.5">Selecione o tipo de histórico desejado:</span>
+                    • Marque <strong>"Dados da conta"</strong> (dados rápidos do último ano).<br />
+                    • E para os dados mais ricos de toda a história da conta, marque especificamente <strong>"Histórico de streaming estendido"</strong> (Extended streaming history).<br />
+                    Clique no botão <strong>"Solicitar dados"</strong>.
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3 bg-[#121212] p-3.5 rounded-xl border border-[#242424]">
+                  <span className="w-6 h-6 rounded-lg bg-[#1DB954] text-black font-black flex items-center justify-center shrink-0 text-xs">
+                    4
+                  </span>
+                  <div>
+                    <span className="font-bold text-white block mb-0.5">Confirme no seu E-mail (Obrigatório!):</span>
+                    O Spotify enviará um e-mail com o assunto <em>"Confirm your request for a copy of your personal data"</em>. Abra-o e clique no botão de <strong>confirmação</strong> para que eles comecem a processar o arquivo.
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3 bg-[#121212] p-3.5 rounded-xl border border-[#242424]">
+                  <span className="w-6 h-6 rounded-lg bg-[#1DB954] text-black font-black flex items-center justify-center shrink-0 text-xs">
+                    5
+                  </span>
+                  <div>
+                    <span className="font-bold text-white block mb-0.5">Baixar e Importar no BeatStats:</span>
+                    Assim que receber o e-mail de que seus dados estão prontos, faça o download do arquivo ZIP e <strong>arraste a pasta ou o arquivo ZIP diretamente nesta tela</strong>! O BeatStats processa tudo automaticamente.
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Guide Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex flex-col gap-2">
           <div className="flex items-center gap-2 text-[#1DB954] text-xs font-bold uppercase tracking-wider">
             <FileText size={15} />
@@ -234,7 +389,7 @@ export const FolderDropzone: React.FC<FolderDropzoneProps> = ({ onDataLoaded }) 
             <span>2. Ingestão Resiliente</span>
           </div>
           <p className="text-xs text-[#A7A7A7] leading-relaxed">
-            Concatena múltiplos arquivos <code className="text-white">StreamingHistory_*.json</code> e trata graciosamente contas sem histórico de reprodução.
+            Concatena múltiplos arquivos <code className="text-white">StreamingHistory_*.json</code> e <code className="text-white">endsong_*.json</code> tratando contas com ou sem streams.
           </p>
         </div>
 
