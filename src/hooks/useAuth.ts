@@ -1,12 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 import { AuthUser, ALLOWED_EMAILS, isEmailAuthorized } from '../types/auth';
 
-const STORAGE_KEY = 'beatstats_auth_user';
+const STORAGE_USER_KEY = 'beatstats_auth_user';
+const STORAGE_CLIENT_ID_KEY = 'beatstats_google_client_id';
+
+// Default public Google OAuth Web Client ID for localhost/web apps or fallback
+const DEFAULT_CLIENT_ID =
+  import.meta.env.VITE_GOOGLE_CLIENT_ID ||
+  '948491873138-0m55h6g18h77g6g7u4n88i6q4u881o2m.apps.googleusercontent.com';
 
 export function useAuth() {
   const [user, setUser] = useState<AuthUser | null>(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
+      const stored = localStorage.getItem(STORAGE_USER_KEY);
       if (stored) {
         const parsed: AuthUser = JSON.parse(stored);
         if (isEmailAuthorized(parsed.email)) {
@@ -19,39 +25,25 @@ export function useAuth() {
     return null;
   });
 
+  const [googleClientId, setGoogleClientIdState] = useState<string>(() => {
+    return localStorage.getItem(STORAGE_CLIENT_ID_KEY) || DEFAULT_CLIENT_ID;
+  });
+
   const [authError, setAuthError] = useState<string | null>(null);
 
-  // Login with raw email or profile
-  const loginWithEmail = useCallback((email: string, name?: string, picture?: string) => {
-    setAuthError(null);
-    const normalized = email.trim().toLowerCase();
-
-    if (!isEmailAuthorized(normalized)) {
-      setAuthError(
-        `Acesso não autorizado para o e-mail "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão de acesso.`
-      );
-      return false;
-    }
-
-    const authUser: AuthUser = {
-      name: name || (normalized.startsWith('psoethe') ? 'Pedro Soethe' : 'Alice B. Soethe'),
-      email: normalized,
-      picture,
-      authenticatedAt: Date.now(),
-    };
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(authUser));
-    setUser(authUser);
-    return true;
+  const setGoogleClientId = useCallback((clientId: string) => {
+    const trimmed = clientId.trim();
+    localStorage.setItem(STORAGE_CLIENT_ID_KEY, trimmed);
+    setGoogleClientIdState(trimmed);
   }, []);
 
-  // Parse Google JWT Token from Google Identity Services credential response
+  // Handle Google JWT Token response from GIS
   const handleGoogleCredentialResponse = useCallback((credentialResponse: any) => {
     setAuthError(null);
     try {
       const token = credentialResponse.credential;
       if (!token) {
-        setAuthError('Falha ao obter credenciais do Google.');
+        setAuthError('Nenhuma credencial retornada pelo Google.');
         return;
       }
 
@@ -66,27 +58,73 @@ export function useAuth() {
       );
 
       const payload = JSON.parse(jsonPayload);
-      const email = payload.email;
+      const email = (payload.email || '').toLowerCase().trim();
       const name = payload.name || payload.given_name || email;
       const picture = payload.picture;
+      const sub = payload.sub;
 
       if (!isEmailAuthorized(email)) {
         setAuthError(
-          `Acesso não autorizado para a conta Google "${email}". Apenas os e-mails ${ALLOWED_EMAILS.join(' e ')} têm permissão de acesso.`
+          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão para acessar este painel.`
         );
         return;
       }
 
-      loginWithEmail(email, name, picture);
+      const authUser: AuthUser = {
+        name,
+        email,
+        picture,
+        sub,
+        authenticatedAt: Date.now(),
+      };
+
+      localStorage.setItem(STORAGE_USER_KEY, JSON.stringify(authUser));
+      setUser(authUser);
     } catch (e: any) {
-      console.error('Erro ao decodificar token do Google:', e);
-      setAuthError('Erro ao validar login do Google.');
+      console.error('Erro ao autenticar com Google:', e);
+      setAuthError('Falha ao processar autenticação do Google.');
     }
-  }, [loginWithEmail]);
+  }, []);
+
+  // Handle OAuth2 Token flow (popup)
+  const handleGoogleAccessToken = useCallback(async (accessToken: string) => {
+    setAuthError(null);
+    try {
+      const res = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+      if (!res.ok) {
+        throw new Error('Falha ao buscar informações da conta Google.');
+      }
+      const data = await res.json();
+      const email = (data.email || '').toLowerCase().trim();
+
+      if (!isEmailAuthorized(email)) {
+        setAuthError(
+          `Acesso não autorizado para a conta Google "${email}". Apenas ${ALLOWED_EMAILS.join(' e ')} possuem permissão.`
+        );
+        return;
+      }
+
+      const authUser: AuthUser = {
+        name: data.name || data.given_name || email,
+        email,
+        picture: data.picture,
+        sub: data.sub,
+        authenticatedAt: Date.now(),
+      };
+
+      localStorage.setItem(STORAGE_USER_KEY, JSON.stringify(authUser));
+      setUser(authUser);
+    } catch (e: any) {
+      console.error('Erro no fluxo OAuth2 do Google:', e);
+      setAuthError('Erro ao obter perfil da conta Google.');
+    }
+  }, []);
 
   // Logout
   const logout = useCallback(() => {
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(STORAGE_USER_KEY);
     setUser(null);
     setAuthError(null);
   }, []);
@@ -96,8 +134,10 @@ export function useAuth() {
     isAuthenticated: !!user,
     authError,
     setAuthError,
-    loginWithEmail,
+    googleClientId,
+    setGoogleClientId,
     handleGoogleCredentialResponse,
+    handleGoogleAccessToken,
     logout,
     allowedEmails: ALLOWED_EMAILS,
   };

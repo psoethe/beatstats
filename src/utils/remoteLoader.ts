@@ -3,7 +3,7 @@
  */
 
 import { SpotifyAccount, NormalizedStream, UserData, PlaylistItem, LibraryData, SearchQueryItem } from '../types/spotify';
-import { parseIndexFile, normalizeStreams, aggregateAccountData } from './parser';
+import { parseIndexFile, normalizeStreams, normalizePlaylists, normalizeSearchQueries, aggregateAccountData } from './parser';
 
 /**
  * Fetch a JSON file safely from public path
@@ -123,22 +123,18 @@ export async function loadBundledSpotifyData(): Promise<SpotifyAccount[]> {
       }
     }
 
-    // Construct Playlists
+    // Construct Playlists with normalized track list
     let playlists: PlaylistItem[] = [];
     const rawPlaylists = playlist1 || playlistFile;
     if (rawPlaylists) {
-      if (Array.isArray(rawPlaylists.playlists)) {
-        playlists = rawPlaylists.playlists;
-      } else if (Array.isArray(rawPlaylists)) {
-        playlists = rawPlaylists;
-      }
+      playlists = normalizePlaylists(rawPlaylists);
     }
 
     // Construct Library
     let library: LibraryData | null = yourLib || null;
 
     // Construct Search Queries
-    let searchQueries: SearchQueryItem[] = Array.isArray(searchQ) ? searchQ : [];
+    let searchQueries: SearchQueryItem[] = searchQ ? normalizeSearchQueries(searchQ) : [];
 
     // Inferences
     let inferences: string[] = [];

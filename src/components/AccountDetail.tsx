@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { SpotifyAccount } from '../types/spotify';
+import { SpotifyAccount, PlaylistItem } from '../types/spotify';
 import { formatPlaytime } from '../utils/parser';
 import { TopTable } from './TopTable';
 import {
@@ -8,7 +8,6 @@ import {
   Music2,
   Sparkles,
   Calendar,
-  Zap,
   Award,
   Disc3,
   Search,
@@ -17,9 +16,11 @@ import {
   ShieldAlert,
   BarChart3,
   Flame,
-  Layers,
   ChevronDown,
+  ChevronUp,
   Info,
+  ExternalLink,
+  Users,
 } from 'lucide-react';
 import {
   AreaChart,
@@ -42,6 +43,8 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
   const [trackMetric, setTrackMetric] = useState<'time' | 'streams'>('time');
   const [activeTab, setActiveTab] = useState<'rankings' | 'playlists' | 'searches' | 'profile'>('rankings');
   const [selectedYear, setSelectedYear] = useState<string>('all');
+  const [playlistSearch, setPlaylistSearch] = useState<string>('');
+  const [expandedPlaylists, setExpandedPlaylists] = useState<Record<string, boolean>>({});
 
   // Discover available years in history
   const availableYears = useMemo(() => {
@@ -54,19 +57,33 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
     return Array.from(years).sort().reverse();
   }, [account]);
 
-  // Filter streams by selected year if needed
-  const filteredStreams = useMemo(() => {
-    if (selectedYear === 'all' || !account.hasStreamingHistory) {
-      return account.streams;
-    }
-    return account.streams.filter(s => s.dateStr.startsWith(selectedYear));
-  }, [account, selectedYear]);
-
   // Recalculate monthly activity for charts if filtered
   const chartMonthlyData = useMemo(() => {
     if (selectedYear === 'all') return account.monthlyActivity;
     return account.monthlyActivity.filter(m => m.yearMonth.startsWith(selectedYear));
   }, [account, selectedYear]);
+
+  const togglePlaylistExpand = (name: string) => {
+    setExpandedPlaylists(prev => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
+
+  // Filter playlists
+  const filteredPlaylists = useMemo(() => {
+    if (!account.playlists) return [];
+    if (!playlistSearch.trim()) return account.playlists;
+    const q = playlistSearch.toLowerCase().trim();
+    return account.playlists.filter(
+      pl =>
+        pl.name.toLowerCase().includes(q) ||
+        (pl.description && pl.description.toLowerCase().includes(q)) ||
+        pl.items.some(
+          t => t.trackName.toLowerCase().includes(q) || t.artistName.toLowerCase().includes(q)
+        )
+    );
+  }, [account.playlists, playlistSearch]);
 
   const topArtistByTime = account.topArtistsByTime[0];
   const topTrackByTime = account.topTracksByTime[0];
@@ -482,47 +499,115 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
       {/* Sub-Tab 2: Playlists & Library */}
       {activeTab === 'playlists' && (
         <div className="space-y-6">
-          {/* Playlists Grid */}
+          {/* Playlists Section */}
           <div className="bg-[#181818] border border-[#282828] rounded-2xl p-6 shadow-xl">
-            <h3 className="text-base font-bold text-white mb-1">Playlists Criadas e Salvas</h3>
-            <p className="text-xs text-[#727272] mb-5">Dados extraídos de Playlist.json</p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <h3 className="text-base font-bold text-white">Playlists Criadas e Salvas</h3>
+                <p className="text-xs text-[#727272]">Dados extraídos de Playlist1.json</p>
+              </div>
 
-            {(!account.playlists || account.playlists.length === 0) ? (
-              <p className="text-xs text-[#727272] py-6 text-center">Nenhuma playlist encontrada para esta conta.</p>
+              {/* Search in playlists */}
+              {account.playlists && account.playlists.length > 0 && (
+                <div className="relative w-full sm:w-64">
+                  <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#727272]" />
+                  <input
+                    type="text"
+                    value={playlistSearch}
+                    onChange={e => setPlaylistSearch(e.target.value)}
+                    placeholder="Filtrar playlists ou faixas..."
+                    className="w-full bg-[#121212] text-xs text-white placeholder-[#727272] pl-9 pr-3 py-2 rounded-xl border border-[#282828] focus:border-[#1DB954] outline-none"
+                  />
+                </div>
+              )}
+            </div>
+
+            {(!filteredPlaylists || filteredPlaylists.length === 0) ? (
+              <p className="text-xs text-[#727272] py-8 text-center">Nenhuma playlist encontrada.</p>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {account.playlists.map((pl, idx) => (
-                  <div key={idx} className="bg-[#121212] border border-[#282828] p-4 rounded-xl flex flex-col gap-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <h4 className="font-bold text-sm text-white">{pl.name}</h4>
-                        {pl.description && <p className="text-xs text-[#A7A7A7] mt-0.5">{pl.description}</p>}
-                      </div>
-                      <span className="bg-[#242424] text-[#A7A7A7] text-[11px] font-bold px-2 py-0.5 rounded-full shrink-0">
-                        {pl.items?.length || 0} faixas
-                      </span>
-                    </div>
+                {filteredPlaylists.map((pl, idx) => {
+                  const isExpanded = !!expandedPlaylists[pl.name];
+                  const displayedTracks = isExpanded ? pl.items : pl.items.slice(0, 5);
 
-                    {pl.items && pl.items.length > 0 && (
-                      <div className="mt-2 space-y-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#727272]">Faixas:</span>
-                        <ul className="text-xs text-[#A7A7A7] space-y-0.5 divide-y divide-[#202020]">
-                          {pl.items.slice(0, 5).map((track, tIdx) => (
-                            <li key={tIdx} className="py-1 flex items-center justify-between gap-2">
-                              <span className="truncate text-white font-medium">{track.trackName}</span>
-                              <span className="text-[11px] text-[#727272] truncate">{track.artistName}</span>
-                            </li>
-                          ))}
-                          {pl.items.length > 5 && (
-                            <li className="pt-1.5 text-[11px] text-[#1DB954] font-semibold">
-                              + {pl.items.length - 5} outras faixas
-                            </li>
+                  return (
+                    <div key={idx} className="bg-[#121212] border border-[#282828] p-5 rounded-2xl flex flex-col justify-between gap-4 hover:border-[#383838] transition-all">
+                      <div>
+                        {/* Playlist Title & Stats */}
+                        <div className="flex items-start justify-between gap-2 mb-1.5">
+                          <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                            <ListMusic size={16} className="text-[#1DB954] shrink-0" />
+                            <span>{pl.name}</span>
+                          </h4>
+                          <span className="bg-[#242424] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shrink-0 border border-[#333]">
+                            {pl.items.length} {pl.items.length === 1 ? 'faixa' : 'faixas'}
+                          </span>
+                        </div>
+
+                        {pl.description && (
+                          <p className="text-xs text-[#A7A7A7] mb-2 leading-relaxed">{pl.description}</p>
+                        )}
+
+                        <div className="flex items-center gap-3 text-[11px] text-[#727272] mb-3">
+                          {pl.lastModifiedDate && <span>Modificada: {pl.lastModifiedDate}</span>}
+                          {pl.numberOfFollowers !== undefined && (
+                            <span className="flex items-center gap-1">
+                              <Users size={11} /> {pl.numberOfFollowers} seguidores
+                            </span>
                           )}
-                        </ul>
+                        </div>
+
+                        {/* Tracks list */}
+                        {pl.items.length > 0 ? (
+                          <div className="mt-3 bg-[#181818] p-3 rounded-xl border border-[#222222]">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-[#727272] block mb-2">
+                              Faixas da Playlist:
+                            </span>
+                            <div className="space-y-2 max-h-72 overflow-y-auto pr-1">
+                              {displayedTracks.map((track, tIdx) => (
+                                <div key={tIdx} className="flex items-center justify-between gap-3 text-xs py-1 border-b border-[#202020] last:border-0">
+                                  <div className="min-w-0 flex items-center gap-2">
+                                    <span className="text-[11px] text-[#666] font-bold w-4 text-right">{tIdx + 1}</span>
+                                    <div className="truncate">
+                                      <p className="font-semibold text-white truncate">{track.trackName}</p>
+                                      <p className="text-[11px] text-[#A7A7A7] truncate">{track.artistName} {track.albumName ? `• ${track.albumName}` : ''}</p>
+                                    </div>
+                                  </div>
+                                  {track.addedDate && (
+                                    <span className="text-[10px] text-[#666] shrink-0">{track.addedDate.slice(0, 10)}</span>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <p className="text-xs text-[#666] italic">Playlist vazia.</p>
+                        )}
                       </div>
-                    )}
-                  </div>
-                ))}
+
+                      {/* Expand Button */}
+                      {pl.items.length > 5 && (
+                        <button
+                          type="button"
+                          onClick={() => togglePlaylistExpand(pl.name)}
+                          className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-[#181818] hover:bg-[#222] border border-[#282828] text-xs font-semibold text-[#1DB954] transition-all cursor-pointer self-start"
+                        >
+                          {isExpanded ? (
+                            <>
+                              <ChevronUp size={14} />
+                              <span>Recolher</span>
+                            </>
+                          ) : (
+                            <>
+                              <ChevronDown size={14} />
+                              <span>Ver todas as {pl.items.length} faixas</span>
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -533,7 +618,7 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
               <h3 className="text-base font-bold text-white mb-1">Resumo da Sua Biblioteca</h3>
               <p className="text-xs text-[#727272] mb-5">Itens salvos em YourLibrary.json</p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-6">
                 <div className="bg-[#121212] p-3 rounded-xl border border-[#282828]">
                   <span className="block text-lg font-black text-white">{account.library.tracks?.length || 0}</span>
                   <span className="text-xs text-[#A7A7A7]">Músicas Curtidas</span>
@@ -551,6 +636,24 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
                   <span className="text-xs text-[#A7A7A7]">Podcasts</span>
                 </div>
               </div>
+
+              {/* Sample tracks from library */}
+              {account.library.tracks && account.library.tracks.length > 0 && (
+                <div className="bg-[#121212] p-4 rounded-xl border border-[#282828]">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#A7A7A7] mb-3">
+                    Exemplos de Músicas Salvas na Biblioteca:
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    {account.library.tracks.slice(0, 10).map((t, idx) => (
+                      <div key={idx} className="flex items-center gap-2 p-2 rounded-lg bg-[#181818] border border-[#242424] truncate">
+                        <Disc3 size={14} className="text-[#1DB954] shrink-0" />
+                        <span className="font-semibold text-white truncate">{t.track}</span>
+                        <span className="text-[#727272] truncate">({t.artist})</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -563,20 +666,24 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
             <Search size={18} className="text-[#1DB954]" />
             <h3 className="text-base font-bold text-white">Histórico de Buscas Realizadas</h3>
           </div>
-          <p className="text-xs text-[#727272] mb-5">Termos buscados no aplicativo (SearchQueries.json)</p>
+          <p className="text-xs text-[#727272] mb-5">Termos e consultas pesquisadas no Spotify (SearchQueries.json)</p>
 
           {(!account.searchQueries || account.searchQueries.length === 0) ? (
-            <p className="text-xs text-[#727272] py-8 text-center">Nenhum termo de busca registrado.</p>
+            <p className="text-xs text-[#727272] py-8 text-center">Nenhum termo de busca registrado para esta conta.</p>
           ) : (
-            <div className="divide-y divide-[#222222]">
+            <div className="divide-y divide-[#222222] max-h-[500px] overflow-y-auto pr-2">
               {account.searchQueries.map((query, idx) => (
-                <div key={idx} className="py-3 flex items-center justify-between gap-4">
+                <div key={idx} className="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-xs text-[#666] font-bold w-5">#{idx + 1}</span>
+                    <span className="text-xs text-[#666] font-bold w-6">#{idx + 1}</span>
                     <span className="text-sm font-semibold text-white">"{query.searchQuery}"</span>
                   </div>
-                  <div className="flex items-center gap-3 text-xs text-[#A7A7A7]">
-                    <span className="bg-[#242424] px-2 py-0.5 rounded-lg">{query.platform}</span>
+                  <div className="flex items-center gap-2 text-xs text-[#A7A7A7]">
+                    {query.platform && (
+                      <span className="bg-[#242424] px-2 py-0.5 rounded-lg border border-[#333] text-[11px]">
+                        {query.platform}
+                      </span>
+                    )}
                     <span>{query.date} {query.searchTime}</span>
                   </div>
                 </div>
@@ -592,7 +699,7 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
           {/* Cadastral Info */}
           <div className="bg-[#181818] border border-[#282828] rounded-2xl p-6 shadow-xl">
             <h3 className="text-base font-bold text-white mb-1">Dados Cadastrais</h3>
-            <p className="text-xs text-[#727272] mb-4">Informações de Userdata.json</p>
+            <p className="text-xs text-[#727272] mb-4">Informações de UserAttributes.json / Userdata.json</p>
 
             {account.userData ? (
               <dl className="divide-y divide-[#242424] text-xs">
@@ -634,17 +741,17 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
                 )}
               </dl>
             ) : (
-              <p className="text-xs text-[#727272] py-4">Arquivo Userdata.json não encontrado nesta conta.</p>
+              <p className="text-xs text-[#727272] py-4">Arquivo de perfil não encontrado nesta conta.</p>
             )}
           </div>
 
           {/* Inferences / Interests */}
           <div className="bg-[#181818] border border-[#282828] rounded-2xl p-6 shadow-xl">
             <h3 className="text-base font-bold text-white mb-1">Segmentos & Inferências de Interesse</h3>
-            <p className="text-xs text-[#727272] mb-4">Extraído de Inferences.json ou Wrapped.json</p>
+            <p className="text-xs text-[#727272] mb-4">Extraído de Inferences.json / Wrapped.json</p>
 
             {account.inferences && account.inferences.length > 0 ? (
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 max-h-72 overflow-y-auto pr-1">
                 {account.inferences.map((inf, i) => (
                   <span
                     key={i}
@@ -655,7 +762,7 @@ export const AccountDetail: React.FC<AccountDetailProps> = ({ account }) => {
                 ))}
               </div>
             ) : (
-              <p className="text-xs text-[#727272] py-4">Nenhum segmento de inferência registrado.</p>
+              <p className="text-xs text-[#727272] py-4">Nenhum segmento de inferência registrado para esta conta.</p>
             )}
           </div>
         </div>

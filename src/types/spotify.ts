@@ -50,7 +50,7 @@ export interface NormalizedStream {
   skipped?: boolean;
 }
 
-// User Profile Data (Userdata.json)
+// User Profile Data (Userdata.json or UserAttributes.json or KidsAccount.json)
 export interface UserData {
   username?: string;
   email?: string;
@@ -62,17 +62,21 @@ export interface UserData {
   postalCode?: string;
   mobileNumber?: string;
   creationTime?: string;
+  popularMusicAllowed?: boolean;
+  accountDisabled?: boolean;
   [key: string]: any;
 }
 
-// Playlist Item (Playlist.json or Playlists.json)
+// Playlist Track (Normalized)
 export interface PlaylistTrack {
   trackName: string;
   artistName: string;
   albumName: string;
   addedDate?: string;
+  trackUri?: string;
 }
 
+// Playlist Item (Playlist.json or Playlist1.json)
 export interface PlaylistItem {
   name: string;
   lastModifiedDate?: string;
@@ -97,9 +101,9 @@ export interface LibraryData {
 
 // Search Query (SearchQueries.json)
 export interface SearchQueryItem {
-  date: string;
-  platform: string;
-  searchTime: string;
+  date?: string;
+  platform?: string;
+  searchTime?: string;
   searchQuery: string;
   searchInteractionURIs?: string[];
 }

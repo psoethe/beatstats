@@ -7,15 +7,16 @@ import { Navbar } from './components/Navbar';
 import { FolderDropzone } from './components/FolderDropzone';
 import { ComparativeOverview } from './components/ComparativeOverview';
 import { AccountDetail } from './components/AccountDetail';
-import { RefreshCw } from 'lucide-react';
 
 export default function App() {
   const {
     user,
     isAuthenticated,
     authError,
-    loginWithEmail,
+    googleClientId,
+    setGoogleClientId,
     handleGoogleCredentialResponse,
+    handleGoogleAccessToken,
     logout,
   } = useAuth();
 
@@ -79,7 +80,9 @@ export default function App() {
     return (
       <AuthScreen
         onGoogleSuccess={handleGoogleCredentialResponse}
-        onDirectLogin={email => loginWithEmail(email)}
+        onAccessToken={handleGoogleAccessToken}
+        googleClientId={googleClientId}
+        onSaveClientId={setGoogleClientId}
         error={authError}
       />
     );

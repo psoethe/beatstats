@@ -12,6 +12,7 @@ import {
   HourlyActivity,
   UserData,
   PlaylistItem,
+  PlaylistTrack,
   LibraryData,
   SearchQueryItem,
   InferencesData,
@@ -149,6 +150,86 @@ export function parseIndexFile(
   }
 
   return accounts;
+}
+
+/**
+ * Normalizes playlist JSON data from Spotify (extracting tracks whether wrapped in {track: {...}} or flat)
+ */
+export function normalizePlaylists(rawPlaylists: any): PlaylistItem[] {
+  let list: any[] = [];
+  if (Array.isArray(rawPlaylists)) {
+    list = rawPlaylists;
+  } else if (rawPlaylists && Array.isArray(rawPlaylists.playlists)) {
+    list = rawPlaylists.playlists;
+  } else {
+    return [];
+  }
+
+  return list.map((pl: any) => {
+    const rawItems: any[] = Array.isArray(pl.items) ? pl.items : [];
+    const normalizedTracks: PlaylistTrack[] = rawItems
+      .map((item: any) => {
+        if (!item) return null;
+        // Check if track is nested in item.track, item.episode, item.localTrack or directly on item
+        const trackObj = item.track || item.episode || item.localTrack || item;
+        const trackName = trackObj.trackName || trackObj.name || item.trackName || '';
+        const artistName = trackObj.artistName || trackObj.artist || item.artistName || 'Artista desconhecido';
+        const albumName = trackObj.albumName || trackObj.album || item.albumName || '';
+        const addedDate = item.addedDate || item.added_at;
+        const trackUri = trackObj.trackUri || trackObj.uri;
+
+        if (!trackName && !artistName) return null;
+
+        return {
+          trackName: trackName || 'Faixa sem título',
+          artistName: artistName || 'Artista desconhecido',
+          albumName: albumName || '',
+          addedDate,
+          trackUri,
+        };
+      })
+      .filter((t): t is PlaylistTrack => t !== null);
+
+    return {
+      name: pl.name || 'Playlist sem título',
+      lastModifiedDate: pl.lastModifiedDate,
+      description: pl.description || null,
+      numberOfFollowers: Number(pl.numberOfFollowers) || 0,
+      items: normalizedTracks,
+    };
+  });
+}
+
+/**
+ * Normalizes search queries from SearchQueries.json
+ */
+export function normalizeSearchQueries(rawQueries: any): SearchQueryItem[] {
+  if (!Array.isArray(rawQueries)) return [];
+
+  return rawQueries
+    .filter(q => q && q.searchQuery && String(q.searchQuery).trim().length > 0)
+    .map(q => {
+      let date = q.date || '';
+      let time = q.searchTime || '';
+
+      // Format ISO or UTC string like "2026-05-17T10:14:09.362Z[UTC]"
+      if (q.searchTime && q.searchTime.includes('T')) {
+        const cleanTs = q.searchTime.replace(/\[.*?\]/, '');
+        const dObj = new Date(cleanTs);
+        if (!isNaN(dObj.getTime())) {
+          date = dObj.toLocaleDateString();
+          time = dObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+      }
+
+      return {
+        date,
+        searchTime: time,
+        platform: q.platform || 'Spotify App',
+        searchQuery: String(q.searchQuery).trim(),
+        searchInteractionURIs: q.searchInteractionURIs || [],
+      };
+    });
 }
 
 /**
@@ -505,7 +586,6 @@ function isFileInAccountFolder(file: File, targetFolderName: string, allDiscover
     }
     // Also handle prefixes like "Spotify Kids Account Data_1" matching "Spotify Kids Account Data 1"
     if (segNorm.startsWith(targetNorm) || targetNorm.startsWith(segNorm)) {
-      // Check if it's the closest match
       return true;
     }
   }
@@ -627,7 +707,6 @@ export async function parseUploadedFiles(
     const accountFiles = files.filter(f => isFileInAccountFolder(f, accDef.folderName, allFolderNames));
 
     // a) Wildcard & recursive search for Streaming History files
-    // Matches StreamingHistory_music_0.json, StreamingHistory0.json, endsong_0.json, Streaming_History_Audio_*.json, etc.
     const potentialStreamFiles = accountFiles.filter(f => {
       const name = f.name.toLowerCase();
       return (
@@ -675,11 +754,19 @@ export async function parseUploadedFiles(
 
     // c) Parse optional rich data safely from all subdirectories
     let userData: UserData | null = null;
-    const userFile = accountFiles.find(f => /userdata.*\.json$/i.test(f.name) || /user_data.*\.json$/i.test(f.name));
+    const userFile = accountFiles.find(
+      f => /userattributes.*\.json$/i.test(f.name) || /userdata.*\.json$/i.test(f.name) || /user_data.*\.json$/i.test(f.name)
+    );
+    const kidsAccFile = accountFiles.find(f => /kidsaccount.*\.json$/i.test(f.name));
+
     if (userFile) {
       userData = await readJson(userFile);
-      if (userData && userData.username && (accDef.displayName.startsWith('Conta Kids') || accDef.displayName.startsWith('Spotify'))) {
-        accDef.displayName = userData.username;
+    }
+    if (kidsAccFile) {
+      const kData = await readJson(kidsAccFile);
+      if (kData) {
+        if (kData.name) accDef.displayName = kData.name;
+        userData = { ...(userData || {}), ...(kData || {}) };
       }
     }
 
@@ -687,11 +774,7 @@ export async function parseUploadedFiles(
     const playlistFile = accountFiles.find(f => /playlist.*\.json$/i.test(f.name));
     if (playlistFile) {
       const pJson = await readJson(playlistFile);
-      if (pJson && Array.isArray(pJson.playlists)) {
-        playlists = pJson.playlists;
-      } else if (Array.isArray(pJson)) {
-        playlists = pJson;
-      }
+      playlists = normalizePlaylists(pJson);
     }
 
     let library: LibraryData | null = null;
@@ -701,12 +784,12 @@ export async function parseUploadedFiles(
     }
 
     let searchQueries: SearchQueryItem[] = [];
-    const searchFile = accountFiles.find(f => /searchqueries.*\.json$/i.test(f.name) || /search_queries.*\.json$/i.test(f.name) || /search.*\.json$/i.test(f.name));
+    const searchFile = accountFiles.find(
+      f => /searchqueries.*\.json$/i.test(f.name) || /search_queries.*\.json$/i.test(f.name) || /search.*\.json$/i.test(f.name)
+    );
     if (searchFile) {
       const sJson = await readJson(searchFile);
-      if (Array.isArray(sJson)) {
-        searchQueries = sJson;
-      }
+      searchQueries = normalizeSearchQueries(sJson);
     }
 
     let inferences: string[] = [];
