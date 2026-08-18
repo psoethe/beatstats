@@ -165,14 +165,11 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-[#202020] py-6 px-4 text-center text-xs text-[#727272] flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto w-full gap-2">
         <p>
-          BeatStats • Logado como <strong className="text-white">{user.email}</strong>{' '}
-          {isFamilyUser ? (
-            <span className="text-emerald-400 text-[10px] font-bold uppercase ml-1 px-2 py-0.5 rounded-md bg-emerald-950/60 border border-emerald-800/40">
-              Admin Família
-            </span>
-          ) : null}
+          BeatStats • Logado como <strong className="text-white">{user.email}</strong>
         </p>
-        <p className="text-[11px] text-[#555]">Processamento 100% seguro no navegador</p>
+        <p className="text-[11px] text-[#A7A7A7] flex items-center gap-1.5">
+          <span>🔒 Processamento 100% local no navegador • O site não salva nem armazena nenhuma informação sua</span>
+        </p>
       </footer>
     </div>
   );

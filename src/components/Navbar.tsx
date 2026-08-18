@@ -11,6 +11,7 @@ import {
   Database,
   Radio,
   FolderArchive,
+  Trash2,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -37,6 +38,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   onLogout,
 }) => {
   const isFamilyUser = isFamilyAdmin(authUser.email);
+
+  const handleDeleteData = () => {
+    if (window.confirm('Deseja realmente limpar e excluir os dados carregados da tela?')) {
+      onResetData();
+    }
+  };
 
   return (
     <header className="bg-[#121212]/95 backdrop-blur-md sticky top-0 z-40 border-b border-[#282828] px-4 sm:px-8 py-3.5">
@@ -181,6 +188,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <FolderOpen size={12} />
                 <span>Trocar Arquivos</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleDeleteData}
+                title="Deletar dados da visualização atual"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 bg-red-950/40 hover:bg-red-900/60 text-red-300 text-[11px] font-bold rounded-xl border border-red-800/40 transition-all cursor-pointer"
+              >
+                <Trash2 size={12} />
+                <span>Deletar Dados</span>
               </button>
             </div>
           </div>

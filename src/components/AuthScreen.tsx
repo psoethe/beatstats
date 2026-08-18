@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ShieldCheck, Lock, AlertCircle, RefreshCw, Radio, Sparkles } from 'lucide-react';
-import { FAMILY_ADMIN_EMAILS } from '../types/auth';
+import { ShieldCheck, Lock, AlertCircle, RefreshCw } from 'lucide-react';
 
 interface AuthScreenProps {
   onGoogleSuccess: (credentialResponse: any) => void;
@@ -119,21 +118,16 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
         </div>
 
         {/* Info Banner */}
-        <div className="bg-[#121212] border border-[#282828] p-4 rounded-2xl text-left space-y-2.5">
+        <div className="bg-[#121212] border border-[#282828] p-4 rounded-2xl text-left space-y-2">
           <div className="flex items-center gap-2 text-xs font-bold text-[#1DB954] uppercase tracking-wider">
             <ShieldCheck size={16} />
             <span>Login com Google</span>
           </div>
           <p className="text-xs text-[#A7A7A7] leading-relaxed">
-            Faça login com sua conta Google para acessar o painel e conectar sua conta Spotify.
+            Faça login com sua conta Google para acessar o painel de estatísticas, importar seus arquivos exportados e conectar sua conta Spotify.
           </p>
-          <div className="pt-1 text-[11px] text-[#727272] border-t border-[#222]">
-            <p>
-              • Contas da família (<code className="text-white">psoethe@gmail.com</code>, <code className="text-white">alicebsoethe@gmail.com</code>): Acesso aos arquivos históricos privados.
-            </p>
-            <p className="mt-1">
-              • Qualquer conta Google: Acesso completo para conectar com a <strong>Spotify Live API</strong> e trazer suas próprias estatísticas!
-            </p>
+          <div className="pt-2 text-[11px] text-[#666] border-t border-[#222]">
+            🔒 <strong>Privacidade Garantida:</strong> Todo o processamento é feito localmente no seu navegador. O site não armazena nem compartilha suas informações.
           </div>
         </div>
 
