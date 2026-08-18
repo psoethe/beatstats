@@ -11,6 +11,8 @@ import {
   Award,
   ListMusic,
   Radio,
+  Info,
+  Calendar,
   Sparkles,
 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
@@ -38,15 +40,21 @@ export const SpotifyLiveDashboard: React.FC = () => {
 
   const [activeSubTab, setActiveSubTab] = useState<'tracks' | 'artists' | 'recent' | 'playlists'>('tracks');
   const [searchFilter, setSearchFilter] = useState('');
+  const [showApiExplanation, setShowApiExplanation] = useState(false);
 
   // Genre aggregation from live top artists
   const genreData = useMemo(() => {
     if (!topArtists || topArtists.length === 0) return [];
     const counts: Record<string, number> = {};
     topArtists.forEach(artist => {
-      (artist.genres || []).forEach(g => {
-        counts[g] = (counts[g] || 0) + 1;
-      });
+      if (Array.isArray(artist.genres)) {
+        artist.genres.forEach(g => {
+          if (g && typeof g === 'string') {
+            const formattedGenre = g.charAt(0).toUpperCase() + g.slice(1);
+            counts[formattedGenre] = (counts[formattedGenre] || 0) + 1;
+          }
+        });
+      }
     });
 
     return Object.entries(counts)
@@ -89,7 +97,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
               Conectar sua Conta Spotify
             </h2>
             <p className="text-xs sm:text-sm text-[#A7A7A7] leading-relaxed">
-              Clique no botão abaixo para autorizar o BeatStats e carregar seus artistas mais ouvidos, músicas favoritas de longo prazo (1+ ano), reproduções recentes e o que está tocando agora no seu Spotify.
+              Clique no botão abaixo para autorizar o BeatStats e carregar seus artistas mais ouvidos, músicas favoritas, reproduções recentes e o que está tocando agora no seu Spotify.
             </p>
           </div>
 
@@ -122,7 +130,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
 
   // If connected to Spotify API
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div className="space-y-6 animate-fadeIn">
       {/* Live Profile Banner */}
       <div className="bg-[#181818] border border-[#282828] p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
         <div className="flex items-center gap-4 sm:gap-6 z-10">
@@ -168,12 +176,13 @@ export const SpotifyLiveDashboard: React.FC = () => {
 
         {/* Live Controls: Time Range + Refresh + Logout */}
         <div className="flex flex-wrap items-center gap-2 z-10 self-start md:self-auto">
-          {/* Time Range Selector */}
-          <div className="flex items-center gap-1 bg-[#121212] p-1 rounded-xl border border-[#282828]">
+          {/* Time Range Selector with clearer labels */}
+          <div className="flex items-center gap-1 bg-[#121212] p-1.5 rounded-2xl border border-[#282828]">
             <button
               type="button"
               onClick={() => setTimeRange('short_term')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              title="Últimas ~4 semanas de escuta"
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'short_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
                   : 'text-[#A7A7A7] hover:text-white'
@@ -184,7 +193,8 @@ export const SpotifyLiveDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => setTimeRange('medium_term')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              title="Últimos ~6 meses de escuta"
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'medium_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
                   : 'text-[#A7A7A7] hover:text-white'
@@ -195,13 +205,14 @@ export const SpotifyLiveDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => setTimeRange('long_term')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              title="Afinidade calculada pelo algoritmo do Spotify (~1 ano)"
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 timeRange === 'long_term'
                   ? 'bg-[#1DB954] text-black shadow-md'
                   : 'text-[#A7A7A7] hover:text-white'
               }`}
             >
-              1+ Ano (Longo Prazo)
+              Longo Prazo (~1 Ano)
             </button>
           </div>
 
@@ -209,23 +220,74 @@ export const SpotifyLiveDashboard: React.FC = () => {
             type="button"
             onClick={fetchLiveSpotifyData}
             title="Atualizar dados agora"
-            className="p-2 rounded-xl bg-[#242424] text-[#A7A7A7] hover:text-white border border-[#333] transition-all cursor-pointer"
+            className="p-2.5 rounded-xl bg-[#242424] text-[#A7A7A7] hover:text-white border border-[#333] transition-all cursor-pointer"
           >
-            <RefreshCw size={15} className={isDataLoading ? 'animate-spin text-[#1DB954]' : ''} />
+            <RefreshCw size={16} className={isDataLoading ? 'animate-spin text-[#1DB954]' : ''} />
           </button>
 
           <button
             type="button"
             onClick={disconnectSpotify}
             title="Desconectar do Spotify"
-            className="p-2 rounded-xl bg-red-950/30 text-red-400 hover:bg-red-900/40 border border-red-800/40 transition-all cursor-pointer"
+            className="p-2.5 rounded-xl bg-red-950/30 text-red-400 hover:bg-red-900/40 border border-red-800/40 transition-all cursor-pointer"
           >
-            <LogOut size={15} />
+            <LogOut size={16} />
           </button>
         </div>
 
         <div className="absolute right-0 top-0 w-96 h-96 bg-[#1DB954]/5 rounded-full blur-3xl pointer-events-none" />
       </div>
+
+      {/* Explanatory Banner: Como funciona o cálculo da API vs Arquivos JSON */}
+      <div className="bg-[#181818]/70 border border-[#282828] p-4 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#A7A7A7]">
+        <div className="flex items-start sm:items-center gap-2.5">
+          <Info size={16} className="text-[#1DB954] shrink-0 mt-0.5 sm:mt-0" />
+          <span>
+            {timeRange === 'short_term' && (
+              <>Exibindo afinidade das <strong>últimas 4 semanas</strong> calculadas pelo algoritmo do Spotify.</>
+            )}
+            {timeRange === 'medium_term' && (
+              <>Exibindo afinidade dos <strong>últimos 6 meses</strong> calculadas pelo algoritmo do Spotify.</>
+            )}
+            {timeRange === 'long_term' && (
+              <>
+                Exibindo afinidade de <strong>Longo Prazo (~1 ano)</strong> calculada pelo algoritmo do Spotify.
+              </>
+            )}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={() => setShowApiExplanation(!showApiExplanation)}
+          className="text-[11px] text-[#1DB954] hover:underline font-semibold shrink-0 cursor-pointer self-end sm:self-auto"
+        >
+          {showApiExplanation ? 'Ocultar detalhes' : 'Entenda a diferença para o JSON exportado'}
+        </button>
+      </div>
+
+      {/* Expanded API vs JSON details */}
+      {showApiExplanation && (
+        <div className="bg-[#121212] border border-[#2c2c2c] p-5 rounded-2xl text-xs space-y-3 text-[#B3B3B3] animate-fadeIn">
+          <div className="flex items-center gap-2 text-white font-bold text-sm">
+            <Calendar size={15} className="text-[#1DB954]" />
+            <span>Por que os dados da API são diferentes do JSON exportado?</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            <div className="bg-[#181818] p-3.5 rounded-xl border border-[#282828] space-y-1">
+              <strong className="text-white block font-bold text-xs">🟢 Spotify Live API (Esta tela):</strong>
+              <p className="text-[11px] text-[#999] leading-relaxed">
+                A API oficial do Spotify não faz uma soma cronológica simples de streams, mas sim um <strong>ranking algorítmico de afinidade</strong> ponderado por repetição e período recente (dividido em 4 semanas, 6 meses e ~12 meses para o <em>long_term</em>).
+              </p>
+            </div>
+            <div className="bg-[#181818] p-3.5 rounded-xl border border-[#282828] space-y-1">
+              <strong className="text-white block font-bold text-xs">📁 Arquivos Exportados (Aba superior):</strong>
+              <p className="text-[11px] text-[#999] leading-relaxed">
+                Os arquivos JSON exportados contêm <strong>100% dos logs brutos</strong> de reprodução com contagem exata de minutos, milissegundos e histórico de anos anteriores.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Currently Playing Widget (if available) */}
       {currentlyPlaying?.item && (
@@ -265,7 +327,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
           {/* #1 Artist */}
           {topArtists[0] && (
             <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
-              {topArtists[0].images[0]?.url ? (
+              {topArtists[0].images && topArtists[0].images[0]?.url ? (
                 <img
                   src={topArtists[0].images[0].url}
                   alt={topArtists[0].name}
@@ -282,7 +344,9 @@ export const SpotifyLiveDashboard: React.FC = () => {
                 </span>
                 <h4 className="text-base font-black text-white truncate">{topArtists[0].name}</h4>
                 <p className="text-xs text-[#727272] truncate">
-                  {(topArtists[0].genres || []).slice(0, 3).join(', ') || 'Artista Spotify'}
+                  {(topArtists[0].genres && topArtists[0].genres.length > 0)
+                    ? topArtists[0].genres.slice(0, 3).join(', ')
+                    : 'Artista Spotify'}
                 </p>
               </div>
             </div>
@@ -291,7 +355,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
           {/* #1 Track */}
           {topTracks[0] && (
             <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl flex items-center gap-4 shadow-lg">
-              {topTracks[0].album?.images[0]?.url ? (
+              {topTracks[0].album?.images && topTracks[0].album.images[0]?.url ? (
                 <img
                   src={topTracks[0].album.images[0].url}
                   alt={topTracks[0].name}
@@ -316,24 +380,35 @@ export const SpotifyLiveDashboard: React.FC = () => {
         </div>
 
         {/* Top Genres Pie */}
-        <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl shadow-lg flex flex-col justify-between">
+        <div className="bg-[#181818] border border-[#282828] p-5 rounded-2xl shadow-lg flex flex-col justify-between min-h-[220px]">
           <h3 className="text-xs font-bold uppercase text-[#A7A7A7] tracking-wider mb-2">
             Gêneros Predominantes
           </h3>
-          <div className="h-40 w-full">
-            {genreData.length === 0 ? (
-              <p className="text-xs text-[#727272] text-center pt-12">Carregando gêneros...</p>
+
+          <div className="h-44 w-full flex items-center justify-center">
+            {isDataLoading ? (
+              <div className="flex items-center justify-center gap-2 text-xs text-[#727272]">
+                <RefreshCw size={14} className="animate-spin text-[#1DB954]" />
+                <span>Processando gêneros...</span>
+              </div>
+            ) : genreData.length === 0 ? (
+              <div className="text-center p-3 space-y-1">
+                <p className="text-xs text-[#A7A7A7] font-semibold">Gêneros não catalogados</p>
+                <p className="text-[11px] text-[#666] leading-tight">
+                  Os artistas deste período não possuem tags de gênero na API do Spotify.
+                </p>
+              </div>
             ) : (
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height={170}>
                 <PieChart>
                   <Pie
                     data={genreData}
                     dataKey="value"
                     nameKey="name"
                     cx="50%"
-                    cy="50%"
-                    innerRadius={35}
-                    outerRadius={60}
+                    cy="45%"
+                    innerRadius={30}
+                    outerRadius={55}
                     paddingAngle={3}
                   >
                     {genreData.map((entry, index) => (
@@ -344,7 +419,10 @@ export const SpotifyLiveDashboard: React.FC = () => {
                     contentStyle={{ backgroundColor: '#242424', border: '1px solid #383838', borderRadius: '12px' }}
                     labelStyle={{ color: '#fff', fontWeight: 'bold' }}
                   />
-                  <Legend wrapperStyle={{ fontSize: '10px', color: '#A7A7A7' }} iconType="circle" />
+                  <Legend
+                    wrapperStyle={{ fontSize: '10px', color: '#A7A7A7', paddingTop: '4px' }}
+                    iconType="circle"
+                  />
                 </PieChart>
               </ResponsiveContainer>
             )}
@@ -430,7 +508,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
             >
               <div className="flex items-center gap-3 min-w-0">
                 <span className="font-black text-xs text-[#555] w-5 text-right shrink-0">#{i + 1}</span>
-                {track.album?.images[0]?.url ? (
+                {track.album?.images && track.album.images[0]?.url ? (
                   <img
                     src={track.album.images[0].url}
                     alt={track.name}
@@ -475,7 +553,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
               className="bg-[#181818] hover:bg-[#202020] border border-[#282828] p-4 rounded-2xl flex items-center gap-4 transition-all group"
             >
               <span className="font-black text-xs text-[#555] w-5 text-right shrink-0">#{i + 1}</span>
-              {artist.images[0]?.url ? (
+              {artist.images && artist.images[0]?.url ? (
                 <img
                   src={artist.images[0].url}
                   alt={artist.name}
@@ -491,7 +569,9 @@ export const SpotifyLiveDashboard: React.FC = () => {
                   {artist.name}
                 </h4>
                 <p className="text-[11px] text-[#727272] truncate">
-                  {(artist.genres || []).slice(0, 2).join(', ') || 'Artista Spotify'}
+                  {(artist.genres && artist.genres.length > 0)
+                    ? artist.genres.slice(0, 2).join(', ')
+                    : 'Artista Spotify'}
                 </p>
               </div>
             </div>
@@ -505,7 +585,7 @@ export const SpotifyLiveDashboard: React.FC = () => {
           {recentlyPlayed.map((item, idx) => (
             <div key={idx} className="py-3 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3 min-w-0">
-                {item.track?.album?.images[0]?.url ? (
+                {item.track?.album?.images && item.track.album.images[0]?.url ? (
                   <img
                     src={item.track.album.images[0].url}
                     alt={item.track.name}
